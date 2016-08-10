@@ -1,6 +1,29 @@
 tmux -- terminal multiplexer
 ============================
 
+## SYNOPSIS
+
+### Shell Commands
+
+- start a new session: `tmux`
+- start a new named session, e.g. `tmux new -s mynewsession`
+- list sessions: `tmux ls`
+- attach to a session by number, e.g. `tmux at 0`
+- attach to a session by name, e.g. `tmux at -t somename`
+- kill a session by name, e.g. `tmux kill-session -t somename`
+
+### Key Bindings
+
+- s list sessions
+- c new window
+- , name window
+- f find window
+- & kill window
+
+
+
+## DESCRIPTION
+
 tmux:
 - is a terminal multiplexer
 - eliminates the need for multiple terminal windows
@@ -28,12 +51,14 @@ There are three layers of organization in _tmux_:
 - windows (tabs)
 - panes (splits)
 
+## Session Interactions
+- s list sessions
+
 ## Window Interactions
 
 Keybindings:
 - c new window
 - , name window
-- s list windows
 - f find window
 - & kill window
 
