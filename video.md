@@ -14,6 +14,8 @@ Video is hard.
 
 ## Ingest
 
+[EMA Avails Metadata](http://www.movielabs.com/md/avails/)
+
 Google's [Movies and TV Partner Help](https://support.google.com/moviestvpartners/answer/6227259)
 
 ## Delivery
