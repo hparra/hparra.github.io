@@ -14,11 +14,14 @@ tmux -- terminal multiplexer
 
 ### Key Bindings
 
-- s list sessions
-- c new window
-- , name window
-- f find window
-- & kill window
+The default command key prefix is `C-b`. Note it conflicts with any Emacs-style bindings.
+
+- `s` list sessions
+- `$` name session
+- `c` new window
+- `,` name window
+- `f` find window
+- `&` kill window
 
 
 
