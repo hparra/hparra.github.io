@@ -3,6 +3,7 @@ Video
 
 Video is hard.
 
+- ingest
 - transcoding
 - segmenting
 - delivery
@@ -10,6 +11,10 @@ Video is hard.
 - metadata
 - indexing
 - metrics
+
+## Ingest
+
+Google's [Movies and TV Partner Help](https://support.google.com/moviestvpartners/answer/6227259)
 
 ## Delivery
 
