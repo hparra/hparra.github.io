@@ -17,7 +17,9 @@
 - C-[ :
 - C-] : abort-recursive-edit
 - C-| :
+
 ---
+
 - C-a : beginning-of-line
 - C-s : isearch-forward
 - C-d : kill-character-forward
@@ -29,7 +31,9 @@
 - C-l : recenter
 - C-; : _free_
 - C-' :
+
 ---
+
 - C-z : suspend-emacs / iconify-or-deiconify-frame
 - C-x :
 - C-c :
