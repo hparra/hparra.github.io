@@ -4,19 +4,12 @@ This repository is a collection of personal notes on various topics. In some cas
 
 ## Software
 
-### Terminal:
-
 - [tmux](tmux)
 - [bash](bash)
 - [emacs](emacs)
-
-### Daemons:
-
 - [dnsmasq](dnsmasq)
 
 ## Diving
-
-### PADI Coursework:
 
 - [Rescue Diver](Rescue-Diver)
 - [Emergency First Responder](Emergency-First-Response)
