@@ -1,4 +1,5 @@
 Diving -- SCUBA Diving
+======================
 
 These are various scuba diving notes, including knowledge reviews for certain PADI courses.
 
