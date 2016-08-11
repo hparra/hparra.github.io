@@ -17,3 +17,4 @@ The CLI for `launchctl` has changed in recent versions. The load/unload/start/st
 
 _/Library/LaunchDaemons/dev.dnsmasq.plist_ is the configuration of dnsmasq for `launchd`
 
+For a `boxen`-installed `brew` the conf is in _/opt/boxen/config/dnsmasq/dnsmasq.conf_
