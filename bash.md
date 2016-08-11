@@ -8,6 +8,8 @@ The Bourne-Again SHell.
 
 `du -ch *`: show human-readable sizes of files and display total size
 
+`lsof -n -iTCP:$PORT | grep LISTEN`: show who is listening to certain port (Mac OS X)
+
 ## REFERENCES
 
 - `man bash` or [bash](http://manpages.debian.org/cgi-bin/man.cgi?query=bash&apropos=0&sektion=0&manpath=Debian+8+jessie&format=html&locale=en)
