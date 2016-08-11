@@ -4,7 +4,7 @@ The Bourne-Again SHell.
 
 ## TIPS
 
-`find | xargs cat`: cat contents of files found
+`find * | xargs cat`: cat contents of files found
 
 `du -ch *`: show human-readable sizes of files and display total size
 
