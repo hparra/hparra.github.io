@@ -2,7 +2,13 @@
 
 The Bourne-Again SHell.
 
-### References
+## TIPS
+
+`find | xargs cat`: cat contents of files found
+
+`du -ch *`: show human-readable sizes of files and display total size
+
+## REFERENCES
 
 - `man bash` or [bash](http://manpages.debian.org/cgi-bin/man.cgi?query=bash&apropos=0&sektion=0&manpath=Debian+8+jessie&format=html&locale=en)
 - `info bash` or [Bash Reference Manual](https://www.gnu.org/software/bash/manual/bashref.html)
