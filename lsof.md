@@ -8,7 +8,7 @@
 
 ## NOTES
 
-Remember to use `-a` to join rules.
+Remember to use `-a` to join rules, e.g. `lsof -a -c node -i TCP`
 
 Recall that socket connections are represented as files in *nix systems.
 
