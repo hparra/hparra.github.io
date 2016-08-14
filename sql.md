@@ -24,3 +24,7 @@ sql -- language for structured databases queries
 - sorts rows by column(s)
 - should also use `ASC` or `DESC`
 - can use an expression function
+
+## REFERENCES
+
+Alan Beaulieu. _Learning SQL_. O'Reilly. April 27, 2009
