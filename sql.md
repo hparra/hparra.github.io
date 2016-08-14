@@ -33,8 +33,9 @@ sql -- language for structured databases queries
 - [SQL As Understood By SQLite](https://www.sqlite.org/lang.html). SQLite.
 - [Query Reference](https://cloud.google.com/bigquery/query-reference). Google BigQuery Documentation.
 - [Streaming SQL Concepts](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/streaming-sql-concepts.html). Amazon Kinesis Analytics Developer Guide.
+- [Modern SQL](http://modern-sql.com/). Markus Winand.
 
 
 ### Books
 
-Alan Beaulieu. _Learning SQL_. O'Reilly. April 27, 2009
+- Learning SQL. Alan Beaulieu. O'Reilly. April 27, 2009.
