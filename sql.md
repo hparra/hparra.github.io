@@ -12,7 +12,7 @@ sql -- language for structured databases queries
 - identifies tables that contain desired columns
 - can use `JOIN`, `INNER JOIN`, etc.
 - can use `AS` with each table to alias its name
-- can utilize rows generated from a subquery
+- can use a subquery to generate a temporary table
 
 `WHERE`
 - filters rows meeting specified conditions
