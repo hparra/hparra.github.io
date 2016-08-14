@@ -23,3 +23,4 @@ sql -- language for structured databases queries
 `ORDER BY`
 - sorts rows by column(s)
 - should also use `ASC` or `DESC`
+- can use an expression function
