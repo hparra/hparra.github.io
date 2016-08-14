@@ -30,6 +30,7 @@ sql -- language for structured databases queries
 - [SQL](https://en.wikipedia.org/wiki/SQL). Wikipedia.
 - [SQL Statement Syntax](https://dev.mysql.com/doc/refman/5.7/en/sql-syntax.html). MySQL Reference.
 - [The SQL Language](https://www.postgresql.org/docs/9.5/static/sql.html). PostgresSQL Manual.
+- [SQL As Understood By SQLite](https://www.sqlite.org/lang.html). SQLite.
 - [Query Reference](https://cloud.google.com/bigquery/query-reference). Google BigQuery Documentation.
 
 
