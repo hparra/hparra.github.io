@@ -5,13 +5,13 @@ sql -- language for structured databases queries
 
 `SELECT`
 - is used to select which columns to include
-- can use `AS` with each column to alias its name
+- can use `AS` operator with each column to alias its name
 - uses the `ALL` keyword by default
 
 `FROM`
 - identifies tables that contain desired columns
 - can use `JOIN`, `INNER JOIN`, etc.
-- can use `AS` with each table to alias its name
+- can use `AS` operator with each table to alias its name
 - can use a subquery to generate a temporary table
 
 `WHERE`
@@ -26,5 +26,13 @@ sql -- language for structured databases queries
 - can use an expression function
 
 ## REFERENCES
+
+- [SQL](https://en.wikipedia.org/wiki/SQL). Wikipedia.
+- [SQL Statement Syntax](https://dev.mysql.com/doc/refman/5.7/en/sql-syntax.html). MySQL Reference.
+- [The SQL Language](https://www.postgresql.org/docs/9.5/static/sql.html). PostgresSQL Manual.
+- [Query Reference](https://cloud.google.com/bigquery/query-reference). Google BigQuery Documentation.
+
+
+### Books
 
 Alan Beaulieu. _Learning SQL_. O'Reilly. April 27, 2009
