@@ -1,5 +1,5 @@
-gsutil -- Google Storage CLI
-============================
+Google Cloud Storage
+====================
 
 ## gsutil
 
