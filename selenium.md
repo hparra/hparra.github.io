@@ -9,6 +9,10 @@ selenium
 java -jar $(cd $(dirname $0); pwd -P)/selenium-server-standalone-2.53.1.jar
 ```
 
+## Drivers
+
+- [GeckoDriver](https://github.com/mozilla/geckodriver/releases). Firefox driver.
+
 ## PaaS
 
 - TestingBot
