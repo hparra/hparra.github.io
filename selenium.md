@@ -11,7 +11,9 @@ java -jar $(cd $(dirname $0); pwd -P)/selenium-server-standalone-2.53.1.jar
 
 ## Drivers
 
+- [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads).
 - [GeckoDriver](https://github.com/mozilla/geckodriver/releases). Firefox driver.
+- [SafariDriver](http://www.seleniumhq.org/download/)
 
 ## PaaS
 
