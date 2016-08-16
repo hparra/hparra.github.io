@@ -23,6 +23,7 @@ HTML:
 
 ## REFERENCES
 
+- [DOT](https://en.wikipedia.org/wiki/DOT_(graph_description_language). Wikipedia.
 - [GraphViz for discrete math students](http://graphs.grevian.org/example)
 
 ## ALTERNATIVES
