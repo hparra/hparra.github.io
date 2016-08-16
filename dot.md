@@ -1,6 +1,28 @@
 dot
 ===
 
+## TOOLS
+
+### Gravizo
+
+[Gravizo](http://gravizo.com) allows you to embed DOT (and others) using image declarations.
+
+Markdown:
+```
+![Alt text](http://g.gravizo.com/g?
+  digraph G {}
+)
+```
+
+HTML:
+```
+<img src='http://g.gravizo.com/g?
+ digraph G {}
+'/>
+```
+
+## REFERENCES
+
 - [GraphViz for discrete math students](http://graphs.grevian.org/example)
 
 ## ALTERNATIVES
