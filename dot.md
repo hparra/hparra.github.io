@@ -24,7 +24,8 @@ HTML:
 ## REFERENCES
 
 - [DOT](https://en.wikipedia.org/wiki/DOT_(graph_description_language)). Wikipedia.
-- [GraphViz for discrete math students](http://graphs.grevian.org/example)
+- [Drawing graphs with _dot_](http://www.graphviz.org/Documentation/dotguide.pdf). PDF. Emden Gansner, Eleftherios Koutsofios, Stephen North.
+- [GraphViz for discrete math students](http://graphs.grevian.org/example).
 
 ## ALTERNATIVES
 
