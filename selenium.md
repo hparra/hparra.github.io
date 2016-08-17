@@ -15,6 +15,10 @@ java -jar $(cd $(dirname $0); pwd -P)/selenium-server-standalone-2.53.1.jar
 - [GeckoDriver](https://github.com/mozilla/geckodriver/releases). Firefox driver.
 - [SafariDriver](http://www.seleniumhq.org/download/)
 
+## Tools
+
+- [WebdriverIO API](http://webdriver.io/api.html). Binding for NodeJS.
+
 ## PaaS
 
 - TestingBot
