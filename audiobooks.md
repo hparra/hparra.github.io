@@ -1,3 +1,6 @@
+Audiobooks are a great alternative to reading. Consuming a book in this way may also serve as a type of screening process - deep books may be read (again) afterwards, but with an intent to deeply analyze its content and take notes.
+
+The following documents the states I'm at with various audiobooks.
 
 ## Current
 
