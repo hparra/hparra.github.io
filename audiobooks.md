@@ -2,7 +2,7 @@ Audiobooks are a great alternative to reading. Consuming a book in this way may 
 
 The following documents the states I'm at with various audiobooks.
 
-## Current
+## Currently Listening
 
 [On Negotiation](https://www.amazon.com/Negotiating-Mark-H-McCormack/dp/0787112747/). Mark H. McCormack. May 1997.
 
@@ -46,14 +46,14 @@ The Art of Seduction. Robert Greene.
 
 48 Laws of Power. Robert Greene.
 
-## Acquire
+## Acquisition Required
 
 - [The Lean Startup](https://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898). Eric Reis.
 - Only the Paranoid Survive. Andrew S. Grove.
 - The 4-Hour Workweek. Tim Ferris.
 - Rework. Jason Fried & DHH.
 
-## Investigate
+## Investigation Needed
 
 - [Leaders Eat Last](https://www.amazon.com/Leaders-Eat-Last-Together-Others/dp/1591845327)
 - [It's Not Just Who You Know](https://www.amazon.com/Its-Not-Just-Know-Relationships-ebook/dp/B0036S4BEE)
