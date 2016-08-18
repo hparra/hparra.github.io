@@ -25,6 +25,10 @@ sql -- language for structured databases queries
 - should also use `ASC` or `DESC`
 - can use an expression function
 
+## TOOLS
+
+- [DB Browser for SQLite](http://sqlitebrowser.org)
+
 ## REFERENCES
 
 - [SQL](https://en.wikipedia.org/wiki/SQL). Wikipedia.
