@@ -38,7 +38,7 @@ sql -- language for structured databases queries
 - [Query Reference](https://cloud.google.com/bigquery/query-reference). Google BigQuery Documentation.
 - [Streaming SQL Concepts](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/streaming-sql-concepts.html). Amazon Kinesis Analytics Developer Guide.
 - [Modern SQL](http://modern-sql.com/). Markus Winand.
-
+- [SQLite Tutorial](http://www.sqlitetutorial.net/). 
 
 ### Books
 
