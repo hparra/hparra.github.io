@@ -4,21 +4,21 @@ The following documents the states I'm at with various audiobooks. I also includ
 
 ## Currently Listening
 
-[On Negotiation](https://www.amazon.com/Negotiating-Mark-H-McCormack/dp/0787112747/). Mark H. McCormack. May 1997.
-
-In Defense of Food. Michael Pollan. Relistening.
+Who Moved My Cheese. Spencer Johnson.
 
 How To Lie With Statistics.
 
 ## Queued
-
-Who Moved My Cheese. Spencer Johnson.
 
 Grow Rich Now! Napolean Hill.
 
 Build to Last. Jim Collins.
 
 ## Completed
+
+In Defense of Food. Michael Pollan. Relistening.
+
+[On Negotiation](https://www.amazon.com/Negotiating-Mark-H-McCormack/dp/0787112747/). Mark H. McCormack. May 1997.
 
 [How Champions Think](https://www.amazon.com/How-Champions-Think-Sports-Life/dp/1476788642/). Bob Rotella. May 2016. _Audiobook completed August 2016_.
 
