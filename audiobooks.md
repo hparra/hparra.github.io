@@ -4,17 +4,17 @@ The following documents the states I'm at with various audiobooks. I also includ
 
 ## Currently Listening
 
-Who Moved My Cheese. Spencer Johnson.
-
 How To Lie With Statistics.
 
 ## Queued
 
-Grow Rich Now! Napolean Hill.
-
 Build to Last. Jim Collins.
 
 ## Completed
+
+Grow Rich Now! Napolean Hill.
+
+Who Moved My Cheese. Spencer Johnson.
 
 In Defense of Food. Michael Pollan. Relistening.
 
