@@ -4,6 +4,8 @@ The following documents the states I'm at with various audiobooks. I also includ
 
 ## Currently Listening
 
+[Soft Skills](https://www.amazon.com/Soft-Skills-software-developers-manual/dp/1617292397). John Sonmez. December 2014.
+
 How To Lie With Statistics.
 
 ## Queued
@@ -55,9 +57,9 @@ The Art of Seduction. Robert Greene.
 
 ## Investigation Needed
 
-- [So Good They Can't Ignore You](https://www.amazon.com/Good-They-Cant-Ignore-You/dp/1455509124)
-- [Antifragile](https://www.amazon.com/Antifragile-Things-That-Disorder-Incerto/dp/0812979680)
-- [Leaders Eat Last](https://www.amazon.com/Leaders-Eat-Last-Together-Others/dp/1591845327)
+- [So Good They Can't Ignore You](https://www.amazon.com/Good-They-Cant-Ignore-You/dp/1455509124). Mentioned in "Soft Skills".
+- [Antifragile](https://www.amazon.com/Antifragile-Things-That-Disorder-Incerto/dp/0812979680). Mentioned in "Soft Skills".
+- [Leaders Eat Last](https://www.amazon.com/Leaders-Eat-Last-Together-Others/dp/1591845327). Mentioned by Nick.
 - [It's Not Just Who You Know](https://www.amazon.com/Its-Not-Just-Know-Relationships-ebook/dp/B0036S4BEE)
 - [The 21 Irrefutable Laws of Leadership](https://www.amazon.com/21-Irrefutable-Laws-Leadership-Follow-ebook/dp/B00ETK5N5O)
 - [The Alchemy of Growth](https://www.amazon.com/Alchemy-Growth-Practical-Insights-Enterprise/dp/0738203092)
