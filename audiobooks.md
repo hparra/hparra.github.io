@@ -4,15 +4,17 @@ The following documents the states I'm at with various audiobooks. I also includ
 
 ## Currently Listening
 
-[Soft Skills](https://www.amazon.com/Soft-Skills-software-developers-manual/dp/1617292397). John Sonmez. December 2014.
+[Soft Skills](https://www.amazon.com/Soft-Skills-Software-Developers-Manual/dp/B0158SJ3EM). John Sonmez. December 2014.
 
-How To Lie With Statistics.
+
 
 ## Queued
 
 Build to Last. Jim Collins.
 
 ## Completed
+
+[How To Lie With Statistics](https://www.amazon.com/How-to-Lie-with-Statistics/dp/B01C4RPH8Q). Darrell Huff. 1954.
 
 Grow Rich Now! Napolean Hill.
 
