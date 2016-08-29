@@ -3,12 +3,17 @@ cron
 
 View cron for current user: `crontab -l`
 
-Ubuntu:
-- _/etc/cron.d_
+## Ways to specify a cronjob
+
+You can place a shell script in one of the following directories:
 - _/etc/cron.hourly_
 - _/etc/cron.daily_
 - _/etc/cron.weekly_
 - _/etc/cron.monthly_
+
+You can place a cron script in _/etc/cron.d_
+
+You can edit the user-level cron using `crontab -e`
 
 ## REFERENCES
 
