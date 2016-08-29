@@ -21,4 +21,6 @@ You can edit the user-level crontab using `crontab -e`
 
 ## REFERENCES
 
+[CronHowto](https://help.ubuntu.com/community/CronHowto). _Ubuntu Community Help Wiki_. Cron HOWTO.
+
 [cron](https://docs.chef.io/resource_cron.html). _Learn Chef_. How to use `chef` to manage cronjobs.
