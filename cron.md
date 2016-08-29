@@ -11,9 +11,13 @@ You can place a shell script in one of the following directories:
 - _/etc/cron.weekly_
 - _/etc/cron.monthly_
 
-You can place a cron script in _/etc/cron.d_
+You can place a crontab in _/etc/cron.d_
 
-You can edit the user-level cron using `crontab -e`
+You can edit the user-level crontab using `crontab -e`
+
+## GOTCHAS
+
+- Always specify absolute paths!
 
 ## REFERENCES
 
