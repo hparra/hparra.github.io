@@ -36,3 +36,17 @@ legs
 - 6:08 - Power Skips with Arms
 - 6:32 - Grape Vine
 
+[Get Better Results With Activation Exercises](http://www.fitbodyhq.com/fitness/get-better-results-with-activation-exercises/). Fitbody HQ.
+- Quads
+  - Squats
+  - Single Leg Squats
+  - Box Jumps
+  - Walking Lunges
+- Hamstring & Glutes
+  - Glute Bridge
+  - Single Leg Bridge
+  - Bird Dog
+  - Quadruped Hip Extension
+  - Fire Hydrant
+  - Side Clam
+  - Glute Activation with Resistance Band
