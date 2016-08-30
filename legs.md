@@ -44,3 +44,5 @@ legs
   - Fire Hydrant
   - Side Clam
   - Glute Activation with Resistance Band
+
+[7 Pre-Workout Activation Routines for Better Performance](http://home.trainingpeaks.com/blog/article/7-pre-workout-activation-routines-for-better-performance). Jim Vance. TrainingPeaks. May 30, 2015.
