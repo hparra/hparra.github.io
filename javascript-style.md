@@ -7,15 +7,49 @@ Beside that:
 
 - functions and class methods should be in camelCase
 - pure functions should be in their own file and have their own unit tests
-- named imports should be broken into multiple lines
 - files that export classes, static or instantaible, should have filenames UpperCamelCase
-- import/includes of classes should be in UpperCamelCase, even if they are not
+
 - do not use `var` anymore (we have `const` and `let`)
 - always leave newline between function or method declarations
-- avoid defining anonymous static object as function parameter
+
 - prefer `null` over an empty string
 
-Do not check boolean values with expressions that check for value:
+`import`/`require` of classes should be in UpperCamelCase, even if they are not:
+```javascript
+// OK
+const Path = require('path')
+
+// Avoid
+const path = require('path')
+```
+
+Avoid multiple named `import`s on one line:
+```javascript
+// OK
+import {
+  thing1,
+  thing2
+} from 'whatever';
+
+// Avoid
+import { thing1, thing2 } from 'whatever'
+```
+
+Avoid defining anonymous static object as function parameter. This improves debugging and avoid Promise-related clutter but I understand the shortcut: 
+```javascript
+// OK
+const myObject = {
+  hello: 'Hi!'
+}
+someFunc(myObject);
+
+// Avoid
+someFunc({
+  hello: 'Hi!'
+})
+```
+
+Avoid checking boolean values with expressions that check for value:
 ```javascript
 const myBoolean = true;
 
