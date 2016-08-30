@@ -11,7 +11,7 @@ Beside that:
 - files that export classes, static or instantaible, should have filenames UpperCamelCase
 - import/includes of classes should be in UpperCamelCase, even if they are not
 - do not use `var` anymore (we have `const` and `let`)
-
+- always leave newline between function or method declarations
 
 ## TIPS
 
