@@ -12,6 +12,19 @@ Beside that:
 - import/includes of classes should be in UpperCamelCase, even if they are not
 - do not use `var` anymore (we have `const` and `let`)
 - always leave newline between function or method declarations
+- avoid defining anonymous static object as function parameter
+- prefer `null` over an empty string
+
+Do not check boolean values with expressions that check for value:
+```javascript
+const myBoolean = true;
+
+// OK
+if (myBoolean) {}
+
+// Avoid
+if (myBoolean === true) {}
+```
 
 ## Nice Things
 
