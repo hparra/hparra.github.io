@@ -13,6 +13,30 @@ Beside that:
 - do not use `var` anymore (we have `const` and `let`)
 - always leave newline between function or method declarations
 
+## Nice Things
+
+```javascript
+  // Best
+  return {
+    user:         state.user,
+    channel:      state.channel,
+    newuser:      state.newuser,
+    creditcard:   state.creditcard,
+    coupon:       state.coupon,
+    queryparams:  state.queryparams,
+  }
+
+  // OK
+  return {
+    user: state.user,
+    channel: state.channel,
+    newuser: state.newuser,
+    creditcard: state.creditcard,
+    coupon: state.coupon,
+    queryparams: state.queryparams,
+  }
+```
+
 ## TIPS
 
 - if you're using `let` you may want to reconsider your function design
