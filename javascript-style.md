@@ -8,11 +8,11 @@ Beside that:
 - functions and class methods should be in camelCase
 - pure functions should be in their own file and have their own unit tests
 - files that export classes, static or instantaible, should have filenames UpperCamelCase
-
 - do not use `var` anymore (we have `const` and `let`)
 - always leave newline between function or method declarations
-
 - prefer `null` over an empty string
+- always throw (propagate) if you define a `.catch()`
+
 
 `import`/`require` of classes should be in UpperCamelCase, even if they are not:
 ```javascript
