@@ -20,7 +20,7 @@ Beside that:
 This is ugly, why the JS folks do not want to improve this potentially awesome expression is beyond me.
 
 ```javascript
-const select = (function (x) => {
+var select = (x => {
   switch(x) {
     case 'A': return 0
     case 'B': return 1
