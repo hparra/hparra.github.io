@@ -1,15 +1,6 @@
 legs
 ====
 
-### Dynamic Warmup/Stretches (Pre-Workout)
-
-
-
-### Static Stretches (Post-Workout)
-
-- Hamstring
-
-
 ## REFERENCES
 
 [4-4 Common Stretching Exercises](http://www.physicallytrained.com/4-4-common-stretching-exercises/).
