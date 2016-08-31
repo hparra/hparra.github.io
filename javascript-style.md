@@ -60,6 +60,39 @@ if (myBoolean) {}
 if (myBoolean === true) {}
 ```
 
+Prefer `=>` when using Promises or callbacks.
+
+Use indentation with Promises to improve readability:
+```javascript
+// OK
+myFuncThatReturnsPromise()
+  .then(res => someTransform(res, 'something'))
+  .then(console.log)
+  .catch(console.error)
+
+// OK
+SomeStaticClass
+  .myFuncThatReturnsPromise()
+  .then(res => {
+    console.log(res)
+    return someTransform(res, 'something')
+  })
+  .then(console.log)
+  .catch(console.error)
+
+// Avoid - `then` on same line
+myFuncThatReturnsPromise().then(res => someTransform(res, 'something'))
+  .then(console.log)
+  .catch(console.error)
+
+// Avoid - not using arrow and not properly indented
+myFuncThatReturnsPromise().then(function (res) {
+  return someTransform(res, 'something')
+})
+.then(console.log)
+.catch(console.error)
+```
+
 ## Nice Things
 
 ```javascript
