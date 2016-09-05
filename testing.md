@@ -1,10 +1,11 @@
 Testing (Software)
 ==================
 
+There are many types of testing and some terms overlap each other, with less than clear definitions.
+
 - Unit: individual piece
 - Integration: combinations of pieces
-- Functional: 
-
+- Functional aka end-to-end (e2e): all the pieces
 
 ## REFERENCES
 
