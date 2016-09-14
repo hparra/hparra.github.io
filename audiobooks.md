@@ -4,9 +4,7 @@ The following documents the states I'm at with various audiobooks. I also includ
 
 ## Currently Listening
 
-[Soft Skills](https://www.amazon.com/Soft-Skills-Software-Developers-Manual/dp/B0158SJ3EM). John Sonmez. December 2014.
-
-
+[The Lean Startup](https://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/B005MM7HY8). Eric Ries. September 2011.
 
 ## Queued
 
@@ -14,13 +12,17 @@ Build to Last. Jim Collins.
 
 ## Completed
 
+[The 4-Hour Workweek (Expanded and Updated)](https://www.amazon.com/4-Hour-Workweek-Anywhere-Expanded-Updated/dp/B0031KN6T8). Timothy Ferris. December 2009.
+
+[Soft Skills](https://www.amazon.com/Soft-Skills-Software-Developers-Manual/dp/B0158SJ3EM). John Sonmez. December 2014.
+
 [How To Lie With Statistics](https://www.amazon.com/How-to-Lie-with-Statistics/dp/B01C4RPH8Q). Darrell Huff. 1954.
 
 Grow Rich Now! Napolean Hill.
 
 Who Moved My Cheese. Spencer Johnson.
 
-In Defense of Food. Michael Pollan. Relistening.
+In Defense of Food. Michael Pollan. (Relisten).
 
 [On Negotiation](https://www.amazon.com/Negotiating-Mark-H-McCormack/dp/0787112747/). Mark H. McCormack. May 1997.
 
