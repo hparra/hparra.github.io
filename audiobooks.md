@@ -8,6 +8,8 @@ The following documents the states I'm at with various audiobooks. I also includ
 
 ## Queued
 
+[Good to Great](https://www.amazon.com/Good-Great-Some-Companies-Others/dp/B003VXI5MS/). Jim Collins. July 13, 2010.
+
 [Build to Last](https://www.amazon.com/Built-Last-Successful-Visionary-2004-11-02/dp/B01JXUSWRA). Jim Collins. Authors comment that _Good to Great_ should be read/heard first.
 
 ## Completed
