@@ -18,7 +18,7 @@ The following documents the states I'm at with various audiobooks. I also includ
 
 [Rework](https://www.amazon.com/Rework/dp/B003BLGD06/). Jason Fried and David Heinemeier Hansson. March 2010.
 
-[The 4-Hour Workweek (Expanded and Updated)](https://www.amazon.com/4-Hour-Workweek-Anywhere-Expanded-Updated/dp/B0031KN6T8). Timothy Ferris. December 2009.
+[The 4-Hour Workweek (Expanded and Updated)](https://www.amazon.com/4-Hour-Workweek-Anywhere-Expanded-Updated/dp/B0031KN6T8). Timothy Ferris. December 2009. Not so much a wake-up call as a hard-hitting reminder. Thanks Tim. 🔥
 
 [How to Win Friends and Influence People](https://www.amazon.com/Dale-Carnegies-Radio-Program-popularity/dp/956291206X). Dale Carnegie. 1937.
 
