@@ -22,7 +22,7 @@ The following documents the states I'm at with various audiobooks. I also includ
 
 [How to Win Friends and Influence People](https://www.amazon.com/Dale-Carnegies-Radio-Program-popularity/dp/956291206X). Dale Carnegie. 1937.
 
-[Soft Skills](https://www.amazon.com/Soft-Skills-Software-Developers-Manual/dp/B0158SJ3EM). John Sonmez. December 2014.
+[Soft Skills](https://www.amazon.com/Soft-Skills-Software-Developers-Manual/dp/B0158SJ3EM). John Sonmez. December 2014. The title is misleading but in a surprisingly good way. This is not a professional relationships help book - it's a lifestyle how-to. Extremely practical with suggestions that I know work from personal experience. Vast majority of book is applicable to everyone, not just software developers. Fans of Tim Ferris will enjoy this.
 
 [How To Lie With Statistics](https://www.amazon.com/How-to-Lie-with-Statistics/dp/B01C4RPH8Q). Darrell Huff. 1954.
 
