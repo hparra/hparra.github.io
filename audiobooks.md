@@ -12,6 +12,8 @@ Build to Last. Jim Collins.
 
 ## Completed
 
+[Rework](https://www.amazon.com/Rework/dp/B003BLGD06/). Jason Fried and David Heinemeier Hansson. March 2010.
+
 [The 4-Hour Workweek (Expanded and Updated)](https://www.amazon.com/4-Hour-Workweek-Anywhere-Expanded-Updated/dp/B0031KN6T8). Timothy Ferris. December 2009.
 
 [Soft Skills](https://www.amazon.com/Soft-Skills-Software-Developers-Manual/dp/B0158SJ3EM). John Sonmez. December 2014.
