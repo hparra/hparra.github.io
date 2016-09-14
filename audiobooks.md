@@ -8,7 +8,7 @@ The following documents the states I'm at with various audiobooks. I also includ
 
 ## Queued
 
-Build to Last. Jim Collins.
+[Build to Last](https://www.amazon.com/Built-Last-Successful-Visionary-2004-11-02/dp/B01JXUSWRA). Jim Collins. Authors comment that _Good to Great_ should be read/heard first.
 
 ## Completed
 
