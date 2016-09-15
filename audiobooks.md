@@ -5,8 +5,7 @@ The following documents the states I'm at with various audiobooks. I also includ
 **Legend**:
 
 - 🔥 Highly Recommended
-- ✏️ Worth deeper study via Book
-
+- ✏️ Merits Studying (notes)
 
 ## Currently Listening
 
