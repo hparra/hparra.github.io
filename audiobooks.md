@@ -9,7 +9,7 @@ The following documents the states I'm at with various audiobooks. I also includ
 
 ## Currently Listening
 
-Rich Dad, Poor Dad. Robert Kiyosaki.
+[Rich Dad, Poor Dad](https://www.amazon.com/Rich-Dad-Poor-Teach-Middle/dp/B008BUHTLE/). Robert Kiyosaki. 1997.
 
 ## Queued
 
