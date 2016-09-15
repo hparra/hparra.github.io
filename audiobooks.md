@@ -9,6 +9,7 @@ The following documents the states I'm at with various audiobooks. I also includ
 
 ## Currently Listening
 
+Rich Dad, Poor Dad. Robert Kiyosaki.
 
 ## Queued
 
