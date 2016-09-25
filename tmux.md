@@ -55,7 +55,9 @@ There are three layers of organization in _tmux_:
 - panes (splits)
 
 ## Session Interactions
+- :new<CR>  new session
 - s list sessions
+- $ name session
 
 ## Window Interactions
 
