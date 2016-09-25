@@ -73,4 +73,6 @@ Mac OS X has some problems with copying and pasting. See [Notes and workarounds 
 
 ## References
 
+[tmux cheatsheet](https://gist.github.com/henrik/1967800)
+
 [tmux man page](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/tmux.1?query=tmux&sec=1)
