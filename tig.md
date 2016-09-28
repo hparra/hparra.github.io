@@ -1,5 +1,5 @@
-tig
-===
+tig -- text-mode interface for Git
+==================================
 
 ## TIPS
 
