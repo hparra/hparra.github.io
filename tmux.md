@@ -16,7 +16,7 @@ tmux -- terminal multiplexer
 
 The default command key prefix is `C-b`. Note it conflicts with any Emacs-style bindings.
 
-- `s` list sessions
+- `s` list/switch sessions
 - `$` name session
 - `c` new window
 - `,` name window
@@ -77,3 +77,5 @@ Mac OS X has some problems with copying and pasting. See [Notes and workarounds 
 [tmux cheatsheet](https://gist.github.com/henrik/1967800)
 
 [tmux man page](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/tmux.1?query=tmux&sec=1)
+
+[tmux Tutorial - Split Terminal Windows Easily](http://lukaszwrobel.pl/blog/tmux-tutorial-split-terminal-windows-easily)
