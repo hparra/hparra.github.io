@@ -22,7 +22,8 @@ The default command key prefix is `C-b`. Note it conflicts with any Emacs-style 
 - `,` name window
 - `f` find window
 - `&` kill window
-
+- `%` split window vertically (columns)
+- `"` split window horizontally (rows)
 
 
 ## DESCRIPTION
