@@ -20,8 +20,8 @@ _/Library/LaunchDaemons/dev.dnsmasq.plist_ is the configuration of dnsmasq for `
 For a `boxen`-installed `brew`: 
 
 ```sh
-# edit config file
-sudo emacs /opt/boxen/config/dnsmasq/dnsmasq.conf
+# edit config files
+emacs /opt/boxen/config/dnsmasq/dnsmasq.conf
 
 # reload
 sudo launchctl stop dev.dnsmasq
