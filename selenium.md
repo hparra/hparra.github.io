@@ -37,3 +37,7 @@ java -jar $(cd $(dirname $0); pwd -P)/selenium-server-standalone-2.53.1.jar
 # See https://testingbot.com/support/other/tunnel
 java -jar $(cd $(dirname $0); pwd -P)/testingbot-tunnel/testingbot-tunnel.jar $TB_KEY $TB_SECRET
 ```
+
+### SauceLabs
+
+If you use `dnsmasq` make sure you DO NOT use _no-resolve_ in configuration. You muse specify the localhost as the DNS server, or else `sc` will read _/etc/resolv.conf_ directly: `sc --direct-domains --dns 127.0.0.1`
