@@ -26,3 +26,9 @@ emacs /opt/boxen/config/dnsmasq/dnsmasq.conf
 # reload
 sudo launchctl stop dev.dnsmasq
 ```
+
+## Configuring dnsmasq
+
+- http://oss.segetech.com/intra/srv/dnsmasq.conf
+- https://wiki.archlinux.org/index.php/dnsmasq
+- http://blogging.dragon.org.uk/howto-setup-dnsmasq-as-dns-dhcp/
