@@ -14,6 +14,7 @@ Web-specific caching:
 - [Caching Tutorial for Web Authors and Webmasters](https://www.mnot.net/cache_docs/)
 - [A Guide to Caching with NGINX and NGINX Plus](https://www.nginx.com/blog/nginx-caching-guide/)
 - [Caching Guide (Apache)](http://httpd.apache.org/docs/2.4/caching.html)
+- [Web Caching Basics: Terminology, HTTP Headers, and Caching Strategies](https://www.digitalocean.com/community/tutorials/web-caching-basics-terminology-http-headers-and-caching-strategies)
 
 Framework-specific caching:
 - [Django’s cache framework](https://docs.djangoproject.com/en/1.10/topics/cache/)
@@ -22,3 +23,7 @@ Framework-specific caching:
 Platform-specific:
 - [Understanding caching in Postgres - An in-depth guide](https://madusudanan.com/blog/understanding-postgres-caching-in-depth/)
 - [Caching Dependencies and Directories (Travis CI)](https://docs.travis-ci.com/user/caching/)
+- [CDN Caching](https://www.incapsula.com/cdn-guide/cdn-caching.html)
+
+Advanced:
+- [Caching for a Global Netflix](http://techblog.netflix.com/2016/03/caching-for-global-netflix.html)
