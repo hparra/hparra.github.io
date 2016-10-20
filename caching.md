@@ -13,6 +13,7 @@ Web-specific caching:
 - [Caching best practices & max-age gotchas](https://jakearchibald.com/2016/caching-best-practices/)
 - [Caching Tutorial for Web Authors and Webmasters](https://www.mnot.net/cache_docs/)
 - [A Guide to Caching with NGINX and NGINX Plus](https://www.nginx.com/blog/nginx-caching-guide/)
+  - [Cache Placement Strategies for NGINX and NGINX Plus](https://www.nginx.com/blog/cache-placement-strategies-nginx-plus/)
 - [Caching Guide (Apache)](http://httpd.apache.org/docs/2.4/caching.html)
 - [Web Caching Basics: Terminology, HTTP Headers, and Caching Strategies](https://www.digitalocean.com/community/tutorials/web-caching-basics-terminology-http-headers-and-caching-strategies)
 
