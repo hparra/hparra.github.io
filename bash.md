@@ -10,6 +10,12 @@ The Bourne-Again SHell.
 
 `lsof -n -iTCP:$PORT | grep LISTEN`: show who is listening to certain port (Mac OS X)
 
+Use `column` to print things nicely:
+
+## NOTES
+
+[shocco.sh](http://rtomayko.github.io/shocco/) is a documentation for Bash written in a literate programming style.
+
 ## REFERENCES
 
 - `man bash` or [bash](http://manpages.debian.org/cgi-bin/man.cgi?query=bash&apropos=0&sektion=0&manpath=Debian+8+jessie&format=html&locale=en)
