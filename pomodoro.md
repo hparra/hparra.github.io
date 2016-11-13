@@ -6,7 +6,7 @@ HGPA desktop version:
 2. Set timer for 25 minutes
 3. Work on the task until the timer rings
 4. Make note in calendar event
-5. If < 4 events in succession:
+5. If < 4 events in succession (Pomodoro Set):
    - then take short break (5 minutes)
    - else take long break (15–30 minutes)
 6. Goto Step 1
@@ -14,6 +14,7 @@ HGPA desktop version:
 Tips:
 - If a distraction pops into your head, write it down, but immediately get back on task.
 - Tell people to return in x minutes
+- Do not email in first set!
 
 ## REFERENCES
 
