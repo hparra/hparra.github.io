@@ -31,14 +31,37 @@ article {
   max-width: @width;
 }
 
+// This styling was taking from Github.com
 code {
   font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+  
+  &::before, &::after {
+    letter-spacing: -0.2em;
+    content: "\00a0";
+  }
 }
 
 pre code {
   // We merge the hljs here
   // <code> outputed by `marked` does have this class
   .hljs;
+  
+  &::before, &::after {
+    content: "";
+  }
+}
+
+ul, ol {
+  li {
+    margin: 0.5em 0;
+  }
 }
 
 .gliki-table {
