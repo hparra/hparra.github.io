@@ -22,6 +22,7 @@
     "gulp": "^3.9.1",
     "gulp-less": "^3.3.0",
     "handlebars": "^4.0.6",
+    "highlight.js": "^9.8.0",
     "marked": "^0.3.6"
   },
   "devDependencies": {
