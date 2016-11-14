@@ -36,43 +36,26 @@ function gliki(options) {
   GLIKI_DIR = path.join(WORKING_DIR, GLIKI_DIRNAME) // FIXME
   BUILD_DIR = path.join(GLIKI_DIR, 'build')
   
-  // generate file candidates
-  // assumes all files are flat in working dir
-  const files = child_process.execSync(`
-      git ls-files \
-        | grep .md \
-        | while read filename; do
-            modified_on=$(git log -1 --format="%cd" --date=short -- $filename)
-            created_on=$(git log --diff-filter=A --format="%cd" --date=short -- $filename)
-            echo "$modified_on,$created_on,$filename"
-          done \
-        | sort -r
-      `, { encoding: 'utf-8' })
-    .trim()
-    .split('\n')
-    .map(line => {
-      return ((fields) => {
-        return {
-          modified_on: fields[0],
-          created_on:  fields[1],
-          filename:    fields[2]
-        }
-      })(line.split(','))
-    })  
+  const files = readGlikiFiles()
 
   // create build directory
   child_process.execSync(`mkdir -p ${BUILD_DIR}`)
 
-  return readFile(path.join(GLIKI_DIR, 'hbs/markdown.hbs'))
-    .then(hbs => Handlebars.compile(hbs))
-    .then(template => {
+  return compileHandlebarsMap(path.join(GLIKI_DIR, 'hbs'))
+    .then(templateMap => {
       return Promise.all(files.map(file => readFile(file.filename)
                                               .then(md => Object.assign({ files: files }, file, { 
                                                 markdown: marked(md, { 
                                                   renderer: glikiRenderer 
                                                 }) 
                                               }))
-                                              .then(context => template(context))
+                                              .then(context => {
+                                                // look for individual templates or use default one
+                                                const template = templateMap[file.filekey]
+                                                  ? templateMap[file.filekey]
+                                                  : templateMap['markdown']
+                                                return template(context)
+                                              })
                                               .then(html => {
                                                 const outfile = file.filename === 'README.md'
                                                   ? 'index.html'
@@ -87,8 +70,68 @@ function gliki(options) {
 // Helpers
 //
 
+/**
+ * Return a hashmap (object) of compiled Handlebars templates.
+ *
+ */
+function compileHandlebarsMap(dirpath) {
+  return readdir(dirpath)
+    .then(filenames => Promise.all(filenames.map(filename => 
+      readFile(path.join(dirpath, filename))
+        .then(hbs => ({
+          key:      path.basename(filename).replace('.hbs', ''),
+          template: Handlebars.compile(hbs)
+        }))))
+      .then(tmpls => tmpls.reduce((prev, curr) => {
+        prev[curr.key] = curr.template
+        return prev
+      }, {})))
+}
 
-
+function readGlikiFiles() {
+  // generate file candidates
+  // assumes all files are flat in working dir
+  // See https://git-scm.com/docs/pretty-formats
+  const files = child_process.execSync(`
+      git ls-files \
+        | grep .md \
+        | while read filename; do
+            modified_by=$(git log -1 --format="%ad,%an,%ae,%H" --date=short -- $filename)
+            created_by=$(git log --diff-filter=A --format="%ad,%an,%ae,%H" --date=short -- $filename)
+            echo "$modified_by,$created_by,$filename"
+          done \
+        | sort -r
+      `, { encoding: 'utf-8' })
+    .trim()
+    .split('\n')
+    .map(line => {
+      return ((fields) => {
+        // Something like github's schema -- https://developer.github.com/v3/git/commits/
+        return {
+          modified_by: {
+            sha: fields[3],
+            author: {
+              date:  fields[0],
+              name:  fields[1],
+              email: fields[2],
+            }
+          },
+          created_by: {
+            sha: fields[7],
+            author: {
+              date:  fields[4],
+              name:  fields[5],
+              email: fields[6],
+            }
+          },
+          filename: fields[8],
+          filekey:  fields[8].replace('.md', '')
+        }
+      })(line.split(','))
+    })
+  
+  return files
+}
 
 /**
  * Promise-version of fs.readdir (kinda)

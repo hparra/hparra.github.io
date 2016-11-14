@@ -4,13 +4,15 @@
   "description": "HGPA's Notes",
   "main": "index.js",
   "scripts": {
+    "start": "",
+    "build": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hparra/hgpa.git"
   },
-  "author": "",
+  "author": "Hector Guillermo Parra Alvarez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hparra/hgpa/issues"

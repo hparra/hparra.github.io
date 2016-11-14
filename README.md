@@ -1,26 +1,12 @@
-# HGPA's Public Notes
+# Hector Guillermo Parra Alvarez
 
-This repo is a collection of personal notes on various subjects.
-In some cases they were transformed from handwritten notes.
+January 17, 1982 &dash; . I am a programmer and a citizen of Earth.
 
-## Table of Contents
+## Presence
 
-These groupings may be incomplete.
-Please explore the repository itself.
-
-### Software
-
-- [tmux](tmux.md)
-- [bash](bash.md)
-- [emacs](emacs.md)
-- [dnsmasq](dnsmasq.md)
-
-### Diving
-
-- [Rescue Diver](Rescue-Diver.md)
-- [Emergency First Responder](Emergency-First-Response.md)
-- [Deep Diver](Deep-Diver.md)
-- [Night Diver](Night-Diver.md)
-- [Underwater Navigator](Underwater-Navigator.md)
-- [Search and Recovery](Search-and-Recovery.md)
-- [Wreck Diver](Wreck-Diver.md)
+|||
+| -------- | --- |
+| Web      | [hgpa.tv](http://hgpa.tv)
+| GitHub   | [hparra](https://github.com/hparra)
+| Twitter  | [HGPAtv](https://twitter.com/HGPAtv) |
+| LinkedIn | [hparra](https://www.linkedin.com/in/hparra) |

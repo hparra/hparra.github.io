@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HGPA</title>
+    <meta name="description" content="something">
+    <link rel="stylesheet" href="/css/hgpa.css" media="screen">
+  </head>
+  <body>
+    <header><a href="/">HGPA</a></header>
+
+    <article>
+      {{{markdown}}}
+    </article>
+
+    <article>
+      <h2>Notes</h2>
+      <table class="gliki-table">
+        <tr>
+            <th>Subject</th>
+            <th>Last Modified</th>
+            <th>Created</th>
+        </tr>
+        {{#each files}}
+        <tr>
+          <td><a href="{{filekey}}.html">{{filekey}}</a></td>
+          <td>{{modified_by.author.date}}</td>
+          <td>{{created_by.author.date}}</td>
+        </tr>
+        {{/each}}
+      </table>
+    </article>
+  </body>
+</html>

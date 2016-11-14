@@ -2,15 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title> | HGPA</title>
+    <title>{{filekey}} | HGPA</title>
     <meta name="description" content="something">
     <link rel="stylesheet" href="/css/hgpa.css" media="screen">
   </head>
   <body>
+    <header><a href="/">HGPA</a></header>
     <article>{{{ markdown }}}</article>
     <div class="gliki-metadata">
-      Modified on: {{modified_on}}<br>
-      Created on: {{created_on}}
+      Modified: {{modified_by.author.date}} (<a href="https://github.com/hparra/hgpa/commit/{{modified_by.sha}}">{{modified_by.sha}}</a>)<br>
+      Created: {{created_by.author.date}} (<a href="https://github.com/hparra/hgpa/commit/{{created_by.sha}}">{{created_by.sha}}</a>)
     </div>
   </body>
 </html>
