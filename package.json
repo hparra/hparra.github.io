@@ -4,7 +4,7 @@
   "description": "HGPA's Notes",
   "main": "index.js",
   "scripts": {
-    "start": "",
+    "start": "gulp",
     "build": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

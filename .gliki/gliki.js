@@ -37,6 +37,7 @@ function gliki(options) {
   BUILD_DIR = path.join(GLIKI_DIR, 'build')
   
   const files = readGlikiFiles()
+  const filesWithoutREADME = files.filter(file => file.filename != 'README.md') // FIXME: this is janky
 
   // create build directory
   child_process.execSync(`mkdir -p ${BUILD_DIR}`)
@@ -44,7 +45,7 @@ function gliki(options) {
   return compileHandlebarsMap(path.join(GLIKI_DIR, 'hbs'))
     .then(templateMap => {
       return Promise.all(files.map(file => readFile(file.filename)
-                                              .then(md => Object.assign({ files: files }, file, { 
+                                              .then(md => Object.assign({ files: filesWithoutREADME }, file, { 
                                                 markdown: marked(md, { 
                                                   renderer: glikiRenderer 
                                                 }) 
@@ -53,7 +54,7 @@ function gliki(options) {
                                                 // look for individual templates or use default one
                                                 const template = templateMap[file.filekey]
                                                   ? templateMap[file.filekey]
-                                                  : templateMap['markdown']
+                                                  : templateMap['__default__']
                                                 return template(context)
                                               })
                                               .then(html => {

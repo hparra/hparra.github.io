@@ -30,5 +30,10 @@
         {{/each}}
       </table>
     </article>
+    
+    <div class="gliki-metadata">
+      Modified: {{modified_by.author.date}} (<a href="https://github.com/hparra/hgpa/commit/{{modified_by.sha}}">{{modified_by.sha}}</a>)<br>
+      Created: {{created_by.author.date}} (<a href="https://github.com/hparra/hgpa/commit/{{created_by.sha}}">{{created_by.sha}}</a>)
+    </div>
   </body>
 </html>
