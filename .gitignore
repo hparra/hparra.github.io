@@ -21,3 +21,6 @@ private
 
 # Node.js
 node_modules
+
+# gliki
+.gliki/build
