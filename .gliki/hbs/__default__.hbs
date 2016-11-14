@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>{{filekey}} | HGPA</title>
-    <meta name="description" content="something">
+    <meta name="description" content="HGPA's notes on {{filekey}}">
     <link rel="stylesheet" href="/css/hgpa.css" media="screen">
   </head>
   <body>
     <header><a href="/">HGPA</a></header>
     <article>{{{ markdown }}}</article>
     <div class="gliki-metadata">
+      Filename:  {{filename}}<br>
       Modified: {{modified_by.author.date}} (<a href="https://github.com/hparra/hgpa/commit/{{modified_by.sha}}">{{modified_by.sha}}</a>)<br>
       Created: {{created_by.author.date}} (<a href="https://github.com/hparra/hgpa/commit/{{created_by.sha}}">{{created_by.sha}}</a>)
     </div>

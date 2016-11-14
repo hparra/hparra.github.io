@@ -36,6 +36,13 @@ function gliki(options) {
   GLIKI_DIR = path.join(WORKING_DIR, GLIKI_DIRNAME) // FIXME
   BUILD_DIR = path.join(GLIKI_DIR, 'build')
   
+  const markedOptions = {
+    renderer: glikiRenderer,
+    gfm:      true,
+    tables:   true,
+    breaks:   false,
+  }
+  
   const files = readGlikiFiles()
   const filesWithoutREADME = files.filter(file => file.filename != 'README.md') // FIXME: this is janky
 
@@ -46,9 +53,7 @@ function gliki(options) {
     .then(templateMap => {
       return Promise.all(files.map(file => readFile(file.filename)
                                               .then(md => Object.assign({ files: filesWithoutREADME }, file, { 
-                                                markdown: marked(md, { 
-                                                  renderer: glikiRenderer 
-                                                }) 
+                                                markdown: marked(md, markedOptions) 
                                               }))
                                               .then(context => {
                                                 // look for individual templates or use default one

@@ -1,17 +1,25 @@
 
 @import (less) "github.css";
 
+// standard width
+@width: 560px;
+
 body {
-  font-family: 'Arial'
+  font-family: 'Arial';
+  font-size: 16px;
 }
 
 header {
   margin: 40px auto 20px auto;
-  max-width: 800px;
+  max-width: @width;
 }
 
 h1 {
-  font-size: 28px
+  font-size: 28px;
+  
+  img {
+    vertical-align: top;
+  }
 }
 
 h2 {
@@ -20,20 +28,52 @@ h2 {
 
 article {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: @width;
 }
 
 .gliki-table {
   width: 100%;
+  
+  th,td {
+    text-align: right;
+  }
+  
+  th:nth-of-type(1),
+  td:nth-of-type(1) {
+    text-align: left;
+  }
 }
 
 .gliki-metadata {
   margin: 40px auto 20px;
   padding: 20px 0;
-  max-width: 800px;
+  max-width: @width;
   border-top: 1px solid #dddddd;
   color: #dddddd;
   a {
     color: #dddddd;
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    font-size: 12px;
+  }
+  
+  h1 {
+    font-size: 20px
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+  
+  header {
+    margin: 20px auto 10px auto;
+  }
+  
+  .gliki-metadata {
+    margin: 20px auto 10px;
+    padding: 10px 0;
   }
 }
