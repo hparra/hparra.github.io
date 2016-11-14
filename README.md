@@ -1,4 +1,4 @@
-# Hector Guillermo Parra Alvarez ![HGPA](https://files.slack.com/files-pri/T026EN613-F028XKNH0/not-impressed3.gif)
+# Hector Guillermo Parra Alvarez ![HGPA](media/not-impressed3.gif)
 
 January 17, 1982 &dash;
 

@@ -9,9 +9,10 @@ const gliki = require('./.gliki/gliki')
 
 gulp.task('default', ['build', 'watch', 'webserver'])
 
-gulp.task('build', ['gliki', 'less'])
+gulp.task('build', ['media', 'gliki', 'less'])
 
 gulp.task('watch', () => {
+  gulp.watch('media/**/*', ['media'])
   gulp.watch(['*.md', '.gliki/hbs/*.hbs'], ['gliki'])
   gulp.watch('.gliki/less/*.less', ['less'])
 })
@@ -22,6 +23,11 @@ gulp.task('webserver', () => {
       port: 4472, // HGPA
       livereload: true
     }))
+})
+
+gulp.task('media', () => {
+  gulp.src('media/**/*')
+    .pipe(gulp.dest('.gliki/build/media/'))
 })
 
 gulp.task('gliki', () => {
