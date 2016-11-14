@@ -31,6 +31,16 @@ article {
   max-width: @width;
 }
 
+code {
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+pre code {
+  // We merge the hljs here
+  // <code> outputed by `marked` does have this class
+  .hljs;
+}
+
 .gliki-table {
   width: 100%;
   
