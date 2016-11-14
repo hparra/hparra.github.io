@@ -4,6 +4,9 @@ language: node_js
 # https://docs.travis-ci.com/user/languages/javascript-with-nodejs
 node_js:
     - "4"
+    
+git:
+  depth: 9999999
 
 # https://docs.travis-ci.com/user/notifications/
 notifications:
