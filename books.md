@@ -17,6 +17,10 @@ I document [audiobooks](audiobooks.md) separately.
 
 _(TODO: There are many of these)_
 
+## Acquisition Required
+
+[Overcoming Gravity: A Systematic Approach to Gymnastics and Bodyweight Strength](https://www.amazon.com/Overcoming-Gravity-Systematic-Gymnastics-Bodyweight/dp/1467933120/). Steven Low. 2011-11-12.
+
 ## Completed
 
 [Cracking the PM Interview: How to Land a Product Manager Job in Technology](https://www.amazon.com/Cracking-PM-Interview-Product-Technology/dp/0984782818). Gayle Laakmann McDowell & Jackie Bavaro. 2014-03-04. See my [notes on "Cracking the PM Interview"](cracking-pm-interview-2014.md).
