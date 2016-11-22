@@ -18,29 +18,41 @@ I routinely return here to complete entries and their summaries.
 
 ## Currently Listening
 
-Genome. Matt Ridley.
+[So Good They Can't Ignore You](https://www.amazon.com/Good-They-Cant-Ignore-You/dp/1455509124). Cal Newport.
+
+[Genome](https://www.amazon.com/Genome-Autobiography-Species-23-Chapters/dp/B004JNNTT8/). Matt Ridley. 1999.
 
 ## Queued
 
-Communicate what you Think. Earl Nightingale.
+The 4-Hour Body. Tim Ferris.
 
-## Acquisition Required
+Brain Rules. John Medina.
+
+The War of Art. Steven Pressfield. 2002.
+
+## On Hold
+
+[The Art of Learning](https://www.amazon.com/Art-Learning-Journey-Optimal-Performance/dp/0743277465/). Josh Waitzkin. 2014-04-01. Great autobiography but not what I thought I was going to get.
+
+[Build to Last](https://www.amazon.com/Built-Last-Successful-Visionary-2004-11-02/dp/B01JXUSWRA). Jim Collins. Authors comment that _Good to Great_ should be read/heard first. I started this book but feel I may not truly appreciate it yet.
+
+## Acquired
+
+- Work Rules! Laszlo Bock.
+- Money: Master the Game. Tony Robbins.
+
+## Selected
 
 - [Getting to Yes](https://www.amazon.com/Getting-Yes-Negotiating-Agreement-Without). Roger Fisher & William Ury.
-- Peopleware (Book only?)
-- Only the Paranoid Survive. Andrew S. Grove. (Book only?)
+- The Effective Executive
 
-## Investigation Needed
+## Interested
 
-- [So Good They Can't Ignore You](https://www.amazon.com/Good-They-Cant-Ignore-You/dp/1455509124). Mentioned in "Soft Skills".
 - [Antifragile](https://www.amazon.com/Antifragile-Things-That-Disorder-Incerto/dp/0812979680). Mentioned in "Soft Skills".
 - [It's Not Just Who You Know](https://www.amazon.com/Its-Not-Just-Know-Relationships-ebook/dp/B0036S4BEE)
 - [The 21 Irrefutable Laws of Leadership](https://www.amazon.com/21-Irrefutable-Laws-Leadership-Follow-ebook/dp/B00ETK5N5O)
 - [The Alchemy of Growth](https://www.amazon.com/Alchemy-Growth-Practical-Insights-Enterprise/dp/0738203092)
-
-## On Hold
-
-[Build to Last](https://www.amazon.com/Built-Last-Successful-Visionary-2004-11-02/dp/B01JXUSWRA). Jim Collins. Authors comment that _Good to Great_ should be read/heard first. I started this book but feel I may not truly appreciate it yet.
+- Psycho-Cybernetics
 
 ## Dropped
 
@@ -48,6 +60,8 @@ Communicate what you Think. Earl Nightingale.
 - How to Prosper in Hard Times. Too many appeals to higher authority.
 
 ## Completed
+
+[Communicate what you Think](https://www.amazon.com/Communicate-What-Think-Earl-Nightingale/dp/B002NNOMQK). Earl Nightingale. 
 
 [The 7 Habits of Highly Effective People](https://www.amazon.com/Habits-Highly-Effective-People-Interactive-ebook/dp/B01069X4H0/). Stephen R. Covey. ✏️
 
