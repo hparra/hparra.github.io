@@ -13,110 +13,119 @@ I routinely return here to complete entries and their summaries.
 
 **Legend**:
 
-- 🔥 Highly Recommended
+- 🔥 May Be Life Altering
+- 👍 Recommended
 - ✏️ Merits Studying (notes)
 
 ## Currently Listening
 
-[So Good They Can't Ignore You](https://www.amazon.com/Good-They-Cant-Ignore-You/dp/1455509124). Cal Newport.
+[Brain Rules: 12 Principles for Surviving and Thriving at Work, Home, and School](http://amzn.to/2guo7qZ). John Medina. 2014-04-22.
 
-[Genome](https://www.amazon.com/Genome-Autobiography-Species-23-Chapters/dp/B004JNNTT8/). Matt Ridley. 1999.
+[Genome](http://amzn.to/2gudLDE). Matt Ridley. 1999.
 
 ## Queued
 
-The 4-Hour Body. Tim Ferris.
-
-Brain Rules. John Medina.
-
-The War of Art. Steven Pressfield. 2002.
+[The War of Art](http://amzn.to/2g5RaAF). Steven Pressfield. 2002.
 
 ## On Hold
 
-[The Art of Learning](https://www.amazon.com/Art-Learning-Journey-Optimal-Performance/dp/0743277465/). Josh Waitzkin. 2014-04-01. Great autobiography but not what I thought I was going to get.
+[The Art of Learning](http://amzn.to/2guoWjq). Josh Waitzkin. 2014-04-01. Great autobiography but not what I thought I was going to get.
 
-[Build to Last](https://www.amazon.com/Built-Last-Successful-Visionary-2004-11-02/dp/B01JXUSWRA). Jim Collins. Authors comment that _Good to Great_ should be read/heard first. I started this book but feel I may not truly appreciate it yet.
+[Build to Last](http://amzn.to/2fAPdbg). Jim Collins. Authors comment that _Good to Great_ should be read/heard first. I started this book but feel I may not truly appreciate it yet.
 
 ## Acquired
 
-- Work Rules! Laszlo Bock.
-- Money: Master the Game. Tony Robbins.
+[Work Rules!](http://amzn.to/2fnb0YM). Laszlo Bock. 2015.
 
-## Selected
-
-- [Getting to Yes](https://www.amazon.com/Getting-Yes-Negotiating-Agreement-Without). Roger Fisher & William Ury.
-- The Effective Executive
+[MONEY Master the Game: 7 Simple Steps to Financial Freedom](http://amzn.to/2gLB9ko). Tony Robbins. 2014.
 
 ## Interested
 
-- [Antifragile](https://www.amazon.com/Antifragile-Things-That-Disorder-Incerto/dp/0812979680). Mentioned in "Soft Skills".
-- [It's Not Just Who You Know](https://www.amazon.com/Its-Not-Just-Know-Relationships-ebook/dp/B0036S4BEE)
-- [The 21 Irrefutable Laws of Leadership](https://www.amazon.com/21-Irrefutable-Laws-Leadership-Follow-ebook/dp/B00ETK5N5O)
-- [The Alchemy of Growth](https://www.amazon.com/Alchemy-Growth-Practical-Insights-Enterprise/dp/0738203092)
-- Psycho-Cybernetics
+[A Mind for Numbers: How to Excel at Math and Science (Even If You Flunked Algebra)](http://amzn.to/2fAUcIV). Barbara Oakley. 2014-07-31.
+
+[Getting to Yes](http://amzn.to/2gugSiA). Roger Fisher & William Ury. 2011.
+
+[The Effective Executive](http://amzn.to/2guluFo). Peter Drucker. 2006.
+
+[Antifragile](http://amzn.to/2guooXa). Nassim Nicholas Taleb. 2012. Mentioned in _Soft Skills_.
+
+[It's Not Just Who You Know](http://amzn.to/2fASF5C). Tommy Spaulding. 2010.
+
+[The 21 Irrefutable Laws of Leadership](http://amzn.to/2fANoeJ). John C. Maxwell. 1998.
 
 ## Dropped
 
-- The Tao of Seneca. Was not "feeling" narrator. Perhaps better to be read.
-- How to Prosper in Hard Times. Too many appeals to higher authority.
+[The Tao of Seneca](http://amzn.to/2guoMIU). Was not "feeling" narrator. Perhaps better to be read.
 
 ## Completed
 
-[Communicate what you Think](https://www.amazon.com/Communicate-What-Think-Earl-Nightingale/dp/B002NNOMQK). Earl Nightingale. 
+[The 4-Hour Body](http://amzn.to/2fnfPRL). Tim Ferris. 2010.
 
-[The 7 Habits of Highly Effective People](https://www.amazon.com/Habits-Highly-Effective-People-Interactive-ebook/dp/B01069X4H0/). Stephen R. Covey. ✏️
+[So Good They Can't Ignore You](http://amzn.to/2gLuG9f). Cal Newport. 2012-09-18.
+ 👍 🔥
 
-[Super Rich](https://www.amazon.com/Super-Rich/dp/B004HYCLSY/). Russel Simmons. 2010. Narrated by Black Ice, whose voice expresses conviction well. The topics in this book by "Uncle Rush" may surprise you: spirituality, meditation, veganism, etc. I liked it and encouraged me to take up mediation again.
+[Communicate what you Think](http://amzn.to/2guj8Xf). Earl Nightingale. 👍
 
-[The Essence of Success](https://www.amazon.com/The-Essence-of-Success/dp/B00OH75IE0/). Earl Nightingale. 1989. Essentially the best of Earl Nightingale with volumes grouped together by topic spanning his entire collection of recordings. It's great to hear the changes in his voice and personality as he got older. Highly recommended.
+[The 7 Habits of Highly Effective People](http://amzn.to/2fn7oGe). Stephen R. Covey. 2004.✏️
 
-[Good to Great](https://www.amazon.com/Good-Great-Some-Companies-Others/dp/B003VXI5MS/). Jim Collins. July 13, 2010.
+[Super Rich](http://amzn.to/2guhtkz). Russel Simmons. 2010.
+Narrated by Black Ice, whose voice expresses conviction well. The topics in this book by "Uncle Rush" may surprise you: spirituality, meditation, veganism, etc. I liked it and encouraged me to take up mediation again.
 
-[Rich Dad, Poor Dad](https://www.amazon.com/Rich-Dad-Poor-Teach-Middle/dp/B008BUHTLE/). Robert Kiyosaki. 1997.
+[The Essence of Success](http://amzn.to/2gupWnB). Earl Nightingale. 1989.
+Essentially the best of Earl Nightingale with volumes grouped together by topic spanning his entire collection of recordings. It's great to hear the changes in his voice and personality as he got older. 👍
 
-[The Lean Startup](https://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/B005MM7HY8). Eric Ries. September 2011. 🔥 ✏️
+[Good to Great](http://amzn.to/2gumbPd). Jim Collins. July 13, 2010.
 
-[Leaders Eat Last: Why Some Teams Pull Together and Others Don't](https://www.amazon.com/Leaders-Eat-Last-Together-Others/dp/B00HQ3K34M/). Simon Sinek. January 7, 2014. Fantastic book that unexpectedly touched upon my interests in neurochemistry. Recommended.
+[Rich Dad, Poor Dad](http://amzn.to/2g5Mwm7). Robert Kiyosaki. 1997.
 
-[Rework](https://www.amazon.com/Rework/dp/B003BLGD06/). Jason Fried and David Heinemeier Hansson. March 2010. Short and to the point which is part of their philosophy.
+[The Lean Startup](http://amzn.to/2gLzxr0). Eric Ries. 2011-09. Anyone starting a business should read this book. 👍 ✏️
 
-[The 4-Hour Workweek (Expanded and Updated)](https://www.amazon.com/4-Hour-Workweek-Anywhere-Expanded-Updated/dp/B0031KN6T8). Timothy Ferris. December 2009. Not so much a wake-up call as a hard-hitting reminder. Thanks Tim. 🔥 ✏️
+[Leaders Eat Last: Why Some Teams Pull Together and Others Don't](http://amzn.to/2guiPYU). Simon Sinek. 2014-01-07.
+Fantastic book that unexpectedly touched upon my interests in neurochemistry. 👍
 
-[How to Win Friends and Influence People](https://www.amazon.com/Dale-Carnegies-Radio-Program-popularity/dp/956291206X). Dale Carnegie. 1937. Classic that deserves study and continued practice. I enjoyed this narrator. ✏️
+[Rework](http://amzn.to/2guoyBK). Jason Fried and David Heinemeier Hansson. 2010-03. Short and to the point which is part of their philosophy. 👍
 
-[Soft Skills](https://www.amazon.com/Soft-Skills-Software-Developers-Manual/dp/B0158SJ3EM). John Sonmez. December 2014. The title is misleading but in a surprisingly good way. This is not a professional inter-personal relationship help book - it's a condensed career and lifestyle how-to. Extremely practical with many suggestions that I know work from personal experience. Vast majority of book is applicable to everyone, not just software developers. Fans of Tim Ferris may enjoy this. ✏️
+[The 4-Hour Workweek (Expanded and Updated)](http://amzn.to/2fALgUg). Timothy Ferris. 2009-12. Not so much a wake-up call as a hard-hitting reminder. Thanks Tim. 🔥 ✏️
 
-[How To Lie With Statistics](https://www.amazon.com/How-to-Lie-with-Statistics/dp/B01C4RPH8Q). Darrell Huff. 1954.
+[How to Win Friends and Influence People](http://amzn.to/2gujutj). Dale Carnegie. 1937. Classic that deserves study and continued practice. I enjoyed this narrator. 👍 ✏️
 
-Grow Rich Now! Napolean Hill.
+[Soft Skills](http://amzn.to/2gumcTb). John Sonmez. 2014-12.
+The title is misleading but in a surprisingly good way. This is not a professional inter-personal relationship help book - it's a condensed career and lifestyle how-to. Extremely practical with many suggestions that I know work from personal experience. Vast majority of book is applicable to everyone, not just software developers. Fans of Tim Ferris may enjoy this. 👍 ✏️
 
-Who Moved My Cheese? Spencer Johnson. Short but important didactic story. Recommended.
+[How To Lie With Statistics](http://amzn.to/2guioRX). Darrell Huff. 1954.
 
-In Defense of Food. Michael Pollan. (Relisten).
+Grow Rich Now! Napolean Hill. This was a recording of one of his seminars.
 
-[On Negotiating](https://www.amazon.com/Negotiating-Mark-H-McCormack/dp/0787112747/). Mark H. McCormack. May 1997. ✏️
+[Who Moved My Cheese?](http://amzn.to/2gLB5kr). Spencer Johnson. 1998-09-08. Short but important didactic story regarding change. 👍
 
-[How Champions Think](https://www.amazon.com/How-Champions-Think-Sports-Life/dp/1476788642/). Bob Rotella. May 2016. _Audiobook completed August 2016_.
+[In Defense of Food](http://amzn.to/2g5W8Nx). Michael Pollan. 2009-04-28. 👍
 
-The One Minute Networker. Bryan Thayer.
+[On Negotiating](http://amzn.to/2fn7vlm). Mark H. McCormack. 1997-05. ✏️
 
-The One Minute Manager. Ken Blanchard & Spencer Johnson.
+[How Champions Think](http://amzn.to/2guks92). Bob Rotella. 2016-05. 👍
 
-As a Man Thinketh (Earl Nightingale Edit). Originally by James Allen. This recording introduced me to both James Allen and Earl Nightingale. Listening to this was a life-altering event. I have re-listened to it dozens of times and continue to do so every few weeks. I give it my absolute highest recommendation. 🔥🔥🔥
+[The One Minute Networker](http://amzn.to/2g5LqXh). Bryan Thayer. 2005-11-01.
+Enthusiastic narrator. Enjoyable. 👍
 
-The Innovators Dilemma. Clayton M. Christensen.
+[The One Minute Manager](http://amzn.to/2g5JhuV). Ken Blanchard & Spencer Johnson. 2015-05-05.
 
-[The Five Dysfunctions of a Team](https://www.amazon.com/Five-Dysfunctions-Team-Leadership-Fable/dp/0787960756/). Patrick Lencioni. April 2002. _Audiobook completed July 2016_.
+As a Man Thinketh (Earl Nightingale Edit). Originally by James Allen. This recording introduced me to both James Allen and Earl Nightingale. Listening to this was a life-altering event. I have re-listened to it dozens of times and continue to do so every few weeks. I give it my absolute highest recommendation. 👍👍👍 🔥🔥🔥
 
-The Hard Thing About Hard Things. Ben Horowitz.
+[The Innovator’s Dilemma: When New Technologies Cause Great Firms to Fail](http://amzn.to/2gukQaW). Clayton M. Christensen. 2011-10-04.
 
-[How Google Works](https://www.amazon.com/How-Google-Works-Eric-Schmidt/dp/1455582344). Eric Schmidt & Jonathan Rosenberg. September 2014. _Audiobook completed June 2016_.
+[The Five Dysfunctions of a Team](http://amzn.to/2guhVM6). Patrick Lencioni. 2002-04. 👍
 
-High Output Management. Andrew S. Grove. ✏️
+[The Hard Thing About Hard Things](http://amzn.to/2g5URGa). Ben Horowitz. 2014-03-04. 👍
 
-Mastery. Robert Greene. Despite the popularity of _The 48 Laws of Power_ I consider this to be his best work. It encouraged me to begin a rigorous self-apprenticeship, of which these audiobooks are a part of. I only wish I heard something like this 20 years ago. 🔥🔥 ✏️
+[How Google Works](http://amzn.to/2guktNV). Eric Schmidt & Jonathan Rosenberg. 2014-09-23.
 
-The 33 Strategies of War. Robert Greene. ✏️
+[High Output Management](https://github.com/zshannon/high-output-management). Andrew S. Grove. 1983. This is an audio program based on the book. 👍
 
-The Art of Seduction. Robert Greene. ✏️
+[Mastery](http://amzn.to/2gulSE4). Robert Greene. 2013-10-29.
+Despite the popularity of _The 48 Laws of Power_ I consider this to be his best work. It encouraged me to begin a rigorous self-apprenticeship, of which these audiobooks are a part of. I only wish I heard something like this 20 years ago. 👍 ✏️
 
-48 Laws of Power. Robert Greene. ✏️
+[The 33 Strategies of War](http://amzn.to/2gug5hC). Robert Greene. 2007-12-14. ✏️
+
+[The Art of Seduction](http://amzn.to/2gug0uk). Robert Greene. 2004-04-01. ✏️
+
+[The 48 Laws of Power](http://amzn.to/2g5P9V7). Robert Greene. 2000-09-01. 👍 ✏️
