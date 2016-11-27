@@ -12,11 +12,13 @@ HGPA desktop version:
 6. Goto Step 1
 
 Tips:
+- Do NOT focus on the task, focus on the time.
 - If a distraction pops into your head, write it down, but immediately get back on task.
 - Tell people to return in x minutes
 - Do not email in first set!
 
 ## REFERENCES
 
-- http://pomodorotechnique.com/
-- https://en.wikipedia.org/wiki/Pomodoro_Technique
+[Pomodoro Technique](http://pomodorotechnique.com/).
+
+[Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique). Wikipedia.
