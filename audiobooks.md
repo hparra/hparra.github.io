@@ -19,25 +19,20 @@ I routinely return here to complete entries and their summaries.
 
 ## Currently Listening
 
-[Brain Rules: 12 Principles for Surviving and Thriving at Work, Home, and School](http://amzn.to/2guo7qZ). John Medina. 2014-04-22.
+[MONEY Master the Game: 7 Simple Steps to Financial Freedom](http://amzn.to/2gLB9ko). Tony Robbins. 2014.
 
 [Genome](http://amzn.to/2gudLDE). Matt Ridley. 1999.
 
 ## Queued
 
-[The War of Art](http://amzn.to/2g5RaAF). Steven Pressfield. 2002.
 
 ## On Hold
-
-[The Art of Learning](http://amzn.to/2guoWjq). Josh Waitzkin. 2014-04-01. Great autobiography but not what I thought I was going to get.
 
 [Build to Last](http://amzn.to/2fAPdbg). Jim Collins. Authors comment that _Good to Great_ should be read/heard first. I started this book but feel I may not truly appreciate it yet.
 
 ## Acquired
 
-[Work Rules!](http://amzn.to/2fnb0YM). Laszlo Bock. 2015.
-
-[MONEY Master the Game: 7 Simple Steps to Financial Freedom](http://amzn.to/2gLB9ko). Tony Robbins. 2014.
+[Antifragile](http://amzn.to/2guooXa). Nassim Nicholas Taleb. 2012. Mentioned in _Soft Skills_.
 
 ## Interested
 
@@ -46,8 +41,6 @@ I routinely return here to complete entries and their summaries.
 [Getting to Yes](http://amzn.to/2gugSiA). Roger Fisher & William Ury. 2011.
 
 [The Effective Executive](http://amzn.to/2guluFo). Peter Drucker. 2006.
-
-[Antifragile](http://amzn.to/2guooXa). Nassim Nicholas Taleb. 2012. Mentioned in _Soft Skills_.
 
 [It's Not Just Who You Know](http://amzn.to/2fASF5C). Tommy Spaulding. 2010.
 
@@ -58,6 +51,14 @@ I routinely return here to complete entries and their summaries.
 [The Tao of Seneca](http://amzn.to/2guoMIU). Was not "feeling" narrator. Perhaps better to be read.
 
 ## Completed
+
+[Work Rules!](http://amzn.to/2fnb0YM). Laszlo Bock. 2015.
+
+[The War of Art](http://amzn.to/2g5RaAF). Steven Pressfield. 2002. 👍 🔥
+ 
+[The Art of Learning](http://amzn.to/2guoWjq). Josh Waitzkin. 2014-04-01. Great autobiography but not what I thought I was going to get.
+
+[Brain Rules: 12 Principles for Surviving and Thriving at Work, Home, and School](http://amzn.to/2guo7qZ). John Medina. 2014-04-22. 👍
 
 [The 4-Hour Body](http://amzn.to/2fnfPRL). Tim Ferris. 2010.
 
