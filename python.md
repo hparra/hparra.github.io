@@ -1,6 +1,41 @@
 python
 ======
 
+## Implementations of Fundamental Types
+
+### List
+
+- is a sequence
+- is implemented as a variable-length array
+  - NOT a linked list
+- is a different data structure from `array`
+  - See https://docs.python.org/2/library/array.html
+
+### Tuple
+
+- is a sequence
+- are immutable
+
+## Set
+
+- is a sequence
+
+### Dictionary
+
+- implemented with resizable hash tables
+- any immutable object can be used as a dictionary key
+- python exposes its hash function as the global `hash()` (32-bit)
+
+## Concurrency
+
+- Python uses reference counting
+GIL: Global Interpreter Lock.
+- There is only one lock!
+
+## TIPS
+
+`sys.getrefcount(obj)`
+
 ## python
 
 - `from MODULE import NAME1, NAME2, ...` to import NAME1 and NAME2 from MODULE
@@ -72,3 +107,7 @@ See [django-admin and manage.py](https://docs.djangoproject.com/en/1.9/ref/djang
 
 - [A non-magical introduction to Pip and Virtualenv for Python beginners](https://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-python/)
 - http://www.thomas-cokelaer.info/tutorials/python/basics.html
+
+[Design and History FAQ](https://docs.python.org/2/faq/design.html). Python Documentation. 
+
+[The Mighty Dictionary](https://www.youtube.com/watch?v=C4Kc8xzcA68). Brandon Craig Rhodes. PyCon 2010. An optimized explanation of Python's Dictionary implementation using a hash table.
