@@ -16,7 +16,6 @@
 
 # project standards
 tmp
-private
 *.log
 
 # Node.js
