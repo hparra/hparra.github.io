@@ -19,32 +19,45 @@ I routinely return here to complete entries and their summaries.
 
 ## Currently Listening
 
-[MONEY Master the Game: 7 Simple Steps to Financial Freedom](http://amzn.to/2gLB9ko). Tony Robbins. 2014.
-
-[Genome](http://amzn.to/2gudLDE). Matt Ridley. 1999.
+[A Mind for Numbers: How to Excel at Math and Science (Even If You Flunked Algebra)](http://amzn.to/2fAUcIV). Barbara Oakley. 2014-07-31.
 
 ## Queued
 
+[Deep Work](http://amzn.to/2hTMsaC). Cal Newport. 2016.
 
-## On Hold
-
-[Build to Last](http://amzn.to/2fAPdbg). Jim Collins. Authors comment that _Good to Great_ should be read/heard first. I started this book but feel I may not truly appreciate it yet.
+[Getting to Yes](http://amzn.to/2gugSiA). Roger Fisher & William Ury. 2011.
 
 ## Acquired
 
 [Antifragile](http://amzn.to/2guooXa). Nassim Nicholas Taleb. 2012. Mentioned in _Soft Skills_.
 
-## Interested
+[Freakonomics](http://amzn.to/2i1fEIP). Steven Levitt.
 
-[A Mind for Numbers: How to Excel at Math and Science (Even If You Flunked Algebra)](http://amzn.to/2fAUcIV). Barbara Oakley. 2014-07-31.
+[Losing My Virginity](http://amzn.to/2hGZqIk). Richard Branson.
 
-[Getting to Yes](http://amzn.to/2gugSiA). Roger Fisher & William Ury. 2011.
+[Outliers](http://amzn.to/2hTSok0). Malcom Gladwell.
+
+[The 21 Irrefutable Laws of Leadership](http://amzn.to/2fANoeJ). John C. Maxwell. 1998.
 
 [The Effective Executive](http://amzn.to/2guluFo). Peter Drucker. 2006.
 
-[It's Not Just Who You Know](http://amzn.to/2fASF5C). Tommy Spaulding. 2010.
+[The Everything Store](http://amzn.to/2gXC8hJ). Brad Stone. 2013.
 
-[The 21 Irrefutable Laws of Leadership](http://amzn.to/2fANoeJ). John C. Maxwell. 1998.
+[The Goal](http://amzn.to/2gXDBoc). Eliyahu Goldratt.
+
+[The Last Lecture](http://amzn.to/2hHhyzg). Randy Pausch. 2008.
+
+[The Power of Positive Thinking](http://amzn.to/2gXFFge). Norman Vincent Peale.
+
+## On Hold
+
+[Build to Last](http://amzn.to/2fAPdbg). Jim Collins. Authors comment that _Good to Great_ should be read/heard first. I started this book but feel I may not truly appreciate it yet.
+
+## Interested
+
+[Psycho-Cybernetics](http://amzn.to/2hLbGEY). Maxwell Maltz.
+
+[It's Not Just Who You Know](http://amzn.to/2fASF5C). Tommy Spaulding. 2010.
 
 ## Dropped
 
@@ -52,13 +65,19 @@ I routinely return here to complete entries and their summaries.
 
 ## Completed
 
+[Genome](http://amzn.to/2gudLDE). Matt Ridley. 1999. 👍
+
+Get the Edge. Tony Robbins. 2000.
+
+[MONEY Master the Game: 7 Simple Steps to Financial Freedom](http://amzn.to/2gLB9ko). Tony Robbins. 2014. 🔥 👍 ✏️
+
 [Work Rules!](http://amzn.to/2fnb0YM). Laszlo Bock. 2015.
 
 [The War of Art](http://amzn.to/2g5RaAF). Steven Pressfield. 2002. 👍 🔥
  
 [The Art of Learning](http://amzn.to/2guoWjq). Josh Waitzkin. 2014-04-01. Great autobiography but not what I thought I was going to get.
 
-[Brain Rules: 12 Principles for Surviving and Thriving at Work, Home, and School](http://amzn.to/2guo7qZ). John Medina. 2014-04-22. 👍
+[Brain Rules: 12 Principles for Surviving and Thriving at Work, Home, and School](http://amzn.to/2guo7qZ). John Medina. 2014-04-22. 👍 ✏️
 
 [The 4-Hour Body](http://amzn.to/2fnfPRL). Tim Ferris. 2010.
 
