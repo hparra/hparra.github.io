@@ -19,11 +19,9 @@ I routinely return here to complete entries and their summaries.
 
 ## Currently Listening
 
-[A Mind for Numbers: How to Excel at Math and Science (Even If You Flunked Algebra)](http://amzn.to/2fAUcIV). Barbara Oakley. 2014-07-31.
+[Deep Work](http://amzn.to/2hTMsaC). Cal Newport. 2016.
 
 ## Queued
-
-[Deep Work](http://amzn.to/2hTMsaC). Cal Newport. 2016.
 
 [Getting to Yes](http://amzn.to/2gugSiA). Roger Fisher & William Ury. 2011.
 
@@ -65,6 +63,8 @@ I routinely return here to complete entries and their summaries.
 
 ## Completed
 
+[A Mind for Numbers: How to Excel at Math and Science (Even If You Flunked Algebra)](http://amzn.to/2fAUcIV). Barbara Oakley. 2014-07-31. Applications on how to learn. Emphasis on STEM but applicable to all knowledge. Every student should read/listen to this book. 🔥 👍 ✏️
+
 [Genome](http://amzn.to/2gudLDE). Matt Ridley. 1999. 👍
 
 Get the Edge. Tony Robbins. 2000.
@@ -81,8 +81,7 @@ Get the Edge. Tony Robbins. 2000.
 
 [The 4-Hour Body](http://amzn.to/2fnfPRL). Tim Ferris. 2010.
 
-[So Good They Can't Ignore You](http://amzn.to/2gLuG9f). Cal Newport. 2012-09-18.
- 👍 🔥
+[So Good They Can't Ignore You](http://amzn.to/2gLuG9f). Cal Newport. 2012-09-18. 👍 🔥
 
 [Communicate what you Think](http://amzn.to/2guj8Xf). Earl Nightingale. 👍
 
