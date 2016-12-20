@@ -30,8 +30,60 @@ See [django-admin and manage.py](https://docs.djangoproject.com/en/1.9/ref/djang
   - views.py
   - migrations/
 
+## Users
+
+- Django comes with its own authentications system.
+- Your custom user model can extend `User` via `from django.contrib.auth.models import User`
+- Use `create_user(username, email=None, password=None, **extra_fields)`
+- Add various default login, et al. view by adding `url('^', include('django.contrib.auth.urls'))` to your `urlpatterns`
+
+- https://docs.djangoproject.com/en/1.10/topics/auth/default/
+
+### TODO:
+
+- Ensure authentication _settings_
+  - `INSTALLED_APPS`
+    - django.contrib.auth
+    - django.contrib.contenttypes
+  - `MIDDLEWARE`
+    - django.contrib.sessions.middleware.SessionMiddleware
+    - django.contrib.auth.middleware.AuthenticationMiddleware
+- Change `PASSWORD_HASHERS`? (BCrypt)
+- Add `AUTH_PASSWORD_VALIDATORS`?
+- Decide on User modeling
+  - Option 1: subclass `AbstractUser`
+  - Option 2: subclass `AbstractBaseUser`
+  - Option 3: relate to appropriate "UserProfile" model
+    - Ensure such a "UserProfile" model exists
+    - Add to settings `AUTH_USER_MODEL`
+      - django.contrib.auth.models.User (?)
+    - `user = models.OneToOne(settings.AUTH_USER_MODEL)`
+- Add Groups, Permissions?
+- Decide on Forms/Views for auth verbs
+  - Option 1: use defaults
+    - Add `url('^', include('django.contrib.auth.urls'))` to urlpatterns
+    - Implement templates
+  - Option 2: user custom defaults
+    - Import `auth_views` and append each to urlpatterns
+    - Implement templates
+  - Option 3: Roll your own forms/views
+- Add protected views/template
+  - Use `@login_required` on view def
+    
+LEARN DJANGO FORMS
+
+## Django Admin
+
+Django has an admin area (app) by default.
+
+Two Scoops believes its always easier to create a new admin then to override the defaults.
+
+The official Django documentation has information on overriding templates, adding new views, etc.
+
 ## REFERENCES
 
 [Two Scoops of Django: Best Practices for Django 1.8](http://amzn.to/2gLzQlw).  Daniel Roy Greenfeld & Audrey Roy Greenfeld. 2015-05-15.
 
 [Tango with Django](http://leanpub.com/tangowithdjango19). Leif Azzopardi & David Maxwell. 2016-10-04. Seems best for developers without prior MVC experience.
+
+[The Django admin site](https://docs.djangoproject.com/en/1.10/ref/contrib/admin/). Django Documentation.
