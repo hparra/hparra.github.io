@@ -203,3 +203,5 @@ Good visualizations but a little wordy.
 4.6 Merge Sort. Data Structures and Algorithms with Python. Kent D. Lee & Steve Hubbard. 2015.
 
 5.2.4. Sorting by Merging. The Art of Computer Programming, Volume 3: Sorting and Searching. Second Edition.
+
+6.9 An Example: Merge and Merge Sort. A Book on C. Al Kelly & Ira Pohl. Fourth Edition. 1998.
