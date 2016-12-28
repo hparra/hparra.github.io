@@ -30,17 +30,44 @@ See [django-admin and manage.py](https://docs.djangoproject.com/en/1.9/ref/djang
   - views.py
   - migrations/
 
+## Database
+
+DB Tools:
+- `manage.py sqlcreate`: create database. Pipe this into your sql client
+- `manage.py sqldiff -a`: check difference between models and db schema
+
+Migrations:
+- `manage.py makemigrations`: created automatically from your model definitions
+- `manage.py showmigrations`
+- `manage.py migrate`
+
+Use `manage.py graph_models` to output DOT stream of database modeling.
+You can specify default settings in _settings.py_:
+```python
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+}
+```
+
+## Django Admin
+
+Django has an admin area (app) by default.
+Two Scoops believes its always easier to create a new admin then to override the defaults.
+The official Django documentation has information on overriding templates, adding new views, etc.
+
+
+
 ## Users
 
 - Django comes with its own authentications system.
 - Your custom user model can extend `User` via `from django.contrib.auth.models import User`
 - Use `create_user(username, email=None, password=None, **extra_fields)`
 - Add various default login, et al. view by adding `url('^', include('django.contrib.auth.urls'))` to your `urlpatterns`
-
 - https://docs.djangoproject.com/en/1.10/topics/auth/default/
+- `./manage.py createsuperuser`
 
-### TODO:
-
+TODO for implementing your User models:
 - Ensure authentication _settings_
   - `INSTALLED_APPS`
     - django.contrib.auth
@@ -69,16 +96,6 @@ See [django-admin and manage.py](https://docs.djangoproject.com/en/1.9/ref/djang
   - Option 3: Roll your own forms/views
 - Add protected views/template
   - Use `@login_required` on view def
-    
-LEARN DJANGO FORMS
-
-## Django Admin
-
-Django has an admin area (app) by default.
-
-Two Scoops believes its always easier to create a new admin then to override the defaults.
-
-The official Django documentation has information on overriding templates, adding new views, etc.
 
 ## REFERENCES
 
