@@ -9,9 +9,12 @@ I am a programmer and citizen of the World.
 |||
 | -------- | --- |
 | Web      | [hgpa.tv](http://hgpa.tv)
-| GitHub   | [hparra](https://github.com/hparra)
-| Twitter  | [HGPAtv](https://twitter.com/HGPAtv) |
 | LinkedIn | [hparra](https://www.linkedin.com/in/hparra) |
+| GitHub   | [hparra](https://github.com/hparra) |
+| NPM | [hgpa](https://www.npmjs.com/~hgpa) |
+| ACM | [81470654282](http://dl.acm.org/author_page.cfm?id=81470654282) | 
+| Twitter  | [HGPAtv](https://twitter.com/HGPAtv) |
+
 
 ## Notes
 
