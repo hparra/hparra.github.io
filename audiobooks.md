@@ -19,7 +19,7 @@ I routinely return here to complete entries and their summaries.
 
 ## Currently Listening
 
-[The Effective Executive](http://amzn.to/2guluFo). Peter Drucker. 2006.
+[Freakonomics](http://amzn.to/2i1fEIP). Steven Levitt.
 
 ## Queued
 
@@ -29,11 +29,7 @@ I routinely return here to complete entries and their summaries.
 
 [Antifragile](http://amzn.to/2guooXa). Nassim Nicholas Taleb. 2012. Mentioned in _Soft Skills_.
 
-[Freakonomics](http://amzn.to/2i1fEIP). Steven Levitt.
-
 [Losing My Virginity](http://amzn.to/2hGZqIk). Richard Branson.
-
-[Outliers](http://amzn.to/2hTSok0). Malcom Gladwell.
 
 [The Everything Store](http://amzn.to/2gXC8hJ). Brad Stone. 2013.
 
@@ -69,7 +65,11 @@ I routinely return here to complete entries and their summaries.
 
 [The Tao of Seneca](http://amzn.to/2guoMIU). Was not "feeling" narrator. Perhaps better to be read.
 
-## Completed (42)
+## Completed (44)
+
+[Outliers](http://amzn.to/2hTSok0). Malcom Gladwell. Great book that argues that people with tremendous success have unique opportunities to work really hard, and that this combination was made possible by a community. The quadrant created by the work and opportunity variables is important to understand. How often have you made the most of a special opportunity? Did you even realize it as such? This book shun some light on my childhood and implicitly answers the question of why mentorship has been hard to come by. It does not necessarily answer how to shape your circumstances but it does support the fact that this is key. Recommended. 👍
+
+[The Effective Executive](http://amzn.to/2guluFo). Peter Drucker. 2006. I feel I need to relisten to this book at a later time. Several suggestions are counter-intuitive.
 
 [The 21 Irrefutable Laws of Leadership](http://amzn.to/2fANoeJ). John C. Maxwell. 1998. This book was excellent. It should probably be the first book you acquire on leadership as it introduces various concepts that other books tend to select from and go deeper on. I'll definitely be looking into Maxwell's body of work. 👍 ✏️
  
