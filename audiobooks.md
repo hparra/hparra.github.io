@@ -19,23 +19,13 @@ I routinely return here to complete entries and their summaries.
 
 ## Currently Listening
 
-[Freakonomics](http://amzn.to/2i1fEIP). Steven Levitt.
-
 ## Queued
 
-[Getting to Yes](http://amzn.to/2gugSiA). Roger Fisher & William Ury. 2011.
-
 ## Acquired
-
-[Antifragile](http://amzn.to/2guooXa). Nassim Nicholas Taleb. 2012. Mentioned in _Soft Skills_.
 
 [Losing My Virginity](http://amzn.to/2hGZqIk). Richard Branson.
 
 [The Everything Store](http://amzn.to/2gXC8hJ). Brad Stone. 2013.
-
-[The Goal](http://amzn.to/2gXDBoc). Eliyahu Goldratt.
-
-[The Last Lecture](http://amzn.to/2hHhyzg). Randy Pausch. 2008.
 
 ## On Hold
 
@@ -65,9 +55,23 @@ I routinely return here to complete entries and their summaries.
 
 [The Tao of Seneca](http://amzn.to/2guoMIU). Was not "feeling" narrator. Perhaps better to be read.
 
-## Completed (44)
+## Completed (46)
+
+### 2017 Q1
+
+[Getting to Yes](http://amzn.to/2gugSiA). Roger Fisher & William Ury. 2011. 👍 ✏️
+
+[The Last Lecture](http://amzn.to/2hHhyzg). Randy Pausch. 2008. This was a nice book. Recommended.
+
+[Antifragile](http://amzn.to/2guooXa). Nassim Nicholas Taleb. 2012. The author rambles at times, and he clearly does not like academics, but the concept of something being _antifragile_ is profound and worth learning and meditating on.
+
+[The Goal](http://amzn.to/2gXDBoc). Eliyahu Goldratt. A great didactic story regarding the Socratic method and the Theory of Constraints. Since this audiobook used actors it was especially entertaining. 👍
+
+[Freakonomics](http://amzn.to/2i1fEIP). Steven Levitt. As the authors mention, there is no unifying theme in this book, other than compounding evidence that data is capable of providing deep insight into anything, and that this insight many times demonstrates what we assume and rationalize and reason to be correct is absolutely wrong. Eye-opening. 👍
 
 [Outliers](http://amzn.to/2hTSok0). Malcom Gladwell. Great book that argues that people with tremendous success have unique opportunities to work really hard, and that this combination was made possible by a community. The quadrant created by the work and opportunity variables is important to understand. How often have you made the most of a special opportunity? Did you even realize it as such? This book shun some light on my childhood and implicitly answers the question of why mentorship has been hard to come by. It does not necessarily answer how to shape your circumstances but it does support the fact that this is key. Recommended. 👍
+
+### 2016 (H2)
 
 [The Effective Executive](http://amzn.to/2guluFo). Peter Drucker. 2006. I feel I need to relisten to this book at a later time. Several suggestions are counter-intuitive.
 
