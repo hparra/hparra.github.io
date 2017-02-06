@@ -99,8 +99,7 @@ function readGlikiFiles() {
   // assumes all files are flat in working dir
   // See https://git-scm.com/docs/pretty-formats
   const files = child_process.execSync(`
-      git ls-files \
-        | grep .md \
+      git ls-files *.md \
         | while read filename; do
             modified_by=$(git log -1 --format="%ad,%an,%ae,%H" --date=short -- $filename)
             created_by=$(git log --diff-filter=A --format="%ad,%an,%ae,%H" --date=short -- $filename)
