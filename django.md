@@ -50,6 +50,12 @@ GRAPH_MODELS = {
 }
 ```
 
+Sometimes you'll make changes so drastic in a new project that it's better to redo your migrations:
+- `manage.py migrate zero` to 
+- delete migration files
+- make changes to models
+- `manage.py makemigration`
+
 ## Django Admin
 
 Django has an admin area (app) by default.
