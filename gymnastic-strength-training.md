@@ -1,35 +1,30 @@
 gymnastics strength training (GST)
 ==================================
 
+I've finished the [Gymnastics Bodies](https://www.gymnasticbodies.com/training/) Fundamentals course. I highly recommend it.
+
+I'm currently working on the first Foundations class, but I don't like it as much as the Fundamentals approach and therefore cannot recommend it.
+
 ## Fundamentals
 
-I am currently participating in the [Gymnastics Bodies](https://www.gymnasticbodies.com/training/) Fundamentals course.
-
-- crab and ape
-- body orientation
-  - prone (front-side)
-  - supine (back-side)
-  - front support
-  - rear support
-- wrist mobility
+"Daily Stretch":
+- wrists
   - palms, fingers forward
   - palms, fingers backwards
   - backs, finger forwards
   - backs, fingers backwards
-- body position
-  - straight (supine)
-    - pull ribs in towards the floor (remove gap between back and floor)
-  - tuck
-    - body upright
-    - knee close to the chest as possible
-    - point toes
-  - straddle
-    - body upright
-    - point toes
-  - pike
-    - body upright
-    - point toes
-  
+- seal + cat (x2)
+- capsule
+- shoulder extension + hip swivel
+- straddle
+  - center
+  - left
+  - right
+- butterfly
+- pike
+- shoulder bridge
+- calf stretch
+
 ## References
 
 [The Secrets of Gymnastic Strength Training](http://fourhourworkweek.com/2016/05/09/the-secrets-of-gymnastic-strength-training/). The Tim Ferris Show. 2016-05-09. An interview with Coach Christopher Sommer.
