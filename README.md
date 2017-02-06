@@ -4,6 +4,8 @@ January 17, 1982 &dash;
 
 I am a programmer and citizen of the World.
 
+Here's [what I'm doing now](now.md).
+
 ## Presence
 
 |||
