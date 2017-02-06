@@ -53,6 +53,7 @@ Iterables:
 - `next(iterator[, default])`, e.g. `next(i, None)`
 - `all` and `any`: returns true if all/any element are true
 - `sorted`
+- `reversed`
 - `min` and `max`
 - `map(function, iterable)` and `reduce(function, iterable[, initializer])`
 - `filter(function, iterable)` but use [list comprehensions](https://docs.python.org/2.7/tutorial/datastructures.html#list-comprehensions) instead
