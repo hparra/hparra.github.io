@@ -55,7 +55,7 @@ I routinely return here to complete entries and their summaries.
 
 [The Tao of Seneca](http://amzn.to/2guoMIU). Was not "feeling" narrator. Perhaps better to be read.
 
-## Completed (46)
+## Completed (49)
 
 ### 2017 Q1
 
