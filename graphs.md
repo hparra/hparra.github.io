@@ -76,7 +76,8 @@ Many graph problems can be solved by modifying BFS or DFS to additional work dur
 - when looking at an edge
 - after exploring a vertex
 
-
 ## REFERENCES
 
 [Stack-based graph traversal ≠ depth first search](http://11011110.livejournal.com/279880.html). David Eppstein. 2013-12-17. Clarification on a common misconception held by many, myself included. Fun fact: I never had Eppstein as a professor while at UCI but someone who took his graph theory course told me it actually made them cry.
+
+[Python Patterns - Implementing Graphs](https://www.python.org/doc/essays/graphs/). Building a graph using Python lists and dictionaries.
