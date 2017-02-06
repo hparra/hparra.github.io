@@ -144,7 +144,7 @@ Enthusiastic narrator. Enjoyable. 👍
 
 [The One Minute Manager](http://amzn.to/2g5JhuV). Ken Blanchard & Spencer Johnson. 2015-05-05.
 
-As a Man Thinketh (Earl Nightingale Edit). Originally by James Allen. This recording introduced me to both James Allen and Earl Nightingale. Listening to this was a life-altering event. I have re-listened to it dozens of times and continue to do so every few weeks. I give it my absolute highest recommendation. 👍👍👍 🔥🔥🔥
+As a Man Thinketh (Earl Nightingale Edit). Originally by James Allen. This recording introduced me to both James Allen and Earl Nightingale. Listening to this was a life-altering event. I have re-listened to it dozens of times and continue to do so every few weeks. I give it my absolute highest recommendation. Also see [As a Man Thinketh (1903)](as-a-man-thinketh-1903.md). 👍👍👍 🔥🔥🔥
 
 [The Innovator’s Dilemma: When New Technologies Cause Great Firms to Fail](http://amzn.to/2gukQaW). Clayton M. Christensen. 2011-10-04.
 
