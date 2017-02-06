@@ -21,7 +21,7 @@ const glikiRenderer = new marked.Renderer()
 glikiRenderer.link = (href, title, text) => {
   // NOTE: We break sanitization because we know we won't do it
   // Replace .md extension for local links only with .html
-  href = /^(?!https?:\/\/).+\.md$/.test(href)
+  href = /^(?!https?:\/\/).+\.md(#.*)?$/.test(href)
     ? href.replace('.md', '.html')
     : href
   const titleAttr = title ? `title="${title}"` : ''
