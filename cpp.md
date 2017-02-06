@@ -3,6 +3,14 @@ cpp -- C++
 
 _These notes are for people who have not used C++ in a long time -- like myself._
 
+Major interpreters and virtual machines written in C++ include:
+- Hotspot (Java)
+- CLR (.NET)
+- HHVM (PHP/Hack)
+- V8 (JavaScript)
+- SpiderMonkey (JavaScript)
+- Flash
+
 [Rule of Three](https://en.wikipedia.org/wiki/Rule_of_three_%28C%2B%2B_programming%29) -- if a class requires one or more of these, then it probably needs all three:
 - destructor
 - copy constructor
