@@ -21,6 +21,17 @@ Three traditional examples:
 - binomial coefficients
 - coin change problem
 
+## Techniques
+
+- optimal substructure
+- overlapping subproblems
+
+You always have to solve the subproblems first.
+There are two different approaches to do this:
+- top down (recursive + memoization)
+- bottom up
+
+
 ## Common Applications
 
 **Longest Common Substring**: Given a set of strings, find the longest substring common to all strings. This could also be solved with a suffix tree.

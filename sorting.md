@@ -54,3 +54,17 @@ Implementations of sorting algorithms can be tricky. Why?
 - is list a continuous array or a linked-list?
 - is function pure or does it mutate?
 - do we manage memory ourselves?
+
+## Comparators
+
+The sorting algorithms in many languages take a comparator functions as parameter.
+Comparators themselves take two parameters, `a` and `b`, and returns:
+  - negative number if a < b
+  - positive number if a > b
+  - zero if a == b
+
+When sorting numbers in ascending order you could simply return `b-a`
+  - if a < b then b-a is positive
+  - if a > b then b-a is negative
+
+One trick with comparators is to sort on a secondary value when when the primary values are equal.

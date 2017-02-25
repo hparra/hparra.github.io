@@ -3,6 +3,20 @@ Quick Sort
 
 ## tl;dr Review
 
+```
+ >             <
+ L     P       R
+[5,8,7,2,1,4,6,3]
+ ^       ^
+ L<----->R
+[1,8,7,2,5,4,6,3]
+   ^   ^
+   L<->R
+[1,2,7,8,5,4,6,3]
+     ^
+    L&R
+```
+
 Quicksort:
   1. _Pivot_
     - select a pivot index
@@ -14,7 +28,7 @@ Quicksort:
   3. _Recurse_:
     - Quicksort each of the two partitions
 
-Partition:
+Partition (Hoare):
   1. move left pointer forward until you find a value > pivot
   2. move right pointer backward until you find a value < pivot
   3. now that you've found values on each side that actually belongs in the other:

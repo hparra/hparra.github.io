@@ -1,6 +1,32 @@
 merge-sort -- Merge Sort
 ========================
 
+## tl;dr
+
+```
+   [2,4,3,1]     \
+  [2,4] [3,1]    | mergesort
+[2] [4] [3] [1]  + 
+  [2,4] [1,3]    | merge
+   [1,2,3,4]     /
+```
+
+Merge Sort:
+- divide and conquer via recursion, similar to exchange sort
+- O(n logn) -- T(n) = 2T(n/2) + O(n)
+- mergesort(a)
+  - log(n) recursions
+  - BASE CASE: list is length 1 or 0
+  - RECURSIVE CASE: list is 2 or more
+    - find middle of list: `floor(length / 2)`
+    - DIVIDE: mergesort left and right halves (you'll hit base case and return)
+    - return of merge left and right halves
+- merge(a,b):
+  - (You must determine where sorted list goes (new array, reference, etc))
+  - iterate through both halves simultaneous
+  - select minimum of two and increment that pointer only
+  - after reaching end of one half iterate through remainder of other
+
 ## CONCEPT
 
 - What if we took a list of items and split it in half?
