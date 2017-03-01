@@ -4,6 +4,8 @@ python -- Notes on the Python programming Language
 - Python has an excellent [language reference](https://docs.python.org/2.7/reference/index.html).
 - Python has a [style guide](https://www.python.org/dev/peps/pep-0008/).
 
+If you're an experienced programmer new to Python then I recommend [Python Tips](http://book.pythontips.com/en/latest/) by Muhammad Yasoob Ullah Khalid.
+
 ## Implementations of Fundamental Types
 
 List:
@@ -40,6 +42,7 @@ Note that `range(a,b)` returns an empty array if a and b are equal.
 Numbers:
 - `int(x[, base])`: constructor that can also be used to change base
 - `chr`: character from integer as ASCII code
+- `ord`: ASCII code to integer
 - `divmod(a,b)`: return `(a // b, a % b)` for integers
 - `bin`, `oct` and `hex`
 - `abs`
