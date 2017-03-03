@@ -43,3 +43,14 @@
 - C-, :
 - C-. :
 - C-/ : undo
+
+## "But I don't use emacs anymore..."
+
+**Evaluating expressions and buffers**
+- evaluate expression: `c-x c-e`
+- some people will bind _eval-buffer_, e.g. `c-x E`
+- (Atom) Install [script](https://atom.io/packages/script)
+  - bind `c-x c-e` to _Script: Run_
+  - _Script: Run_ will evaluate a selection or the entire buffer
+  - `c-g` will still close that window
+  - remember that 
