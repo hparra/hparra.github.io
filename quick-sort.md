@@ -29,8 +29,8 @@ Quicksort:
     - Quicksort each of the two partitions
 
 Partition (Hoare):
-  1. move left pointer forward until you find a value > pivot
-  2. move right pointer backward until you find a value < pivot
+  1. while value < pivot move left pointer forward
+  2. while value > pivot move right pointer backward
   3. now that you've found values on each side that actually belongs in the other:
     - swap them
     - move both pointers inwards
@@ -40,6 +40,8 @@ Performance:
 - Worst: O(n^2) e.g. pivot is first or last index
 - Best: O(n lg n)
 - Average: O(n lg n)
+
+Note: If you pick pivot to be first or last element, you will always be swapping it
 
 ## Overview
 
