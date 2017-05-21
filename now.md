@@ -1,19 +1,15 @@
 now -- What I’m Doing Now
 =========================
 
-## 2017 -- Quarter 1
+## 2017 -- Quarter 2
 
-**I'm looking for a new career challenge.** I left Pivotshare in November wanting a challenge at scale: responsibility, team size, architecture, customers, revenue. I prefer to continue moving into management. I'm currently speaking with public companies and prominent startups in San Francisco and New York City. I expect to begin a new role by Q2.
+I started my **new job at Uber** in May. I'm now a backend engineer with the Hourly Rentals team, which supports partners that rent vehicles on an hourly basis to drive for Uber. At least that's what we're doing now -- the future looks _very_ interesting. My focus this quarter is to get situated and become familiar with Uber's vast infrastructure and engineering culture. I also need to acquire expertise in Golang.
 
-**I'm trying to drop down to a healthy 165 pounds.** I lost 10 pounds in the second half of last year, mostly through experiments in vegetarianism and low-carb eating. I'm training for maximum strength in February before I leave my gym, and in March I'll focus on calisthenics and cardio before relocating. I may finally return to BJJ in Q2! I'm working on returning to a healthy diet based on my experiments.
+As a result of my new job **I now live in downtown San Francisco**. I haven't lived in a proper city since Quito about five years ago, so this is a big change. Now that I've settled in I'll take advantage of the summer to explore the town and surrounding areas. I definitely need to buy a thicker wetsuit.
 
-**The Starfall Group is almost done with an MVP for a new passive revenue stream.** We will launch it by the end of Q1. We were cash-positive last year and aspire to hit 6-digit revenue this year. 2016 was a very active year and all the founders are excited again.
+Last quarter's health-related OKRs were a bust (no net change), so I'm trying again this quarter, adjusting for recent changes. There is a 24-hour gym where I live and my employer does a good job with food options. There is also much to explore in the city which means lots of walking -- I've been running some too.
 
-**I'm still listening to lots of audiobooks.** My focus in Q1 will probably move more towards leadership, management, motivation, and communication. See [Audiobooks](audiobooks.md#2017-q1).
-
-**I temporarily quit Twitter and Facebook in 2016 Q4** and don't intend to return until sometime in Q2. 
-
-**I'm still watching too much anime.** Simulcasts for Q1 include _Demi-chan wa Kataritai_, _Gabriel DropOut_, and _Kobayashi-san Chi no Maid Dragon_. I'm also enjoying _Hanasaku Iroha_ (2011) and _Tonari no Seki-kun_ (2014).
+This is an exciting quarter to say the least! HGPA
 
 _(This is a now page, and if you have your own site, [you should make one](http://nownownow.com/about) too.)_
 
