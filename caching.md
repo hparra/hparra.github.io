@@ -29,3 +29,19 @@ Platform-specific:
 
 Advanced:
 - [Caching for a Global Netflix](http://techblog.netflix.com/2016/03/caching-for-global-netflix.html)
+
+---
+
+Belady’s optimal page replacement policy
+
+- NRU: Not Recently Used
+
+- LRU: Least Recently Used
+- LFU: Least Frequently Used
+- FIFO: First In, First Out
+- MRU: Most Recently Used
+- Second-chance
+- Clock
+
+
+- https://www.varnish-cache.org/trac/wiki/ArchitectureLRU
