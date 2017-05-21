@@ -25,7 +25,41 @@ sql -- language for structured databases queries
 - should also use `ASC` or `DESC`
 - can use an expression function
 
+## Altering
+
+- `TABLE`
+  - `RENAME`
+  - `ALTER`
+    - `COLUMN`
+      - `ADD`
+      - `RENAME`
+      - `DROP`
+      - `ALTER`
+        - `SET DEFAULT`
+        - `SET NULL`
+
+## Updating
+
+`UPDATE`
+
+`SET`
+
+`FROM`
+
+`WHERE`
+
+`RETURNING` (Postgres-only)
+
 ## TOOLS
+
+### psql
+
+- `\list`: list all databases
+- `\c` connect to a database
+- `\dt` list tables in current database
+- `\d+` describe table
+
+### Other
 
 - [DB Browser for SQLite](http://sqlitebrowser.org)
 
