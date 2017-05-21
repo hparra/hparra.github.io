@@ -19,13 +19,7 @@ I routinely return here to complete entries and their summaries.
 
 ## Currently Listening
 
-## Queued
-
-## Acquired
-
-[Losing My Virginity](http://amzn.to/2hGZqIk). Richard Branson.
-
-[The Everything Store](http://amzn.to/2gXC8hJ). Brad Stone. 2013.
+[Thinking, Fast and Slow](http://amzn.to/2r6UyBg). Daniel Kahneman. 2011.
 
 ## On Hold
 
@@ -55,9 +49,33 @@ I routinely return here to complete entries and their summaries.
 
 [The Tao of Seneca](http://amzn.to/2guoMIU). Was not "feeling" narrator. Perhaps better to be read.
 
-## Completed (49)
+## Completed
+
+### 2017 Q2
+
+Total: 3
+
+[Drive](http://amzn.to/2q7dKe4). Daniel H. Pink. 2009.
+
+[Peak](http://amzn.to/2q6VRw8). Anders Ericsson & Robert Pool. 2016. 👍
+
+[The Obstacle Is the Way](http://amzn.to/2qMcBK8). Ryan Holiday. 2014. 👍
 
 ### 2017 Q1
+
+Total: 12
+
+[Mindwise: How We Understand What Others Think, Believe, Feel, and Want](http://amzn.to/2o3CmXg). Nicholas Epley. People aren't thinking about me afterall! A bit informal as I would have preferred more concrete references to studies.
+
+[A Guide to the Good Life: The Ancient Art of Stoic Joy](http://amzn.to/2o3yB3X). William Irvine. The beginning is heavy on the history, but I enjoy that sort of thing. The practical stuff eventually come into focused. A thorough introduction on applied stoicism.
+
+[The Practicing Mind: Developing Focus and Discipline in Your Life](http://amzn.to/2oDdiEn). Thomas M. Sterner 2012. I listened to this twice as well. I really liked this one. 👍
+
+[When Things Fall Apart: Heart Advice for Difficult Times](http://amzn.to/2nxXosP). Pema Chodron. 2007. I listened to this twice. 👍
+
+[Grit: The Power of Passion and Perseverance](http://amzn.to/2o3AjCv). Angela Duckworth. 2016. Enjoyed this book. A little long but the insights are very important.
+
+[The Subtle Art of Not Giving a Fuck](http://amzn.to/2lDvRsP). Mark Manson. 2016. This was a short but powerful book that reminded me of some things I've seem to forgotten lately. Funny too. The conclusion reminded me of my last close-encounter with death, so that hit particularly hard.
 
 [Getting to Yes](http://amzn.to/2gugSiA). Roger Fisher & William Ury. 2011. 👍 ✏️
 
@@ -73,7 +91,9 @@ I routinely return here to complete entries and their summaries.
 
 ### 2016 (H2)
 
-[The Effective Executive](http://amzn.to/2guluFo). Peter Drucker. 2006. I feel I need to relisten to this book at a later time. Several suggestions are counter-intuitive.
+Total: 43
+
+[The Effective Executive](http://amzn.to/2guluFo). Peter Drucker. 2006. I feel I need to relisten to this book at a later time. Several suggestions are counter-intuitive. (Relistened in 2017 Q1).
 
 [The 21 Irrefutable Laws of Leadership](http://amzn.to/2fANoeJ). John C. Maxwell. 1998. This book was excellent. It should probably be the first book you acquire on leadership as it introduces various concepts that other books tend to select from and go deeper on. I'll definitely be looking into Maxwell's body of work. 👍 ✏️
  
