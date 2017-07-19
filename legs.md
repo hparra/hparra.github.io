@@ -1,6 +1,15 @@
 legs
 ====
 
+
+## On the Floor -- In Place
+
+- knee-to-elbow
+- hamstring curls
+- lunge back Kicks
+- single leg Bridge
+- weighted donkey kicks
+
 ## REFERENCES
 
 [4-4 Common Stretching Exercises](http://www.physicallytrained.com/4-4-common-stretching-exercises/).
