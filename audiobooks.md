@@ -13,47 +13,30 @@ I routinely return here to complete entries and their summaries.
 
 **Legend**:
 
+- 📢 Currently Listening
 - 🔥 May Be Life Altering
 - 👍 Recommended
 - ✏️ Merits Studying (notes)
 
-## Currently Listening
+### 2017 Q3
 
-[Thinking, Fast and Slow](http://amzn.to/2r6UyBg). Daniel Kahneman. 2011.
+📢 _Tribes_. Seth Godin. 2008.
 
-## On Hold
+_Ego is the Enemy_. Ryan Holiday. 2016.
 
-[Build to Last](http://amzn.to/2fAPdbg). Jim Collins. Authors comment that _Good to Great_ should be read/heard first. I started this book but feel I may not truly appreciate it yet.
-
-## Interested
-
-[Psycho-Cybernetics](http://amzn.to/2hLbGEY). Maxwell Maltz.
-
-[It's Not Just Who You Know](http://amzn.to/2fASF5C). Tommy Spaulding. 2010.
-
-[Choke: What the Secrets of the Brain Reveal About Getting It Right When You Have To](http://amzn.to/2i5Nf7F). Sian Beilock. 2011.
-
-[Performing Under Pressure: The Science of Doing Your Best When It Matters Most](http://amzn.to/2iCx6Un). Hendrie Weisinger & J.P. Pawliw-Fry. 2015.
-
-[The Coaching Habit: Say Less, Ask More & Change the Way You Lead Forever](http://amzn.to/2iBYtSG). Michael Bungay Stanier. 2016.
-
-[Start with Why: How Great Leaders Inspire Everyone to Take Action](http://amzn.to/2hrsClz). Simon Sinek. 2010.
-
-[Extreme Ownership: How U.S. Navy SEALs Lead and Win](http://amzn.to/2hm5wJW). Jocko Willink & Leif Babin. 2015.
-
-[The 10X Rule: The Only Difference Between Success and Failure](http://amzn.to/2iCmV1Y). Grant Cardone. 2011.
-
-[The Talent Code: Unlocking the Secret of Skill in Sports, Art, Music, Math, and Just About Anything](http://amzn.to/2iCuqG7). Daniel Coyle.
-
-## Dropped
-
-[The Tao of Seneca](http://amzn.to/2guoMIU). Was not "feeling" narrator. Perhaps better to be read.
-
-## Completed
+_Willpower_. Roy F. Baumeister and John Tierney. 2001.
 
 ### 2017 Q2
 
-Total: 3
+Total: 7
+
+_Too Soon Old, Too Late Smart_. Gordon Livington. 2008. 👍
+
+_How To Talk to Anyone_. Leil Lowndes. 2003.
+
+_The Talent Code_. Daniel Coyle. 2009.
+
+[Thinking, Fast and Slow](http://amzn.to/2r6UyBg). Daniel Kahneman. 2011.
 
 [Drive](http://amzn.to/2q7dKe4). Daniel H. Pink. 2009.
 
@@ -183,4 +166,32 @@ Despite the popularity of _The 48 Laws of Power_ I consider this to be his best 
 
 [The Art of Seduction](http://amzn.to/2gug0uk). Robert Greene. 2004-04-01. ✏️
 
-[The 48 Laws of Power](http://amzn.to/2g5P9V7). Robert Greene. 2000-09-01. 👍 ✏️
+[The 48 Laws of Power](http://amzn.to/2g5P9V7). Robert Greene. 2000-09-01. 👍 ✏️ 
+
+## On Hold
+
+[Build to Last](http://amzn.to/2fAPdbg). Jim Collins. Authors comment that _Good to Great_ should be read/heard first. I started this book but feel I may not truly appreciate it yet.
+
+## Interested
+
+[Psycho-Cybernetics](http://amzn.to/2hLbGEY). Maxwell Maltz.
+
+[It's Not Just Who You Know](http://amzn.to/2fASF5C). Tommy Spaulding. 2010.
+
+[Choke: What the Secrets of the Brain Reveal About Getting It Right When You Have To](http://amzn.to/2i5Nf7F). Sian Beilock. 2011.
+
+[Performing Under Pressure: The Science of Doing Your Best When It Matters Most](http://amzn.to/2iCx6Un). Hendrie Weisinger & J.P. Pawliw-Fry. 2015.
+
+[The Coaching Habit: Say Less, Ask More & Change the Way You Lead Forever](http://amzn.to/2iBYtSG). Michael Bungay Stanier. 2016.
+
+[Start with Why: How Great Leaders Inspire Everyone to Take Action](http://amzn.to/2hrsClz). Simon Sinek. 2010.
+
+[Extreme Ownership: How U.S. Navy SEALs Lead and Win](http://amzn.to/2hm5wJW). Jocko Willink & Leif Babin. 2015.
+
+[The 10X Rule: The Only Difference Between Success and Failure](http://amzn.to/2iCmV1Y). Grant Cardone. 2011.
+
+[The Talent Code: Unlocking the Secret of Skill in Sports, Art, Music, Math, and Just About Anything](http://amzn.to/2iCuqG7). Daniel Coyle.
+
+## Dropped
+
+[The Tao of Seneca](http://amzn.to/2guoMIU). Was not "feeling" narrator. Perhaps better to be read.
