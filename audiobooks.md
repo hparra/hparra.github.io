@@ -20,11 +20,15 @@ I routinely return here to complete entries and their summaries.
 
 ### 2017 Q3
 
-📢 _Tribes_. Seth Godin. 2008.
+📢 _The Happiness Hypothesis_. Jonathan Haidt. 2007.
 
-_Ego is the Enemy_. Ryan Holiday. 2016.
+_The Talent Code_. Dan Coyle. 2009.
 
-_Willpower_. Roy F. Baumeister and John Tierney. 2001.
+_Tribes_. Seth Godin. 2008.
+
+_Ego is the Enemy_. Ryan Holiday. 2016. 👍
+
+_Willpower_. Roy F. Baumeister and John Tierney. 2001. 👍
 
 ### 2017 Q2
 
@@ -34,7 +38,7 @@ _Too Soon Old, Too Late Smart_. Gordon Livington. 2008. 👍
 
 _How To Talk to Anyone_. Leil Lowndes. 2003.
 
-_The Talent Code_. Daniel Coyle. 2009.
+_The Little Book of Talent_. Daniel Coyle. 2012.
 
 [Thinking, Fast and Slow](http://amzn.to/2r6UyBg). Daniel Kahneman. 2011.
 
