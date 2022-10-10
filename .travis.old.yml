@@ -1,0 +1,31 @@
+
+language: node_js
+
+# https://docs.travis-ci.com/user/languages/javascript-with-nodejs
+node_js:
+    - "4"
+    
+git:
+  depth: 9999999
+  submodules: false
+
+# https://docs.travis-ci.com/user/notifications/
+notifications:
+  email: false
+
+env:
+  - secure: "g8voqzxl4BZUW1PXUp5bO92FX4sBQsmKvKB41xUWgGBGDvBFM1wqjOhrpQBGGZxYL6E4ZIho2e8qaa/nqx4oj3sB3tZ2UvZVa5n7o7zpkPKY+Ov+moOI9Mmu4Bg9Ubi10AlmFCpXOEq3xdhGBkJ1iGFuAxwjRnDEcRgu+Tp2uRmRp1q+ukqeJ3zovdIWeFJfuwBansdvzQwGfinDeh6B89BDpgI2DM8murxVfrAsbpYyVV4BkxXP0iRGzObP+06/O5/oqGuQ3lSOZVuKUHl2b04gs3lzmETFgTcSIfr2cjO9sdEDjDmb1DpUftqGoVLoWBBFVjxnFcS5g1LiFMdTf/affyRbhZ0NRTLcxNwjpTLWJsltdnEifsqDgQvWEWK8M9jjPSjgJj33svz5ECgB3N4hGMkLVnX4aAVeny+Oa96m7ef2uqZcudMLFO+j6Nz6oBKAIMWsd+pTns8hAUHIbL65Qd+RJLout7k1IA1/Cm/Bg3udZ1rACYgxnE8T6PNL5wPbMj+tZFeCy/VjGGN/H01SrvWz7vewqR37JLPp2vG0mSQ+F3F4NLz6MfDuxjuPVSInFZa+WHjFOvC0wW0cQqWwH356dmG1cvPTLMrdWD6yetMesi4M9XsYRVZbwLTAvxgrDBMpK2EKrEyz6eerV78FcPsQEPDYehMI0mJbaaA="
+
+before_script:
+  - sudo apt-get install sshpass -y
+  - npm install -g gulp
+
+script: npm run build
+
+deploy:
+  - provider: script
+    script:   .gliki/deploy.sh
+    skip_cleanup: true
+    on:
+      branch: master
+
