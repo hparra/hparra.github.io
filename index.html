@@ -1,0 +1,16 @@
+---
+---
+
+<h1>HGPA</h1>
+<p>1982 -</p>
+
+<h2>Journal</h2>
+<ul>
+{% for entry in site.journal %}
+  <li>
+    <a href="{{ entry.url }}">
+      {{ entry.title }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
