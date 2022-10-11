@@ -32,6 +32,10 @@ collections:
   journal:
     output: true
     sort_by: date
+  notes:
+    output: true
+    sort_by: date
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
