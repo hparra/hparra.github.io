@@ -1,3 +1,6 @@
+---
+---
+
 # Bash
 
 The Bourne-Again SHell.

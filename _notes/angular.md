@@ -1,3 +1,6 @@
+---
+---
+
 # Angular Notes
 
 These are notes to references regarding advanced Angular.js concepts. Working knowledge of Angular is assumed.

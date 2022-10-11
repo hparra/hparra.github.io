@@ -1,3 +1,6 @@
+---
+---
+
 ## Dynamic Stretches
 
 - [Dynamic Chest Stretch](http://www.bodybuilding.com/exercises/detail/view/name/dynamic-chest-stretch)

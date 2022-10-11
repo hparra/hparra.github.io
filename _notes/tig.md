@@ -1,3 +1,6 @@
+---
+---
+
 tig -- text-mode interface for Git
 ==================================
 
