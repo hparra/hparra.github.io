@@ -9,7 +9,18 @@
 {% for entry in site.journal %}
   <li>
     <a href="{{ entry.url }}">
-      {{ entry.title }}
+      {{ entry.id | remove: "/journal/" }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
+
+<h2>Notes</h2>
+<ul>
+{% for entry in site.notes %}
+  <li>
+    <a href="{{ entry.url }}">
+      {{ entry.id | remove: "/notes/"}}
     </a>
   </li>
 {% endfor %}
