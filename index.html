@@ -4,17 +4,6 @@
 <h1>HGPA</h1>
 <p>1982 -</p>
 
-<h2>Journal</h2>
-<ul>
-{% for entry in site.journal %}
-  <li>
-    <a href="{{ entry.url }}">
-      {{ entry.id | remove: "/journal/" }}
-    </a>
-  </li>
-{% endfor %}
-</ul>
-
 <h2>Notes</h2>
 <p>
   Notes are incomplete collections of information.
@@ -27,6 +16,21 @@
   <li>
     <a href="{{ entry.url }}">
       {{ entry.id | remove: "/notes/"}}
+    </a>
+  </li>
+{% endfor %}
+</ul>
+
+<h2>Journal</h2>
+<p>
+  Journal entries are mixed notes generated on a specific day.
+  Sometimes portions of these become actual notes.
+</p>
+<ul>
+{% for entry in site.journal %}
+  <li>
+    <a href="{{ entry.url }}">
+      {{ entry.id | remove: "/journal/" }}
     </a>
   </li>
 {% endfor %}
