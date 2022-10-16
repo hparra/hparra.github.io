@@ -4,7 +4,8 @@
 Golang
 ======
 
-Oh Go! I finally get to use you.
+- [https://github.com/golang/example](https://github.com/golang/example)
+- [https://go.dev/blog/error-handling-and-go](https://go.dev/blog/error-handling-and-go)
 
 ## Notes from "A Tour of Go"
 
