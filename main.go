@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"log"
+	"net/url"
 	"os"
 	"path"
 	"strings"
@@ -41,13 +42,27 @@ func (*LinkTransformer) Transform(doc *ast.Document, reader text.Reader, pctx pa
 			return ast.WalkContinue, nil
 		}
 
-		cb, ok := node.(*ast.Link)
+		link, ok := node.(*ast.Link)
 		if !ok {
 			return ast.WalkContinue, nil
 		}
 
-		// TODO: transform Destination url
-		fmt.Println(string(cb.Destination))
+		dest := string(link.Destination)
+
+		u, err := url.Parse(dest)
+		if err != nil {
+			log.Fatal("bad url")
+		}
+
+		// We only change relative-URLs
+		if u.IsAbs() {
+			return ast.WalkContinue, nil
+		}
+
+		// replace html with md
+		newDest := strings.Replace(dest, ".md", ".html", 1)
+		link.Destination = []byte(newDest)
+		// fmt.Printf("%s\n", newDest)
 
 		return ast.WalkContinue, nil
 	})
