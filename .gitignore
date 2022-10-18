@@ -23,7 +23,7 @@ node_modules
 
 # gliki
 .gliki/build
-build
+.goliki/public
 
 # jekyll
 _site/
