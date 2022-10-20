@@ -34,18 +34,35 @@ func NewSite() *Site {
 	}
 }
 
+type File struct {
+	Path            string
+	LogicalName     string
+	ContentBaseName string
+	BaseFileName    string
+	Ext             string
+	Dir             string
+}
+
 // Page represents a goliki file.
 // It contains the file data and metadata at multiple stages in the pipeline.
 // This is called Page
 type Page struct {
-	// File written in markdown
-	File     *object.File
+	// GitFile written in markdown
+	GitFile  *object.File
 	Metadata map[string]interface{}
 	// HTML rendered from File
 	MarkdownHTML *bytes.Buffer
 	LastCommit   *object.Commit
 
-	Section string
+	Site    *Site
+	File    *File
+	OutFile *File
+
+	TemplateName string
+
+	RelPermalink string
+	Section      string
+	Title        string
 }
 
 // LinkTransformer implements ASTTransformer.
@@ -89,6 +106,12 @@ func (*LinkTransformer) Transform(doc *ast.Document, reader text.Reader, pctx pa
 func main() {
 
 	site := NewSite()
+
+	t := template.Must(template.ParseFiles(
+		".goliki/layouts/default.html",
+		".goliki/layouts/index.html",
+	))
+	fmt.Printf("tmpl check!\n%s", t.DefinedTemplates())
 
 	gitpath := "."
 
@@ -151,7 +174,7 @@ func main() {
 		}
 
 		doc := &Page{
-			File:       f,
+			GitFile:    f,
 			LastCommit: lastCommit,
 		}
 
@@ -181,17 +204,10 @@ func main() {
 	// TODO: store YAML front matter for each
 	for _, page := range site.AllPages {
 
-		filepath := page.File.Name
-		// dir, filename := path.Split(filepath)
-		dirpaths := strings.SplitN(filepath, "/", 2)
-		if len(dirpaths) > 1 {
-			page.Section = dirpaths[0]
-		}
-
 		// get file content
-		contents, err := page.File.Contents()
+		contents, err := page.GitFile.Contents()
 		if err != nil {
-			log.Fatalf("could not get contents: %s", filepath)
+			log.Fatalf("could not get contents: %s", page.GitFile.Name)
 			continue
 		}
 
@@ -208,38 +224,55 @@ func main() {
 		page.Metadata = meta.Get(context)
 		// fmt.Println(d.Metadata)
 
-		// Collections
-		site.Sections[page.Section] = append(site.Sections[page.Section], page)
-	}
+		// cf is our content file, i.e. original markdown files
+		cf := &File{}
+		cf.Path = page.GitFile.Name
+		cf.Dir, cf.LogicalName = path.Split(cf.Path)
+		cf.Ext = path.Ext(cf.LogicalName)
+		cf.ContentBaseName = strings.Replace(cf.LogicalName, cf.Ext, "", 1)
+		page.File = cf
 
-	t := template.Must(template.ParseFiles(
-		".goliki/layouts/default.html",
-		".goliki/layouts/index.html",
-	))
-	fmt.Printf("tmpl check!\n%s", t.DefinedTemplates())
+		// will this error?
+		page.Section = strings.Split(cf.Dir, "/")[0]
 
-	// for each doc we want to render the specified layout with metadata and generated markdown,
-	// and write the final content to file.
-	for _, page := range site.AllPages {
-		// TODO: get YAML front matter and read layout (template)
+		// sf is our site file, i.e. final rendered files
+		sf := &File{}
+		sf.Ext = "html"
+		sf.ContentBaseName = cf.ContentBaseName
+		if cf.ContentBaseName == "README" {
+			sf.ContentBaseName = "index"
+		}
+		sf.LogicalName = fmt.Sprintf("%s.%s", sf.ContentBaseName, sf.Ext)
+		sf.Dir = cf.Dir
+		sf.Path = path.Join(sf.Dir, sf.LogicalName)
+		page.OutFile = sf
 
-		//
-		// write HTML file to file path
-		//
-
-		// e.g. f/a.md > build/f/a.html
-		relpath := strings.Replace(page.File.Name, ".md", ".html", 1)
-		tmplName := "default.html"
-
-		// special case: check if README and rewrite to index
-		if strings.Contains(page.File.Name, "README.md") {
-			relpath = strings.Replace(page.File.Name, "README.md", "index.html", 1)
-			tmplName = "index.html"
+		// select our template
+		page.TemplateName = "default.html"
+		if sf.ContentBaseName == "index" {
+			page.TemplateName = "index.html"
 		}
 
-		// FIXME: default var or parameter
-		buildpath := path.Join(".goliki/public/", relpath)
+		page.RelPermalink = sf.Path
+		page.Title = sf.ContentBaseName
+	}
 
+	// Post-processing for collections, etc.
+	for _, page := range site.AllPages {
+
+		if page.Section != "" {
+			site.Sections[page.Section] = append(site.Sections[page.Section], page)
+		}
+
+		// embed global Site var into each page
+		page.Site = site
+	}
+
+	// traverse all pages and render to final location
+	for _, page := range site.AllPages {
+
+		// FIXME: default var or parameter
+		buildpath := path.Join(".goliki/public/", page.OutFile.Path)
 		fmt.Println(buildpath)
 
 		// mkdir -p
@@ -252,12 +285,10 @@ func main() {
 		defer f.Close()
 
 		// render template with doc as context and write to file
-		err = t.ExecuteTemplate(f, tmplName, page)
+		err = t.ExecuteTemplate(f, page.TemplateName, page)
 		if err != nil {
 			panic(err)
 		}
-
-		// f.Write(d.MarkdownHTML.Bytes())
 	}
 
 }
