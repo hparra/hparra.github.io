@@ -7,13 +7,14 @@ import (
 	"net/url"
 	"os"
 	"path"
+	"regexp"
 	"strings"
 	"text/template"
 
 	"github.com/go-git/go-git/v5"
 	"github.com/go-git/go-git/v5/plumbing/object"
 	"github.com/yuin/goldmark"
-	"github.com/yuin/goldmark-meta"
+	meta "github.com/yuin/goldmark-meta"
 	"github.com/yuin/goldmark/ast"
 	"github.com/yuin/goldmark/extension"
 	"github.com/yuin/goldmark/parser"
@@ -21,15 +22,30 @@ import (
 	"github.com/yuin/goldmark/util"
 )
 
-// Document represents a goliki file.
+type Site struct {
+	AllPages []*Page
+	Sections map[string][]*Page
+}
+
+func NewSite() *Site {
+	return &Site{
+		AllPages: []*Page{},
+		Sections: map[string][]*Page{},
+	}
+}
+
+// Page represents a goliki file.
 // It contains the file data and metadata at multiple stages in the pipeline.
-type Document struct {
+// This is called Page
+type Page struct {
 	// File written in markdown
 	File     *object.File
 	Metadata map[string]interface{}
 	// HTML rendered from File
 	MarkdownHTML *bytes.Buffer
 	LastCommit   *object.Commit
+
+	Section string
 }
 
 // LinkTransformer implements ASTTransformer.
@@ -72,6 +88,8 @@ func (*LinkTransformer) Transform(doc *ast.Document, reader text.Reader, pctx pa
 
 func main() {
 
+	site := NewSite()
+
 	gitpath := "."
 
 	r, err := git.PlainOpen(gitpath)
@@ -99,13 +117,22 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// traverse the tree and add qualifying files to list
-	docs := []*Document{}
+	// file name check for *.md
+	pageRegex, err := regexp.Compile(`[\w]+\.md`)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// layoutRegex, err := regexp.Compile(`.goliki/layouts/[\w]+\.html`)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+
+	// traverse the tree!
+	// add qualifying files to list
 	tree.Files().ForEach(func(f *object.File) error {
 
-		// NOTE: first param is a shell pattern, not regex
-		matched, err := path.Match("*/*.md", f.Name)
-		if err != nil || !matched {
+		if !pageRegex.MatchString(f.Name) {
 			return nil
 		}
 
@@ -123,7 +150,7 @@ func main() {
 			return nil
 		}
 
-		doc := &Document{
+		doc := &Page{
 			File:       f,
 			LastCommit: lastCommit,
 		}
@@ -131,7 +158,7 @@ func main() {
 		// fmt.Println(doc.File.Name)
 		// fmt.Println(doc.LastCommit.Message)
 
-		docs = append(docs, doc)
+		site.AllPages = append(site.AllPages, doc)
 		return nil
 	})
 
@@ -152,36 +179,48 @@ func main() {
 
 	// for each doc parse it's markdown and store rendered HTML
 	// TODO: store YAML front matter for each
-	for _, d := range docs {
+	for _, page := range site.AllPages {
+
+		filepath := page.File.Name
+		// dir, filename := path.Split(filepath)
+		dirpaths := strings.SplitN(filepath, "/", 2)
+		if len(dirpaths) > 1 {
+			page.Section = dirpaths[0]
+		}
 
 		// get file content
-		contents, err := d.File.Contents()
+		contents, err := page.File.Contents()
 		if err != nil {
-			log.Fatalf("could not get contents: %s", d.File.Name)
+			log.Fatalf("could not get contents: %s", filepath)
 			continue
 		}
 
 		// Why do I have to do this?
-		d.MarkdownHTML = new(bytes.Buffer)
+		page.MarkdownHTML = new(bytes.Buffer)
 
 		// TODO: Add https://github.com/yuin/goldmark-highlighting
 		context := parser.NewContext()
-		if err := markdown.Convert([]byte(contents), d.MarkdownHTML, parser.WithContext(context)); err != nil {
+		if err := markdown.Convert([]byte(contents), page.MarkdownHTML, parser.WithContext(context)); err != nil {
 			panic(err)
 		}
+
 		// TODO: Metadata is too raw
-		d.Metadata = meta.Get(context)
+		page.Metadata = meta.Get(context)
 		// fmt.Println(d.Metadata)
+
+		// Collections
+		site.Sections[page.Section] = append(site.Sections[page.Section], page)
 	}
 
-	// TODO: process site-wide metadata from all front matter
-
-	// FIXME
-	t := template.Must(template.New("default.html").ParseFiles(".goliki/layouts/default.html"))
+	t := template.Must(template.ParseFiles(
+		".goliki/layouts/default.html",
+		".goliki/layouts/index.html",
+	))
+	fmt.Printf("tmpl check!\n%s", t.DefinedTemplates())
 
 	// for each doc we want to render the specified layout with metadata and generated markdown,
 	// and write the final content to file.
-	for _, d := range docs {
+	for _, page := range site.AllPages {
 		// TODO: get YAML front matter and read layout (template)
 
 		//
@@ -189,7 +228,14 @@ func main() {
 		//
 
 		// e.g. f/a.md > build/f/a.html
-		relpath := strings.Replace(d.File.Name, ".md", ".html", 1)
+		relpath := strings.Replace(page.File.Name, ".md", ".html", 1)
+		tmplName := "default.html"
+
+		// special case: check if README and rewrite to index
+		if strings.Contains(page.File.Name, "README.md") {
+			relpath = strings.Replace(page.File.Name, "README.md", "index.html", 1)
+			tmplName = "index.html"
+		}
 
 		// FIXME: default var or parameter
 		buildpath := path.Join(".goliki/public/", relpath)
@@ -206,7 +252,7 @@ func main() {
 		defer f.Close()
 
 		// render template with doc as context and write to file
-		err = t.Execute(f, d)
+		err = t.ExecuteTemplate(f, tmplName, page)
 		if err != nil {
 			panic(err)
 		}
