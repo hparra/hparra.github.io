@@ -33,6 +33,8 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
+          # We need all the history!
+          fetch-depth: 0
           submodules: recursive
       
       - name: Setup Github Pages

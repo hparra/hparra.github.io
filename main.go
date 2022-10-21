@@ -171,12 +171,12 @@ func main() {
 			FileName: &f.Name,
 		})
 		if err != nil {
-			return nil
+			log.Fatal(err)
 		}
 
 		lastCommit, err := commitIter.Next()
 		if err != nil {
-			return nil
+			log.Fatal(err)
 		}
 
 		page := &Page{
