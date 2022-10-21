@@ -7,40 +7,41 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, shrink-to-fit=no">
   </head>
   <body>
-    <header><a href="/">HGPA</a></header>
-    <article>{{ .MarkdownHTML }}</article>
+    <article>
+      {{ .MarkdownHTML }}
 
-    <h2>Notes</h2>
-    <p>
-      Notes are incomplete collections of information.
-      Quality and completeness varies.
-      These files can change at anytime.
-      Use at your own risk.
-    </p>
-    <ul>
-    {{ range $page := index .Site.Sections "_notes" }}
-      <li>
-        <a href="{{ $page.RelPermalink }}">
-          {{ $page.Title }}
-        </a>
-      </li>
-    {{ end }}
-    </ul>
+      <h2>Notes</h2>
+      <p>
+        Notes are incomplete collections of information.
+        Quality and completeness varies.
+        These files can change at anytime.
+        Use at your own risk.
+      </p>
+      <ul>
+      {{ range $page := index .Site.Sections "notes" }}
+        <li>
+          <a href="{{ $page.RelPermalink }}">
+            {{ $page.Title }}
+          </a>
+        </li>
+      {{ end }}
+      </ul>
 
-    <h2>Journal</h2>
-    <p>
-      Journal entries are mixed notes generated on a specific day.
-      Sometimes portions of these become actual notes.
-    </p>
-    <ul>
-    {{ range $page := index .Site.Sections "_journal" }}
-      <li>
-        <a href="{{ $page.RelPermalink }}">
-          {{ $page.Title }}
-        </a>
-      </li>
-    {{ end }}
-    </ul>
+      <h2>Journal</h2>
+      <p>
+        Journal entries are mixed notes generated on a specific day.
+        Sometimes portions of these become actual notes.
+      </p>
+      <ul>
+      {{ range $page := index .Site.Sections "journal" }}
+        <li>
+          <a href="{{ $page.RelPermalink }}">
+            {{ $page.Title }}
+          </a>
+        </li>
+      {{ end }}
+      </ul>
+    </article>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
