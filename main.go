@@ -22,29 +22,14 @@ import (
 	"github.com/yuin/goldmark/util"
 )
 
-// Site is collection of all site data: pages, variables, etc.
-// It is passed into templates via Page.
-type Site struct {
-	AllPages []*Page
-	Sections map[string][]*Page
-}
-
-// NewSite returns a Site with instantiated fields.
-func NewSite() *Site {
-	return &Site{
-		AllPages: []*Page{},
-		Sections: map[string][]*Page{},
-	}
-}
-
 // Page represents a goliki file.
 // It contains the file data and metadata at multiple stages in the build pipeline.
 // It is passed into templates.
 type Page struct {
-	// GitFile is the original content file from git.
-	GitFile *object.File
 	// LastCommit is the latest commit that modified this file.
 	LastCommit *object.Commit
+	// Markdown is the raw markdown file.
+	Markdown string
 	// MarkdownHTML is rendered from GitFile content.
 	MarkdownHTML *bytes.Buffer
 	// Metadata is read from YAML Front Matter.
@@ -61,6 +46,21 @@ type Page struct {
 	Title        string
 }
 
+// Site is collection of all site data: pages, variables, etc.
+// It is passed into templates via Page.
+type Site struct {
+	AllPages []*Page
+	Sections map[string][]*Page
+}
+
+// NewSite returns a Site with instantiated fields.
+func NewSite() *Site {
+	return &Site{
+		AllPages: []*Page{},
+		Sections: map[string][]*Page{},
+	}
+}
+
 // File represents common file metadata.
 // It tries to follow schema for Hugo's .Page.File
 // https://gohugo.io/variables/files/
@@ -71,6 +71,16 @@ type File struct {
 	BaseFileName    string
 	Ext             string
 	Dir             string
+}
+
+// NewFile returns ref to new F from parsed path to file.
+func NewFile(fpath string) *File {
+	f := &File{}
+	f.Path = fpath
+	f.Dir, f.LogicalName = path.Split(f.Path)
+	f.Ext = path.Ext(f.LogicalName)
+	f.ContentBaseName = strings.Replace(f.LogicalName, f.Ext, "", 1)
+	return f
 }
 
 // LinkTransformer is a custom Goldmark ASTTransformer.
@@ -115,19 +125,58 @@ func (*LinkTransformer) Transform(doc *ast.Document, reader text.Reader, pctx pa
 //
 func main() {
 
-	site := NewSite()
+	// check for local git repo
+	gitpath := "."
+	r, err := git.PlainOpen(gitpath)
+	if err != nil {
+		log.Fatal(err)
+	}
 
-	// save time and check templates immediately
+	pagesTask(r, `[\w]+\.md`, ".goliki/public/")
+
+}
+
+// pagesTask runt the Page pipeline
+func pagesTask(r *git.Repository, filePattern string, publishDir string) {
+
+	// load and parse templates
 	t := template.Must(template.ParseFiles(
 		".goliki/layouts/default.html",
 		".goliki/layouts/index.html",
 	))
 	log.Printf("found templates: %s\n", t.DefinedTemplates())
 
-	gitpath := "."
-	r, err := git.PlainOpen(gitpath)
+	// create configured goldmark
+	markdown := goldmark.New(
+		goldmark.WithParserOptions(
+			parser.WithASTTransformers(
+				util.Prioritized(&LinkTransformer{}, 100),
+			),
+		),
+		goldmark.WithExtensions(
+			extension.GFM,
+			meta.Meta,
+		),
+	)
+
+	// actual pipeline
+	pages := readPages(r, filePattern)
+	for _, page := range pages {
+		addGit(page, r)
+		renderMarkdown(page, markdown)
+	}
+	reduceSite(pages)
+	for _, page := range pages {
+		renderWritePage(page, publishDir, t)
+	}
+}
+
+// readPage needs to be refactored when we read from fs instead.
+func readPages(r *git.Repository, re string) []*Page {
+	pageRegex, err := regexp.Compile(re)
 	if err != nil {
 		log.Fatal(err)
+		return nil
 	}
 
 	// get reference to last commit (HEAD)
@@ -149,122 +198,107 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// file name check for *.md
-	pageRegex, err := regexp.Compile(`[\w]+\.md`)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	// traverse the tree!
-	// add qualifying files to list
-	// TODO: don't be lazy; read from file system
+	pages := []*Page{}
 	tree.Files().ForEach(func(f *object.File) error {
 
-		if !pageRegex.MatchString(f.Name) {
+		ff := NewFile(f.Name)
+		if !pageRegex.MatchString(ff.Path) {
 			return nil
 		}
-		log.Printf("processing %s\n", f.Name)
+		log.Printf("processing %s\n", ff.Path)
 
-		// git log -- FILENAME
-		commitIter, err := r.Log(&git.LogOptions{
-			From:     ref.Hash(),
-			FileName: &f.Name,
-		})
+		// get file content
+		contents, err := f.Contents()
 		if err != nil {
-			log.Fatal(err)
-		}
-
-		lastCommit, err := commitIter.Next()
-		if err != nil {
-			log.Fatal(err)
+			log.Fatalf("could not get contents: %s\n", f.Name)
 		}
 
 		page := &Page{
-			GitFile:    f,
-			LastCommit: lastCommit,
+			File:     ff,
+			Markdown: contents,
 		}
 
-		site.AllPages = append(site.AllPages, page)
+		pages = append(pages, page)
 
 		return nil
 	})
-	log.Printf("processed %d files\n", len(site.AllPages))
+	log.Printf("processed %d files\n", len(pages))
 
-	// create configured goldmark
-	markdown := goldmark.New(
-		goldmark.WithParserOptions(
-			parser.WithASTTransformers(
-				util.Prioritized(&LinkTransformer{}, 100),
-			),
-		),
-		goldmark.WithExtensions(
-			extension.GFM,
-			meta.Meta,
-		),
-	)
+	return pages
+}
 
-	// for each doc parse it's markdown and store rendered HTML
-	log.Println("starting process")
-	for _, page := range site.AllPages {
+// addGit adds latest commit info to Page.
+func addGit(page *Page, r *git.Repository) *Page {
 
-		// get file content
-		contents, err := page.GitFile.Contents()
-		if err != nil {
-			log.Printf("could not get contents: %s\n", page.GitFile.Name)
-			continue
-		}
-
-		// Why do I have to do this?
-		page.MarkdownHTML = new(bytes.Buffer)
-
-		// TODO: Add https://github.com/yuin/goldmark-highlighting
-		context := parser.NewContext()
-		if err := markdown.Convert([]byte(contents), page.MarkdownHTML, parser.WithContext(context)); err != nil {
-			log.Printf("%s", err)
-			continue
-		}
-
-		// TODO: Metadata is too raw
-		page.Metadata = meta.Get(context)
-		// fmt.Println(d.Metadata)
-
-		// cf is our content file, i.e. original markdown files
-		cf := &File{}
-		cf.Path = page.GitFile.Name
-		cf.Dir, cf.LogicalName = path.Split(cf.Path)
-		cf.Ext = path.Ext(cf.LogicalName)
-		cf.ContentBaseName = strings.Replace(cf.LogicalName, cf.Ext, "", 1)
-		page.File = cf
-
-		// will this error?
-		page.Section = strings.Split(cf.Dir, "/")[0]
-
-		// sf is our site file, i.e. final rendered files
-		sf := &File{}
-		sf.Ext = "html"
-		sf.ContentBaseName = cf.ContentBaseName
-		if cf.ContentBaseName == "README" {
-			sf.ContentBaseName = "index"
-		}
-		sf.LogicalName = fmt.Sprintf("%s.%s", sf.ContentBaseName, sf.Ext)
-		sf.Dir = cf.Dir
-		sf.Path = path.Join(sf.Dir, sf.LogicalName)
-		page.OutFile = sf
-
-		// select our template
-		page.TemplateName = "default.html"
-		if sf.ContentBaseName == "index" {
-			page.TemplateName = "index.html"
-		}
-
-		page.RelPermalink = sf.Path
-		page.Title = sf.ContentBaseName
+	// git log -- FILENAME
+	commitIter, err := r.Log(&git.LogOptions{
+		// it's HEAD by default
+		// From:     ref.Hash(),
+		FileName: &page.File.Path,
+	})
+	if err != nil {
+		log.Fatal(err)
+		return page
 	}
-	log.Println("finished process")
 
-	// Post-processing for collections, etc.
-	log.Println("starting post-process")
-	for _, page := range site.AllPages {
+	lastCommit, err := commitIter.Next()
+	if err != nil {
+		log.Fatal(err)
+		return page
+	}
+
+	page.LastCommit = lastCommit
+	return page
+}
+
+// renderMarkdown renders and stores HTML from Page's markdown.
+// It also parses metadata into appropriate Page variables.
+func renderMarkdown(page *Page, markdown goldmark.Markdown) *Page {
+
+	// Why do I have to do this?
+	page.MarkdownHTML = new(bytes.Buffer)
+
+	// TODO: Add https://github.com/yuin/goldmark-highlighting
+	context := parser.NewContext()
+	if err := markdown.Convert([]byte(page.Markdown), page.MarkdownHTML, parser.WithContext(context)); err != nil {
+		log.Printf("%s", err)
+		return page
+	}
+
+	// TODO: Metadata is too raw
+	page.Metadata = meta.Get(context)
+
+	// will this error?
+	page.Section = strings.Split(page.File.Dir, "/")[0]
+
+	// Outfile represents how the final file is to be written.
+	// FIXME: this probably needs to go elsewhere
+	sf := &File{}
+	sf.Ext = "html"
+	sf.ContentBaseName = page.File.ContentBaseName
+	if page.File.ContentBaseName == "README" {
+		sf.ContentBaseName = "index"
+	}
+	sf.LogicalName = fmt.Sprintf("%s.%s", sf.ContentBaseName, sf.Ext)
+	sf.Dir = page.File.Dir
+	sf.Path = path.Join(sf.Dir, sf.LogicalName)
+	page.OutFile = sf
+
+	// select our template
+	page.TemplateName = "default.html"
+	if sf.ContentBaseName == "index" {
+		page.TemplateName = "index.html"
+	}
+
+	page.RelPermalink = sf.Path
+	page.Title = sf.ContentBaseName
+	return page
+}
+
+// reduceSite processes pages to and adds site aggregate data to each one.
+func reduceSite(pages []*Page) []*Page {
+	site := NewSite()
+	for _, page := range pages {
 
 		if page.Section != "" {
 			site.Sections[page.Section] = append(site.Sections[page.Section], page)
@@ -273,37 +307,31 @@ func main() {
 		// embed global Site var into each page
 		page.Site = site
 	}
-	log.Println("finished post-process")
+	return pages
+}
 
-	publishDir := ".goliki/public/"
-
-	// traverse all pages and render to final location
-	log.Println("starting file writing")
-	for _, page := range site.AllPages {
-
-		// create destination directory
-		filedir := path.Join(publishDir, page.OutFile.Dir)
-		err := os.MkdirAll(filedir, os.ModePerm)
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		// create file at path
-		filepath := path.Join(publishDir, page.OutFile.Path)
-		f, err := os.Create(filepath)
-		if err != nil {
-			log.Fatal(err)
-		}
-		defer f.Close()
-
-		// write file with rendered template
-		err = t.ExecuteTemplate(f, page.TemplateName, page)
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		log.Printf("wrote %s\n", filepath)
+// renderWritePage renders final HTML for page and write it to disk.
+// TODO: Should be two functions: one render template into a new buffer in Page,
+// and the other to write buffer to fs.
+func renderWritePage(page *Page, publishDir string, t *template.Template) *Page {
+	// create destination directory
+	filedir := path.Join(publishDir, page.OutFile.Dir)
+	err := os.MkdirAll(filedir, os.ModePerm)
+	if err != nil {
+		log.Fatal(err)
 	}
-	log.Println("ending file writing")
-
+	// create file at path
+	filepath := path.Join(publishDir, page.OutFile.Path)
+	f, err := os.Create(filepath)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer f.Close()
+	// write file with rendered template
+	err = t.ExecuteTemplate(f, page.TemplateName, page)
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.Printf("wrote %s\n", filepath)
+	return page
 }
