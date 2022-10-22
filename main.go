@@ -32,12 +32,14 @@ type Page struct {
 	Markdown string
 	// MarkdownHTML is rendered from GitFile content.
 	MarkdownHTML *bytes.Buffer
+	// HTML is content rendered from template.
+	HTML *bytes.Buffer
 	// Metadata is read from YAML Front Matter.
 	Metadata map[string]interface{}
-
-	Site    *Site
-	File    *File
-	OutFile *File
+	// Site contains information about the entire site and all pages.
+	Site *Site
+	// File is simple metadata regarding original input file of page.
+	File *File
 
 	TemplateName string
 
@@ -167,7 +169,8 @@ func pagesTask(r *git.Repository, filePattern string, publishDir string) {
 	}
 	reduceSite(pages)
 	for _, page := range pages {
-		renderWritePage(page, publishDir, t)
+		renderPage(page, t)
+		writePage(page, publishDir)
 	}
 }
 
@@ -271,27 +274,10 @@ func renderMarkdown(page *Page, markdown goldmark.Markdown) *Page {
 	// will this error?
 	page.Section = strings.Split(page.File.Dir, "/")[0]
 
-	// Outfile represents how the final file is to be written.
-	// FIXME: this probably needs to go elsewhere
-	sf := &File{}
-	sf.Ext = "html"
-	sf.ContentBaseName = page.File.ContentBaseName
-	if page.File.ContentBaseName == "README" {
-		sf.ContentBaseName = "index"
-	}
-	sf.LogicalName = fmt.Sprintf("%s.%s", sf.ContentBaseName, sf.Ext)
-	sf.Dir = page.File.Dir
-	sf.Path = path.Join(sf.Dir, sf.LogicalName)
-	page.OutFile = sf
+	// FIXME: This relative URL is only correct at root
+	page.RelPermalink = path.Join(page.File.Dir, fmt.Sprintf("%s.%s", page.File.ContentBaseName, "html"))
 
-	// select our template
-	page.TemplateName = "default.html"
-	if sf.ContentBaseName == "index" {
-		page.TemplateName = "index.html"
-	}
-
-	page.RelPermalink = sf.Path
-	page.Title = sf.ContentBaseName
+	page.Title = page.File.ContentBaseName
 	return page
 }
 
@@ -310,28 +296,52 @@ func reduceSite(pages []*Page) []*Page {
 	return pages
 }
 
-// renderWritePage renders final HTML for page and write it to disk.
-// TODO: Should be two functions: one render template into a new buffer in Page,
-// and the other to write buffer to fs.
-func renderWritePage(page *Page, publishDir string, t *template.Template) *Page {
-	// create destination directory
-	filedir := path.Join(publishDir, page.OutFile.Dir)
-	err := os.MkdirAll(filedir, os.ModePerm)
+// renderPage renders HTML for page.
+func renderPage(page *Page, t *template.Template) *Page {
+
+	if page.TemplateName == "" {
+		page.TemplateName = "default.html"
+		if page.File.LogicalName == "README.md" {
+			page.TemplateName = "index.html"
+		}
+	}
+
+	// write file with rendered template
+	page.HTML = new(bytes.Buffer)
+	err := t.ExecuteTemplate(page.HTML, page.TemplateName, page)
 	if err != nil {
 		log.Fatal(err)
 	}
-	// create file at path
-	filepath := path.Join(publishDir, page.OutFile.Path)
-	f, err := os.Create(filepath)
+	return page
+}
+
+// writePage writes page HTML to path at publishDir.
+// it ensures the path exists
+func writePage(page *Page, publishDir string) *Page {
+	// FIXME: check that publishDir exists
+
+	// ensure destination exists
+	pageDir := path.Join(publishDir, page.File.Dir)
+	err := os.MkdirAll(pageDir, os.ModePerm)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// README.md -> index.html
+	contentBaseName := page.File.ContentBaseName
+	if contentBaseName == "README" {
+		contentBaseName = "index"
+	}
+
+	logicalName := fmt.Sprintf("%s.%s", contentBaseName, "html")
+	pagePath := path.Join(pageDir, logicalName)
+
+	f, err := os.Create(pagePath)
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer f.Close()
-	// write file with rendered template
-	err = t.ExecuteTemplate(f, page.TemplateName, page)
-	if err != nil {
-		log.Fatal(err)
-	}
-	log.Printf("wrote %s\n", filepath)
+	f.Write(page.HTML.Bytes())
+
 	return page
 }
