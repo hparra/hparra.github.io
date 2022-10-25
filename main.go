@@ -3,10 +3,12 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"net/url"
 	"os"
 	"path"
+	"path/filepath"
 	"regexp"
 	"strings"
 	"text/template"
@@ -29,7 +31,7 @@ type Page struct {
 	// LastCommit is the latest commit that modified this file.
 	LastCommit *object.Commit
 	// Markdown is the raw markdown file.
-	Markdown string
+	Markdown *bytes.Buffer
 	// MarkdownHTML is rendered from GitFile content.
 	MarkdownHTML *bytes.Buffer
 	// HTML is content rendered from template.
@@ -46,6 +48,17 @@ type Page struct {
 	RelPermalink string
 	Section      string
 	Title        string
+}
+
+// NewPage creates a new Page from path and bytes.
+// Bytes represent the raw Markdown content.
+func NewPage(path string, b []byte) *Page {
+	// Should this be NewPage()?
+	page := &Page{
+		File:     NewFile(path),
+		Markdown: bytes.NewBuffer(b),
+	}
+	return page
 }
 
 // Site is collection of all site data: pages, variables, etc.
@@ -118,13 +131,11 @@ func (*LinkTransformer) Transform(doc *ast.Document, reader text.Reader, pctx pa
 		// replace html with md
 		newDest := strings.Replace(dest, ".md", ".html", 1)
 		link.Destination = []byte(newDest)
-		// fmt.Printf("%s\n", newDest)
 
 		return ast.WalkContinue, nil
 	})
 }
 
-//
 func main() {
 
 	// check for local git repo
@@ -161,11 +172,17 @@ func pagesTask(r *git.Repository, filePattern string, publishDir string) {
 		),
 	)
 
-	// actual pipeline
-	pages := readPages(r, filePattern)
-	for _, page := range pages {
+	pages := []*Page{}
+	paths := listFilePaths(".", filePattern)
+	for _, path := range paths {
+		page, err := readPage(path)
+		if err != nil {
+			log.Println(err)
+			continue
+		}
 		addGit(page, r)
 		renderMarkdown(page, markdown)
+		pages = append(pages, page)
 	}
 	reduceSite(pages)
 	for _, page := range pages {
@@ -174,60 +191,42 @@ func pagesTask(r *git.Repository, filePattern string, publishDir string) {
 	}
 }
 
-// readPage needs to be refactored when we read from fs instead.
-func readPages(r *git.Repository, re string) []*Page {
-	pageRegex, err := regexp.Compile(re)
+// listFilepaths traverses the file tree at rootDir and returns an array of paths.
+func listFilePaths(rootDir string, filePattern string) []string {
+	paths := []string{}
+
+	// fpr is the filepath regex
+	fpr, err := regexp.Compile(filePattern)
 	if err != nil {
 		log.Fatal(err)
 		return nil
 	}
 
-	// get reference to last commit (HEAD)
-	ref, err := r.Head()
-	if err != nil {
-		log.Fatal(err)
-	}
-	log.Printf("HEAD %s\n", ref.Hash())
-
-	// retrieve commit object using hash
-	commit, err := r.CommitObject(ref.Hash())
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	// get list of all files at that commit
-	tree, err := commit.Tree()
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	pages := []*Page{}
-	tree.Files().ForEach(func(f *object.File) error {
-
-		ff := NewFile(f.Name)
-		if !pageRegex.MatchString(ff.Path) {
-			return nil
-		}
-		log.Printf("processing %s\n", ff.Path)
-
-		// get file content
-		contents, err := f.Contents()
+	// https://pkg.go.dev/path/filepath@go1.15.2#WalkFunc
+	err = filepath.Walk(rootDir, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
-			log.Fatalf("could not get contents: %s\n", f.Name)
+			return err
 		}
-
-		page := &Page{
-			File:     ff,
-			Markdown: contents,
+		if !info.IsDir() && fpr.MatchString(path) {
+			log.Println(path)
+			paths = append(paths, path)
 		}
-
-		pages = append(pages, page)
-
 		return nil
 	})
-	log.Printf("processed %d files\n", len(pages))
+	if err != nil {
+		log.Fatal(err)
+	}
 
-	return pages
+	return paths
+}
+
+func readPage(path string) (*Page, error) {
+	b, err := ioutil.ReadFile(path)
+	if err != nil {
+		return nil, err
+	}
+	log.Printf("Read %s\n", path)
+	return NewPage(path, b), nil
 }
 
 // addGit adds latest commit info to Page.
@@ -263,7 +262,7 @@ func renderMarkdown(page *Page, markdown goldmark.Markdown) *Page {
 
 	// TODO: Add https://github.com/yuin/goldmark-highlighting
 	context := parser.NewContext()
-	if err := markdown.Convert([]byte(page.Markdown), page.MarkdownHTML, parser.WithContext(context)); err != nil {
+	if err := markdown.Convert(page.Markdown.Bytes(), page.MarkdownHTML, parser.WithContext(context)); err != nil {
 		log.Printf("%s", err)
 		return page
 	}
