@@ -150,8 +150,8 @@ func main() {
 		log.Fatal(err)
 	}
 
+	copyFiles(".goliki/static", ".goliki/public/")
 	pagesTask(r, `[\w]+\.md`, ".goliki/public/")
-
 }
 
 // pagesTask runt the Page pipeline
@@ -367,4 +367,36 @@ func writePage(page *Page, publishDir string) *Page {
 	f.Write(page.HTML.Bytes())
 
 	return page
+}
+
+// copyFiles copies all files in sourceDir to publishDir.
+func copyFiles(sourceDir string, publishDir string) error {
+
+	filepaths, err := listFilePaths(sourceDir, ".")
+	if err != nil {
+		return err
+	}
+
+	for _, p := range filepaths {
+
+		// replace sourceDir with destDir
+		np := path.Join(publishDir, strings.ReplaceAll(p, sourceDir, ""))
+
+		b, err := ioutil.ReadFile(p)
+		if err != nil {
+			log.Println(err)
+			continue
+		}
+
+		if err := os.MkdirAll(path.Dir(np), os.ModePerm); err != nil {
+			log.Println(err)
+			continue
+		}
+
+		if err := ioutil.WriteFile(np, b, 0644); err != nil {
+			log.Println(err)
+			continue
+		}
+	}
+	return nil
 }
