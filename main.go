@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"log"
 	"net/url"
@@ -45,6 +46,7 @@ type Page struct {
 
 	TemplateName string
 
+	Permalink    string
 	RelPermalink string
 	Section      string
 	Title        string
@@ -130,6 +132,9 @@ func (*LinkTransformer) Transform(doc *ast.Document, reader text.Reader, pctx pa
 
 		// replace html with md
 		newDest := strings.Replace(dest, ".md", ".html", 1)
+		// replace README with index
+		newDest = strings.Replace(newDest, "README", "index", 1)
+
 		link.Destination = []byte(newDest)
 
 		return ast.WalkContinue, nil
@@ -152,11 +157,13 @@ func main() {
 // pagesTask runt the Page pipeline
 func pagesTask(r *git.Repository, filePattern string, publishDir string) {
 
+	tmplFilePaths, err := filepath.Glob(".goliki/layouts/*.html")
+	if err != nil {
+		log.Fatalln(err)
+	}
+
 	// load and parse templates
-	t := template.Must(template.ParseFiles(
-		".goliki/layouts/default.html",
-		".goliki/layouts/index.html",
-	))
+	t := template.Must(template.ParseFiles(tmplFilePaths...))
 	log.Printf("found templates: %s\n", t.DefinedTemplates())
 
 	// create configured goldmark
@@ -173,7 +180,10 @@ func pagesTask(r *git.Repository, filePattern string, publishDir string) {
 	)
 
 	pages := []*Page{}
-	paths := listFilePaths(".", filePattern)
+	paths, err := listFilePaths(".", filePattern)
+	if err != nil {
+		log.Fatal(err)
+	}
 	for _, path := range paths {
 		page, err := readPage(path)
 		if err != nil {
@@ -192,16 +202,15 @@ func pagesTask(r *git.Repository, filePattern string, publishDir string) {
 }
 
 // listFilepaths traverses the file tree at rootDir and returns an array of paths.
-func listFilePaths(rootDir string, filePattern string) []string {
-	paths := []string{}
-
+func listFilePaths(rootDir string, filePattern string) ([]string, error) {
 	// fpr is the filepath regex
 	fpr, err := regexp.Compile(filePattern)
 	if err != nil {
-		log.Fatal(err)
-		return nil
+		log.Println(err)
+		return nil, err
 	}
 
+	paths := []string{}
 	// https://pkg.go.dev/path/filepath@go1.15.2#WalkFunc
 	err = filepath.Walk(rootDir, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
@@ -214,10 +223,11 @@ func listFilePaths(rootDir string, filePattern string) []string {
 		return nil
 	})
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		return paths, err
 	}
 
-	return paths
+	return paths, err
 }
 
 func readPage(path string) (*Page, error) {
@@ -239,13 +249,16 @@ func addGit(page *Page, r *git.Repository) *Page {
 		FileName: &page.File.Path,
 	})
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		log.Println("OK")
 		return page
 	}
 
 	lastCommit, err := commitIter.Next()
 	if err != nil {
-		log.Fatal(err)
+		if err == io.EOF {
+			log.Printf("No commit history: %s\n", page.File.Path)
+		}
 		return page
 	}
 
@@ -263,7 +276,7 @@ func renderMarkdown(page *Page, markdown goldmark.Markdown) *Page {
 	// TODO: Add https://github.com/yuin/goldmark-highlighting
 	context := parser.NewContext()
 	if err := markdown.Convert(page.Markdown.Bytes(), page.MarkdownHTML, parser.WithContext(context)); err != nil {
-		log.Printf("%s", err)
+		log.Println(err)
 		return page
 	}
 
@@ -273,9 +286,11 @@ func renderMarkdown(page *Page, markdown goldmark.Markdown) *Page {
 	// will this error?
 	page.Section = strings.Split(page.File.Dir, "/")[0]
 
-	// FIXME: This relative URL is only correct at root
-	page.RelPermalink = path.Join(page.File.Dir, fmt.Sprintf("%s.%s", page.File.ContentBaseName, "html"))
+	filename := fmt.Sprintf("%s.%s", page.File.ContentBaseName, "html")
 
+	// FIXME: This relative URL is only correct at root
+	page.RelPermalink = path.Join(page.File.Dir, filename)
+	page.Permalink = path.Join("/", page.File.Dir, filename)
 	page.Title = page.File.ContentBaseName
 	return page
 }
@@ -285,7 +300,8 @@ func reduceSite(pages []*Page) []*Page {
 	site := NewSite()
 	for _, page := range pages {
 
-		if page.Section != "" {
+		// do not add README/index to Section list
+		if page.Section != "" && page.File.ContentBaseName != "README" {
 			site.Sections[page.Section] = append(site.Sections[page.Section], page)
 		}
 
@@ -298,9 +314,14 @@ func reduceSite(pages []*Page) []*Page {
 // renderPage renders HTML for page.
 func renderPage(page *Page, t *template.Template) *Page {
 
+	// set template if it has not been defined
 	if page.TemplateName == "" {
 		page.TemplateName = "default.html"
 		if page.File.LogicalName == "README.md" {
+			page.TemplateName = "README.html"
+		}
+		// This is readme @ root
+		if page.File.Path == "README.md" {
 			page.TemplateName = "index.html"
 		}
 	}
@@ -309,6 +330,7 @@ func renderPage(page *Page, t *template.Template) *Page {
 	page.HTML = new(bytes.Buffer)
 	err := t.ExecuteTemplate(page.HTML, page.TemplateName, page)
 	if err != nil {
+		// This is not good
 		log.Fatal(err)
 	}
 	return page
@@ -323,7 +345,8 @@ func writePage(page *Page, publishDir string) *Page {
 	pageDir := path.Join(publishDir, page.File.Dir)
 	err := os.MkdirAll(pageDir, os.ModePerm)
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		return nil
 	}
 
 	// README.md -> index.html
@@ -337,7 +360,8 @@ func writePage(page *Page, publishDir string) *Page {
 
 	f, err := os.Create(pagePath)
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		return nil
 	}
 	defer f.Close()
 	f.Write(page.HTML.Bytes())
