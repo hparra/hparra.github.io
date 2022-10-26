@@ -14,9 +14,11 @@ import (
 	"strings"
 	"text/template"
 
+	"github.com/alecthomas/chroma/formatters/html"
 	"github.com/go-git/go-git/v5"
 	"github.com/go-git/go-git/v5/plumbing/object"
 	"github.com/yuin/goldmark"
+	highlighting "github.com/yuin/goldmark-highlighting"
 	meta "github.com/yuin/goldmark-meta"
 	"github.com/yuin/goldmark/ast"
 	"github.com/yuin/goldmark/extension"
@@ -175,6 +177,11 @@ func pagesTask(r *git.Repository, filePattern string, publishDir string) {
 		),
 		goldmark.WithExtensions(
 			extension.GFM,
+			highlighting.NewHighlighting(
+				highlighting.WithFormatOptions(
+					html.WithLineNumbers(false),
+				),
+			),
 			meta.Meta,
 		),
 	)
