@@ -178,6 +178,7 @@ func pagesTask(r *git.Repository, filePattern string, publishDir string) {
 		goldmark.WithExtensions(
 			extension.GFM,
 			highlighting.NewHighlighting(
+				highlighting.WithStyle("github"),
 				highlighting.WithFormatOptions(
 					html.WithLineNumbers(false),
 				),
