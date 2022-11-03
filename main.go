@@ -156,19 +156,58 @@ func main() {
 	pagesTask(r, `[\w]+\.md`, ".goliki/public/")
 }
 
-// pagesTask runt the Page pipeline
+// pagesTask runs the Page pipeline.
 func pagesTask(r *git.Repository, filePattern string, publishDir string) {
 
-	tmplFilePaths, err := filepath.Glob(".goliki/layouts/*.html")
+	// load templates first for quick error
+	t, err := parseTemplateGlob(".goliki/layouts/*.html")
 	if err != nil {
-		log.Fatalln(err)
+		log.Fatal(err)
+	}
+
+	markdown := newGoldmark()
+
+	pages := []*Page{}
+	paths, err := listFilePaths(".", filePattern)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, path := range paths {
+		page, err := readPage(path)
+		if err != nil {
+			log.Println(err)
+			continue
+		}
+		addGit(page, r)
+		renderMarkdown(page, markdown)
+		pages = append(pages, page)
+	}
+	reduceSite(pages)
+	for _, page := range pages {
+		renderPage(page, t)
+		writePage(page, publishDir)
+	}
+}
+
+// parseTemplateGlob accepts a Glob for Go Template files to load.
+func parseTemplateGlob(glob string) (*template.Template, error) {
+	tmplFilePaths, err := filepath.Glob(glob)
+	if err != nil {
+		return nil, err
 	}
 
 	// load and parse templates
-	t := template.Must(template.ParseFiles(tmplFilePaths...))
+	t, err := template.ParseFiles(tmplFilePaths...)
+	if err != nil {
+		return nil, err
+	}
 	log.Printf("found templates: %s\n", t.DefinedTemplates())
+	return t, nil
+}
 
-	// create configured goldmark
+// newGoldmark returns a new goldmark configured for Goliki.
+func newGoldmark() goldmark.Markdown {
 	markdown := goldmark.New(
 		goldmark.WithParserOptions(
 			parser.WithASTTransformers(
@@ -186,27 +225,7 @@ func pagesTask(r *git.Repository, filePattern string, publishDir string) {
 			meta.Meta,
 		),
 	)
-
-	pages := []*Page{}
-	paths, err := listFilePaths(".", filePattern)
-	if err != nil {
-		log.Fatal(err)
-	}
-	for _, path := range paths {
-		page, err := readPage(path)
-		if err != nil {
-			log.Println(err)
-			continue
-		}
-		addGit(page, r)
-		renderMarkdown(page, markdown)
-		pages = append(pages, page)
-	}
-	reduceSite(pages)
-	for _, page := range pages {
-		renderPage(page, t)
-		writePage(page, publishDir)
-	}
+	return markdown
 }
 
 // listFilepaths traverses the file tree at rootDir and returns an array of paths.
