@@ -115,8 +115,17 @@ body {
   padding: 45px;
 }
 
+.file-table {
+  width: 100%;
+}
+
 .commit-body {
-  color: #999999;
+  color: var(--color-fg-subtle);
+}
+
+/* TODO: GH defines these in their own sheet, but they are not currently defined outside of .markdown-body */
+.color-fg-subtle {
+  color: var(--color-fg-subtle);
 }
 
 @media (max-width: 767px) {

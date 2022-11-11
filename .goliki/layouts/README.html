@@ -14,22 +14,32 @@
     
     <!-- MAIN -->
     <main>
-      <article class=".markdown-body">
+      <article class="markdown-body">
         {{ .MarkdownHTML }}
       </article>
     </main>
     
     <!-- NAV -->
     <nav>
-      <ul>
-      {{ range $page := index .Site.Sections .Section }}
-        <li>
-          <a href="{{ $page.Permalink }}">
-            {{ $page.Title }}
-          </a>
-        </li>
-      {{ end }}
-      </ul>
+      <table class="file-table">
+        <tbody>
+        {{ range $page := index .Site.Sections .Section }}
+          <tr>
+            <td>
+              <a href="{{ $page.Permalink }}">
+                {{ $page.Title }}
+              </a>
+            </td>
+            <td class="color-fg-muted">
+              {{ $page.LastCommit.Message }}
+            </td>
+            <td class="color-fg-muted">
+              {{ $page.LastCommit.Author.When }}
+            </td>
+          </tr>
+        {{ end }}
+        </tbody>
+      </table>
     </nav>
 
     <!-- SCRIPT -->
