@@ -115,6 +115,10 @@ body {
   padding: 45px;
 }
 
+.commit-body {
+  color: #999999;
+}
+
 @media (max-width: 767px) {
   .container {
     padding: 15px;

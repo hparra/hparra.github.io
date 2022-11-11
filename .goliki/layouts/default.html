@@ -14,9 +14,19 @@
     
     <!-- MAIN -->
     <main>
-      <article class=".markdown-body">
       <article class="markdown-body">
         {{ .MarkdownHTML }}
+        
+        <div class="commit-body">
+          {{ if .LastCommit }}
+          <p>Last Commit Metadata:</p>
+          <p>Hash: {{ .LastCommit.Hash }}</p>
+          <p>Message: {{ .LastCommit.Message }}</p>
+          <!-- <p>{{ .LastCommit.Author.Name }}</p>
+          <p>{{ .LastCommit.Author.Email }}</p> -->
+          <p>When: {{ .LastCommit.Author.When }}</p>
+          {{ end }}
+        </div>
       </article>
     </main>
 
