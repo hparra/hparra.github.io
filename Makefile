@@ -1,10 +1,6 @@
 .PHONY: run
 run:
-	go run main.go
-
-.PHONY: install
-install:
-	go mod download
+	goliki
 
 .PHONY: server
 server:

@@ -47,11 +47,11 @@ jobs:
           go-version: 1.15
           cache: true
       
-      - name: Install Go deps
-        run: go get .
+      - name: Install Goliki
+        run: go install github.com/hparra/goliki
 
       - name: Run it!
-        run: go run main.go
+        run: goliki
 
       - name: Upload build
         uses: actions/upload-pages-artifact@v1
