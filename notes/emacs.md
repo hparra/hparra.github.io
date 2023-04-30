@@ -7,6 +7,8 @@
 
 ## Control-based sorted by keyboard layout
 
+qwertyuiop[]|
+
 - C-q : quoted-insert
 - C-w : kill-region
 - C-e : end-of-line
@@ -21,7 +23,7 @@
 - C-] : abort-recursive-edit
 - C-| :
 
----
+asdfghjkl;'
 
 - C-a : beginning-of-line
 - C-s : isearch-forward
@@ -32,10 +34,10 @@
 - C-j : newline-and-indent
 - C-k : kill-whole-line
 - C-l : recenter
-- C-; : _free_
+- C-; : _free_ (comment line in most modes)
 - C-' :
 
----
+zxcvbnm,./
 
 - C-z : suspend-emacs / iconify-or-deiconify-frame
 - C-x :
@@ -49,11 +51,17 @@
 
 ## "But I don't use emacs anymore..."
 
-**Evaluating expressions and buffers**
+Evaluating expressions and buffers:
+
 - evaluate expression: `c-x c-e`
 - some people will bind _eval-buffer_, e.g. `c-x E`
 - (Atom) Install [script](https://atom.io/packages/script)
   - bind `c-x c-e` to _Script: Run_
   - _Script: Run_ will evaluate a selection or the entire buffer
   - `c-g` will still close that window
-  - remember that 
+  - remember that
+
+## related
+
+- [vscode](vscode.md)
+- [editors](editors.md)
