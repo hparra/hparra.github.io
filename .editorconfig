@@ -1,0 +1,12 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+insert_final_newline = true
+
+[*.md]
+indent_size = 2
+# https://daringfireball.net/projects/markdown/syntax#block
+trim_trailing_whitespace = false

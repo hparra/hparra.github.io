@@ -22,5 +22,6 @@ i usually associate them with a phase, even if i still use them. (⭐️)
 
 [Sunsetting Atom](https://github.blog/2022-06-08-sunsetting-atom/). github blog. rip.
 
-[hgpa](/README.md)
+[hgpa/notes](/notes/README.md)
 
+[hgpa](/README.md)

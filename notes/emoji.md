@@ -8,7 +8,7 @@
 
 ## mac os x
 
-why do they make it so hard?
+why do they make it so hard to use these?
 
 ## references
 
