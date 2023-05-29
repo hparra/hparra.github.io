@@ -37,6 +37,7 @@ javascript:(async function copyMarkdownCitation(s) {
     siteName: meta('[property="og:site_name"]') || window.location.hostname,
     description: meta('[name="description"]'),
   };
+  /* exceptions */
   switch (window.location.hostname) {
     case 'en.wikipedia.org':
       c.title = document.title.split(' - ')[0];
@@ -63,3 +64,5 @@ javascript:(async function copyMarkdownCitation(s) {
 [Bookmarklets are Dead…](https://medium.com/making-instapaper/bookmarklets-are-dead-d470d4bbb626). Brian Donohue. Medium.
 
 [Clipboard: write() method - Web APIs](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/write). MDN. developer.mozilla.org.
+
+[GitHub Pages: The Missing Manual](https://til.simonwillison.net/github/github-pages). Simon Willison. til.simonwillison.net.
