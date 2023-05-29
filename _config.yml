@@ -1,0 +1,126 @@
+# default Jekyll configuration
+# https://jekyllrb.com/docs/configuration/default/
+# some of these are forcefully overwritten by github-pages
+
+# source              : .
+# destination         : ./_site
+# collections_dir     : .
+# plugins_dir         : _plugins # takes an array of strings and loads plugins in that order
+# layouts_dir         : _layouts
+# data_dir            : _data
+# includes_dir        : _includes
+# sass:
+#   sass_dir: _sass
+# collections:
+#   posts:
+#     output          : true
+
+# # Handling Reading
+# safe                : false
+# include             : [".htaccess"]
+# exclude             : ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+# keep_files          : [".git", ".svn"]
+# encoding            : "utf-8"
+# markdown_ext        : "markdown,mkdown,mkdn,mkd,md"
+# strict_front_matter : false
+
+# # Filtering Content
+# show_drafts         : null
+# limit_posts         : 0
+# future              : false
+# unpublished         : false
+
+# # Plugins
+# whitelist           : []
+# plugins             : []
+
+# # Conversion
+# markdown            : kramdown
+# highlighter         : rouge
+# lsi                 : false
+# excerpt_separator   : "\n\n"
+# incremental         : false
+
+# # Serving
+# detach              : false
+# port                : 4000
+# host                : 127.0.0.1
+# baseurl             : "" # does not include hostname
+# show_dir_listing    : false
+
+# # Outputting
+# permalink           : date
+# paginate_path       : /page:num
+# timezone            : null
+
+# quiet               : false
+# verbose             : false
+# defaults            : []
+
+# liquid:
+#   error_mode        : warn
+#   strict_filters    : false
+#   strict_variables  : false
+
+# Markdown Processors
+# kramdown:
+#   auto_ids          : true
+#   entity_output     : as_char
+#   toc_levels        : [1, 2, 3, 4, 5, 6]
+#   smart_quotes      : lsquo,rsquo,ldquo,rdquo
+#   input             : GFM
+#   hard_wrap         : false
+#   footnote_nr       : 1
+#   show_warnings     : false
+
+# github's default configuation
+# https://github.com/github/pages-gem/blob/master/lib/github-pages/configuration.rb
+
+# plugins_dir is overridden
+# whitelist is overridden
+jailed: false # overridden remotely
+safe: true # overridden
+lsi: false # overridden 
+highlighter: rogue # overridden
+gist:
+  noscript: false # overridden
+future: true
+
+# default theme on both Github.com and Enterprise is jekyll-theme-primer
+theme: 'jekyll-theme-primer'
+
+# Combined list of PLUGIN_WHITELIST and DEFAULT_PLUGINS with difference commented out
+# https://github.com/github/pages-gem/blob/master/lib/github-pages/plugins.rb
+plugins:
+  # - jekyll-avatar
+  - jekyll-coffeescript
+  - jekyll-commonmark-ghpages
+  # - jekyll-default-layout
+  # - jekyll-feed
+  - jekyll-gist
+  - jekyll-github-metadata
+  # - jekyll-include-cache
+  # - jekyll-mentions
+  # - jekyll-octicons
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-readme-index
+  # - jekyll-redirect-from
+  - jekyll-relative-links
+  # - jekyll-remote-theme
+  # - jekyll-seo-tag
+  # - jekyll-sitemap
+  - jekyll-titles-from-headings
+  - jemoji
+
+# Github's default markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  gfm_quirks: paragraph_end
+  math_engine: mathjax # overridden
+  syntax_highlighter: rogue # overridden
+  syntax_highlighter_opts:
+    default_lang: plaintext
+  templage: '' # overridden
