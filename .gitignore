@@ -24,3 +24,15 @@ node_modules
 # gliki
 .gliki/build
 .goliki/public
+
+# jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# sass
+.sass-cache/
+
+# bundler
+.bundle/
+vendor/
