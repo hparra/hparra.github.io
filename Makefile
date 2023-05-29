@@ -2,6 +2,10 @@ default: install
 
 all: install build
 
+.PHONY: clean
+clean:
+	bundle exec jekyll clean
+
 .PHONY: install
 install:
 	bundle install
@@ -12,7 +16,7 @@ upgrade:
 
 .PHONY: serve
 serve:
-	bundle exec jekyll serve --trace --livereload
+	bundle exec jekyll serve --trace --livereload --incremental
 
 .PHONY: build
 build:

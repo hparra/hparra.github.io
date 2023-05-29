@@ -2,7 +2,16 @@
 # https://jekyllrb.com/docs/configuration/default/
 # some of these are forcefully overwritten by github-pages
 
-# source              : .
+title: HGPA
+repository: hparra/hparra.github.io
+author: Hayley Parra
+url: https://hgpa.tv
+
+site:
+  title: hgpa
+  description: website for hgpa
+
+source              : .
 destination         : .jekyll/_site
 # collections_dir     : .
 # plugins_dir         : _plugins # takes an array of strings and loads plugins in that order
@@ -78,8 +87,8 @@ includes_dir        : .jekyll/includes
 
 # plugins_dir is overridden
 # whitelist is overridden
-jailed: false # overridden remotely
-safe: true # overridden
+# jailed: false # overridden remotely
+# safe: true # overridden
 lsi: false # overridden 
 highlighter: rogue # overridden
 gist:
@@ -95,7 +104,7 @@ plugins:
   # - jekyll-avatar
   - jekyll-coffeescript
   - jekyll-commonmark-ghpages
-  # - jekyll-default-layout
+  - jekyll-default-layout
   # - jekyll-feed
   - jekyll-gist
   - jekyll-github-metadata
@@ -124,3 +133,8 @@ kramdown:
   syntax_highlighter_opts:
     default_lang: plaintext
   templage: '' # overridden
+
+readme_index:
+  enabled:          true
+  remove_originals: false
+  with_frontmatter: true
