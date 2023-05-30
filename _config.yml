@@ -89,7 +89,7 @@ includes_dir        : .jekyll/includes
 # whitelist is overridden
 # jailed: false # overridden remotely
 # safe: true # overridden
-lsi: false # overridden 
+lsi: false # overridden
 highlighter: rogue # overridden
 gist:
   noscript: false # overridden
