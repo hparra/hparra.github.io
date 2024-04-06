@@ -36,3 +36,6 @@ _site/
 # bundler
 .bundle/
 vendor/
+
+# obsidian
+.obsidian
