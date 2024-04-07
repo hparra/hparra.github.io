@@ -13,7 +13,7 @@ HGPA
 {% assign pages = site.pages | where_exp: 'page', 'page.url contains "/journal"' | sort: 'name' %}
 {% for page in pages %}
   <li>
-    <a href="{{ page.url }}">{{ page.name | remove: ".md" }}</a>
+    <a href="{{ page.url | remove: '.html' }}">{{ page.name | remove: ".md" }}</a>
   </li>
 {% endfor %}
 </ul>
