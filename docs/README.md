@@ -2,7 +2,7 @@
 
 ## wiki
 
-my wiki. opinionated.
+wiki. opinionated.
 
 <ul>
 {% assign pages = site.pages | where_exp: 'page', 'page.url contains "/wiki"' | sort: 'name' %}
@@ -15,7 +15,7 @@ my wiki. opinionated.
 
 ## notes
 
-notes from books, articles, videos, etc. facts only.
+notes from books, articles, videos.
 
 <ul>
 {% assign pages = site.pages | where_exp: 'page', 'page.url contains "/notes"' | sort: 'name' %}
@@ -38,3 +38,4 @@ personal anecdotes.
   </li>
 {% endfor %}
 </ul>
+
