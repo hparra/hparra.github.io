@@ -19,10 +19,10 @@ Perhaps you may find some of them useful.
 ## index
 
 <ul>
-{% assign pages = site.pages | where_exp: 'page', 'page.url contains "/notes"' | sort: 'name' %}
+{% assign pages = site.pages | where_exp: 'page', 'page.url contains "/wiki"' | sort: 'name' %}
 {% for page in pages %}
   <li>
-    <a href="{{ page.url }}">{{ page.name | remove: ".md" }}</a>
+    <a href="{{ page.url  | remove: '.html' }}">{{ page.name | remove: ".md" }}</a>
   </li>
 {% endfor %}
 </ul>
