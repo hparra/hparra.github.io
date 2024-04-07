@@ -19,6 +19,6 @@ You can find this theme's files by running `bundle info --path jekyll-theme-prim
 [Jekyll Theme Primer]: https://pages-themes.github.io/primer/
 [Jekyll Theme Primer][Jekyll Theme Primer]. Jekyll Theme Primer.
 
-[About GitHub Pages and Jekyll](https://ghdocs-prod.azurewebsites.net/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll). GitHub Docs.
+[About GitHub Pages and Jekyll](https:///docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll). GitHub Docs.
 
 [Dependency versions](https://pages.github.com/versions/). GitHub Pages. GitHub Pages uses the following dependencies and versions.
