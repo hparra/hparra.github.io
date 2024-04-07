@@ -1,4 +1,4 @@
-ADR: Architectural Decision Record
+# ADR: Architectural Decision Record
 
 ## References
 
