@@ -370,6 +370,29 @@ export function build(): void {
 }
 
 /**
+ * Resolve a request pathname to an absolute path guaranteed to stay under
+ * `base`, or `null` when the input is unsafe. Guards the dev server against
+ * directory traversal (`/../package.json`) and malformed percent-encoding
+ * (which would otherwise throw out of `decodeURIComponent`).
+ *
+ * @param base - Directory the result must remain inside (e.g. {@link OUT}).
+ * @param urlPath - Raw URL pathname (query string already stripped).
+ * @returns The safe absolute path, or `null` if malformed or escaping `base`.
+ */
+export function safeResolve(base: string, urlPath: string): string | null {
+  let decoded: string;
+  try {
+    decoded = decodeURIComponent(urlPath);
+  } catch {
+    return null; // malformed percent-encoding
+  }
+  const resolved = path.join(base, decoded);
+  const rel = path.relative(base, resolved);
+  if (rel.startsWith("..") || path.isAbsolute(rel)) return null;
+  return resolved;
+}
+
+/**
  * Start a minimal static file server over {@link OUT}, resolving `/` and
  * extensionless paths to their `.html`/`index.html` files the way GitHub Pages
  * does. Intended as a local `make serve` replacement, not for production.
@@ -388,9 +411,15 @@ export function serve(port = 4000): void {
   };
   http
     .createServer((req, res) => {
-      const p = decodeURIComponent((req.url || "/").split("?")[0]);
-      let file = path.join(OUT, p);
-      if (p.endsWith("/")) file = path.join(file, "index.html");
+      const urlPath = (req.url || "/").split("?")[0];
+      const resolved = safeResolve(OUT, urlPath);
+      if (resolved === null) {
+        res.writeHead(400, { "content-type": "text/plain" });
+        res.end("400 Bad Request");
+        return;
+      }
+      let file = resolved;
+      if (urlPath.endsWith("/")) file = path.join(file, "index.html");
       else if (!fs.existsSync(file) && fs.existsSync(`${file}.html`))
         file = `${file}.html`;
       if (fs.existsSync(file) && fs.statSync(file).isDirectory())

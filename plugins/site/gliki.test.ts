@@ -1,9 +1,11 @@
 import assert from "node:assert/strict";
+import path from "node:path";
 import { describe, it } from "node:test";
 import {
   build,
   firstH1,
   rewriteLocalLink,
+  safeResolve,
   serve,
   titleCase,
   walk,
@@ -68,6 +70,30 @@ describe("titleCase", () => {
 
   it("capitalizes a single word", () => {
     assert.equal(titleCase("bash"), "Bash");
+  });
+});
+
+describe("safeResolve", () => {
+  const base = "/site/public";
+
+  it("resolves normal paths under base", () => {
+    assert.equal(safeResolve(base, "/wiki/bash"), path.join(base, "wiki/bash"));
+    assert.equal(safeResolve(base, "/"), path.join(base, "/"));
+  });
+
+  it("rejects directory traversal", () => {
+    assert.equal(safeResolve(base, "/../package.json"), null);
+    assert.equal(safeResolve(base, "/../../etc/passwd"), null);
+    assert.equal(safeResolve(base, "/wiki/../../secret"), null);
+  });
+
+  it("rejects encoded traversal", () => {
+    assert.equal(safeResolve(base, "/%2e%2e/package.json"), null);
+  });
+
+  it("returns null on malformed percent-encoding instead of throwing", () => {
+    assert.equal(safeResolve(base, "/%ZZ"), null);
+    assert.equal(safeResolve(base, "/%E0%A4%A"), null);
   });
 });
 
