@@ -35,8 +35,8 @@ body {
   margin: 0;
   color: var(--fg);
   background: var(--bg);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial,
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -127,7 +127,8 @@ article img {
 
 code,
 pre {
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    monospace;
   font-size: 85%;
 }
 

@@ -15,16 +15,16 @@
  * @module gliki
  */
 
-import fs from "node:fs";
-import path from "node:path";
-import http from "node:http";
 import { execFileSync } from "node:child_process";
+import fs from "node:fs";
+import http from "node:http";
+import path from "node:path";
 import { pathToFileURL } from "node:url";
 import matter from "gray-matter";
+import Handlebars from "handlebars";
+import hljs from "highlight.js";
 import { Marked } from "marked";
 import { markedHighlight } from "marked-highlight";
-import hljs from "highlight.js";
-import Handlebars from "handlebars";
 
 // --- config (inline for the engine-swap step; will move to gliki.config.ts) ---
 
@@ -92,10 +92,10 @@ export function rewriteLocalLink(href: string): string {
   // leave external, anchor, and mailto links alone
   if (/^(https?:\/\/|mailto:|#|tel:)/i.test(href)) return href;
   if (!/\.md(#|\?|$)/i.test(href)) return href;
-  // README.md / index.md are directory indexes
-  href = href.replace(/(^|\/)(README|index)\.md(#|\?|$)/i, "$1$3");
-  href = href.replace(/\.md(#|\?|$)/i, ".html$1");
-  return href;
+  // README.md / index.md are directory indexes; everything else .md -> .html
+  return href
+    .replace(/(^|\/)(README|index)\.md(#|\?|$)/i, "$1$3")
+    .replace(/\.md(#|\?|$)/i, ".html$1");
 }
 
 /**
@@ -146,7 +146,11 @@ export function git(args: string[]): string {
  * @returns `modified` and `created` dates (`YYYY-MM-DD`) and the modified sha
  *   (empty when the file is not yet committed).
  */
-export function gitDates(srcRel: string): { modified: string; created: string; sha: string } {
+export function gitDates(srcRel: string): {
+  modified: string;
+  created: string;
+  sha: string;
+} {
   const log = git([
     "log",
     "--follow",
@@ -163,7 +167,10 @@ export function gitDates(srcRel: string): { modified: string; created: string; s
     return { modified, created, sha };
   }
   // untracked / uncommitted: fall back to filesystem mtime
-  const mtime = fs.statSync(path.join(ROOT, srcRel)).mtime.toISOString().slice(0, 10);
+  const mtime = fs
+    .statSync(path.join(ROOT, srcRel))
+    .mtime.toISOString()
+    .slice(0, 10);
   return { modified: mtime, created: mtime, sha: "" };
 }
 
@@ -259,7 +266,9 @@ export function toLeaf(file: string): Leaf {
   }
 
   const title =
-    (typeof meta.title === "string" && meta.title) || firstH1(content) || titleCase(name);
+    (typeof meta.title === "string" && meta.title) ||
+    firstH1(content) ||
+    titleCase(name);
 
   return {
     srcRel,
@@ -291,7 +300,8 @@ export function build(): void {
   const leaves = files.filter((f) => f.endsWith(".md")).map(toLeaf);
 
   // page list exposed to index templates, git-recency sorted (newest first)
-  const byRecency = (a: Leaf, b: Leaf) => b.git.modified.localeCompare(a.git.modified);
+  const byRecency = (a: Leaf, b: Leaf) =>
+    b.git.modified.localeCompare(a.git.modified);
   const pages = [...leaves].sort(byRecency);
 
   // Handlebars helper: `{{#each (section "wiki")}}` -> that section's pages,
@@ -300,7 +310,9 @@ export function build(): void {
     pages.filter((p) => p.section === name && !p.isIndex),
   );
 
-  const layout = Handlebars.compile(fs.readFileSync(path.join(TPL_DIR, "__default__.hbs"), "utf8"));
+  const layout = Handlebars.compile(
+    fs.readFileSync(path.join(TPL_DIR, "__default__.hbs"), "utf8"),
+  );
 
   for (const leaf of leaves) {
     // drop now-meaningless Jekyll {% raw %} guards (they only ever wrapped
@@ -352,7 +364,9 @@ export function build(): void {
   // tell GitHub Pages not to re-run Jekyll on our artifact
   fs.writeFileSync(path.join(OUT, ".nojekyll"), "");
 
-  console.log(`gliki: built ${leaves.length} pages -> ${path.relative(ROOT, OUT)}/`);
+  console.log(
+    `gliki: built ${leaves.length} pages -> ${path.relative(ROOT, OUT)}/`,
+  );
 }
 
 /**
@@ -377,7 +391,8 @@ export function serve(port = 4000): void {
       const p = decodeURIComponent((req.url || "/").split("?")[0]);
       let file = path.join(OUT, p);
       if (p.endsWith("/")) file = path.join(file, "index.html");
-      else if (!fs.existsSync(file) && fs.existsSync(`${file}.html`)) file = `${file}.html`;
+      else if (!fs.existsSync(file) && fs.existsSync(`${file}.html`))
+        file = `${file}.html`;
       if (fs.existsSync(file) && fs.statSync(file).isDirectory())
         file = path.join(file, "index.html");
       if (!fs.existsSync(file)) {
@@ -385,10 +400,14 @@ export function serve(port = 4000): void {
         res.end("404");
         return;
       }
-      res.writeHead(200, { "content-type": types[path.extname(file)] || "application/octet-stream" });
+      res.writeHead(200, {
+        "content-type": types[path.extname(file)] || "application/octet-stream",
+      });
       res.end(fs.readFileSync(file));
     })
-    .listen(port, () => console.log(`gliki: serving ${OUT} at http://127.0.0.1:${port}`));
+    .listen(port, () =>
+      console.log(`gliki: serving ${OUT} at http://127.0.0.1:${port}`),
+    );
 }
 
 /**
