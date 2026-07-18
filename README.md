@@ -3,9 +3,12 @@
 repo: https://github.com/hparra/hparra.github.io  
 settings: https://github.com/hparra/hparra.github.io/settings/pages  
 
+Built with [gliki](plugins/site/gliki.ts), a small git-based bliki generator,
+and published to GitHub Pages via Actions. Content lives in [docs/](docs/).
 
 ```sh
-cd docs
-make install # you only have to do this once
-make serve # http://127.0.0.1:4000
+npm install     # once
+npm run serve   # build + serve at http://127.0.0.1:4000
+npm run build   # build to ./public
+npm run ci      # typecheck + lint + test
 ```

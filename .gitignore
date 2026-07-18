@@ -39,3 +39,9 @@ vendor/
 
 # obsidian
 .obsidian
+
+# gliki build output
+/public
+
+# test coverage
+/coverage

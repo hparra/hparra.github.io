@@ -1,0 +1,32 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "files": {
+    "ignore": [
+      "node_modules",
+      "public",
+      "coverage",
+      "docs",
+      "plugins/site/static/js"
+    ]
+  },
+  "formatter": {
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "linter": {
+    "rules": {
+      "suspicious": {
+        "noExplicitAny": "warn",
+        "noImplicitAnyLet": "warn"
+      },
+      "style": {
+        "noParameterAssign": "warn"
+      }
+    }
+  },
+  "json": {
+    "formatter": {
+      "trailingCommas": "none"
+    }
+  }
+}
