@@ -1,0 +1,19 @@
+{
+  "name": "hparra.github.io",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "node --experimental-strip-types plugins/site/gliki.ts",
+    "serve": "node --experimental-strip-types plugins/site/gliki.ts --serve"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "handlebars": "^4.7.8",
+    "highlight.js": "^11.9.0",
+    "marked": "^12.0.2",
+    "marked-highlight": "^2.1.1"
+  }
+}

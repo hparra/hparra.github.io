@@ -1,0 +1,266 @@
+/* gliki minimal stylesheet — clean, readable, close to GitHub's markdown look
+   without vendoring the full jekyll-theme-primer. Light + dark aware. */
+
+:root {
+  --fg: #1f2328;
+  --muted: #59636e;
+  --bg: #ffffff;
+  --link: #0969da;
+  --border: #d1d9e0;
+  --code-bg: #f6f8fa;
+  --accent: #d1d9e0b3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #e6edf3;
+    --muted: #9198a1;
+    --bg: #0d1117;
+    --link: #4493f8;
+    --border: #3d444d;
+    --code-bg: #161b22;
+    --accent: #3d444db3;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--fg);
+  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+.site-header {
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+}
+
+.site-header a {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  margin-top: 1.75rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+article h1 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+article h2 {
+  font-size: 1.5rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+article h3 {
+  font-size: 1.25rem;
+}
+
+article p,
+article ul,
+article ol,
+article blockquote,
+article table {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+article ul,
+article ol {
+  padding-left: 2rem;
+}
+
+article li + li {
+  margin-top: 0.25em;
+}
+
+article blockquote {
+  margin-left: 0;
+  padding: 0 1em;
+  color: var(--muted);
+  border-left: 0.25em solid var(--border);
+}
+
+article img {
+  max-width: 100%;
+}
+
+code,
+pre {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 85%;
+}
+
+article code {
+  padding: 0.2em 0.4em;
+  background: var(--code-bg);
+  border-radius: 6px;
+}
+
+article pre {
+  padding: 1rem;
+  overflow: auto;
+  background: var(--code-bg);
+  border-radius: 6px;
+  line-height: 1.45;
+}
+
+article pre code {
+  padding: 0;
+  background: none;
+  font-size: 100%;
+}
+
+article table {
+  border-collapse: collapse;
+  display: block;
+  overflow: auto;
+  width: max-content;
+  max-width: 100%;
+}
+
+article table th,
+article table td {
+  padding: 6px 13px;
+  border: 1px solid var(--border);
+}
+
+article table tr:nth-child(2n) {
+  background: var(--code-bg);
+}
+
+article hr {
+  height: 1px;
+  border: 0;
+  background: var(--border);
+  margin: 1.5rem 0;
+}
+
+.page-meta {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.page-meta a {
+  color: var(--muted);
+}
+
+/* highlight.js — GitHub-ish token colors, light + dark */
+.hljs-comment,
+.hljs-quote {
+  color: #6e7781;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-type {
+  color: #cf222e;
+}
+.hljs-string,
+.hljs-doctag,
+.hljs-regexp {
+  color: #0a3069;
+}
+.hljs-title,
+.hljs-section,
+.hljs-selector-id,
+.hljs-function .hljs-title {
+  color: #6639ba;
+}
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-attr,
+.hljs-attribute {
+  color: #0550ae;
+}
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-symbol,
+.hljs-meta {
+  color: #953800;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-strong {
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  .hljs-comment,
+  .hljs-quote {
+    color: #8b949e;
+  }
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-type {
+    color: #ff7b72;
+  }
+  .hljs-string,
+  .hljs-doctag,
+  .hljs-regexp {
+    color: #a5d6ff;
+  }
+  .hljs-title,
+  .hljs-section,
+  .hljs-selector-id,
+  .hljs-function .hljs-title {
+    color: #d2a8ff;
+  }
+  .hljs-number,
+  .hljs-literal,
+  .hljs-variable,
+  .hljs-attr,
+  .hljs-attribute {
+    color: #79c0ff;
+  }
+  .hljs-built_in,
+  .hljs-builtin-name,
+  .hljs-symbol,
+  .hljs-meta {
+    color: #ffa657;
+  }
+}

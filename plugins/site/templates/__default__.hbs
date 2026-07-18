@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{title}} | {{site.title}}</title>
+    <meta
+      name="description"
+      content="{{#if meta.description}}{{meta.description}}{{else}}{{site.title}} — {{title}}{{/if}}"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container markdown-body">
+      <header class="site-header"><a href="/">{{site.title}}</a></header>
+      <article>{{{body}}}</article>
+      <footer class="page-meta">
+        {{#if git.sha}}
+          <a href="{{sourceUrl}}">{{filename}}</a> ·
+          <a href="{{editUrl}}">edit</a><br />
+          modified {{git.modified}}{{#if git.created}} · created {{git.created}}{{/if}}
+        {{/if}}
+      </footer>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.3.1/anchor.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      if (window.anchors) anchors.add("article h2, article h3, article h4");
+    </script>
+  </body>
+</html>

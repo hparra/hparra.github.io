@@ -5,12 +5,9 @@
 wiki. opinionated.
 
 <ul>
-{% assign pages = site.pages | where_exp: 'page', 'page.url contains "/wiki"' | sort: 'name' %}
-{% for page in pages %}
-  <li>
-    <a href="{{ page.url | remove: '.html' }}">{{ page.name | remove: ".md" }}</a>
-  </li>
-{% endfor %}
+{{#each (section "wiki")}}
+  <li><a href="{{href}}">{{name}}</a></li>
+{{/each}}
 </ul>
 
 ## notes
@@ -18,12 +15,9 @@ wiki. opinionated.
 notes from books, articles, videos.
 
 <ul>
-{% assign pages = site.pages | where_exp: 'page', 'page.url contains "/notes"' | sort: 'name' %}
-{% for page in pages %}
-  <li>
-    <a href="{{ page.url | remove: '.html'  }}">{{ page.name | remove: ".md" }}</a>
-  </li>
-{% endfor %}
+{{#each (section "notes")}}
+  <li><a href="{{href}}">{{name}}</a></li>
+{{/each}}
 </ul>
 
 ## journal
@@ -31,11 +25,8 @@ notes from books, articles, videos.
 personal anecdotes.
 
 <ul>
-{% assign pages = site.pages | where_exp: 'page', 'page.url contains "/journal"' | sort: 'name' %}
-{% for page in pages %}
-  <li>
-    <a href="{{ page.url | remove: '.html'  }}">{{ page.name | remove: ".md" }}</a>
-  </li>
-{% endfor %}
+{{#each (section "journal")}}
+  <li><a href="{{href}}">{{name}}</a></li>
+{{/each}}
 </ul>
 

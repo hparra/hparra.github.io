@@ -39,3 +39,6 @@ vendor/
 
 # obsidian
 .obsidian
+
+# gliki build output
+/public

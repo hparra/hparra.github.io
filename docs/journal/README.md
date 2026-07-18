@@ -10,10 +10,7 @@ HGPA
 ## index
 
 <ul>
-{% assign pages = site.pages | where_exp: 'page', 'page.url contains "/journal"' | sort: 'name' %}
-{% for page in pages %}
-  <li>
-    <a href="{{ page.url | remove: '.html' }}">{{ page.name | remove: ".md" }}</a>
-  </li>
-{% endfor %}
+{{#each (section "journal")}}
+  <li><a href="{{href}}">{{name}}</a></li>
+{{/each}}
 </ul>
